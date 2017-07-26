@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1 {
+            width: 100px;
+            height: 20px;
+            border: 1px solid black;
+        }
+        span {
+            position: relative;
+            left: 103px;
+            top: -21px;
+        }
+        input  {
+            position: relative;
+            left: 103px;
+            top: -21px;
+        }
+        .div2 {
+            width: 0;
+            height: 20px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <div class="div2" id="dong"></div>
+</div>
+<span id="span1">100%</span>
+<input type="button" value="开始充电" id="but1"/>
+</body>
+<script>
+    var dong = document.getElementById("dong");
+    var but = document.getElementById("but1");
+    var span1 = document.getElementById("span1");
+    var i = 0;
+    but.onclick = function () {
+        a = setInterval("jia()",10);
+    }
+
+    function jia() {
+        dong.style.width = i+"px";
+        i++;
+        if (i==101){
+            alert("充电完成了傻吊");
+            clearInterval(a);
+            i = 0;
+        }
+    }
+</script>
+</html>

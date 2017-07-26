@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>li1</li>
+    <li>li2</li>
+    <li>li3</li>
+    <li>li4</li>
+    <li>li5</li>
+    <li>li6</li>
+    <li>li7</li>
+    <li>li8</li>
+</ul>
+</body>
+<script src="myTool.js"></script>
+<script>
+    var oLi = $("li");
+
+    for (var i = 0; i < 8; i++) {
+        oLi[i].a = i;
+
+        oLi[i].onmouseover = function () {
+            if (this.a == 7) {
+                return;
+            }
+            //暴力清除
+            for (var j = 0; j < oLi.length; j++) {
+                oLi[j].style.backgroundColor = "";
+            }
+            next(this).style.backgroundColor = "pink";
+        }
+
+    }
+
+</script>
+</html>
+
+
+
+
+
+
+

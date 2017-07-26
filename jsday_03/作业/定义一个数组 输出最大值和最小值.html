@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr = [1, 8, 22, -6, 10, 3, 9, 50, 15, 44, 5];
+        var arr2 = new Array;
+        arr2 = arr.slice(0);    //创建新数组并且赋值   返回一个新数组，从0到最后。
+//        （slice有两个参数：xx.slice(start,end),返回数组xx下标从start到end的元素。若未定义end则返回start到结尾。）
+        var temp;
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < arr.length - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        console.log("最大值为：" + arr[arr.length - 1]);
+        console.log("最小值为：" + arr[0]);
+        for (var i = 0; i < arr2.length; i++) {
+            if (arr2[i] == arr[arr.length - 1]) {
+
+                console.log("最大值下标为：" + i);
+            }
+            if (arr2[i] == arr[0]) {
+
+                console.log("最小值下标为：" + i);
+            }   //下标不对
+        }
+        console.log(arr);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

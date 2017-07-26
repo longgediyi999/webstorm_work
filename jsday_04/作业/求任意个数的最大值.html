@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var sum = 0;
+        function he() {
+            sum = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (sum < arguments[i]) {
+                    sum = arguments[i];
+                }
+
+            }
+            console.log(sum);
+        }
+        he(1, 2, 3, 4, 5);
+        he(1, 2);
+        he(2, 1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

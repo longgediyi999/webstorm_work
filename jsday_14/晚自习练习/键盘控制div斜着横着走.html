@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box {
+            width: 85px;
+            height: 81px;
+            background: url(fly.gif);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script>
+
+    var box = document.getElementById("box");
+
+    var onOff = {
+        l: false,
+        r: false,
+        t: false,
+        b: false
+    };
+
+    setInterval(function () {
+        if (onOff.l) {
+            box.style.left = box.offsetLeft - 8 + "px";
+            box.style.transform = "rotate(270deg)";
+        }
+        if (onOff.r) {
+            box.style.left = box.offsetLeft + 8 + "px";
+            box.style.transform = "rotate(90deg)";
+        }
+        if (onOff.t) {
+            box.style.top = box.offsetTop - 8 + "px";
+            box.style.transform = "rotate(0deg)";
+        }
+        if (onOff.b) {
+            box.style.top = box.offsetTop + 8 + "px";
+            box.style.transform = "rotate(180deg)";
+        }
+
+        if (onOff.l && onOff.t) {
+            box.style.transform = "rotate(315deg)";
+        }
+        if (onOff.l && onOff.b) {
+            box.style.transform = "rotate(225deg)";
+        }
+        if (onOff.r && onOff.t) {
+            box.style.transform = "rotate(45deg)";
+        }
+        if (onOff.r && onOff.b) {
+            box.style.transform = "rotate(135deg)";
+        }
+
+        limit();
+
+
+    }, 30);
+
+    document.onkeydown = function (ev) {  //按下键盘
+        ev = ev || event;
+
+        if (ev.keyCode == 38) {
+            onOff.t = true;
+        }
+        if (ev.keyCode == 40) {
+            onOff.b = true;
+        }
+        if (ev.keyCode == 37) {
+            onOff.l = true;
+        }
+        if (ev.keyCode == 39) {
+            onOff.r = true;
+        }
+
+    }
+
+    document.onkeyup = function (ev) {
+        ev = ev || event;
+
+        if (ev.keyCode == 38) {
+            onOff.t = false;
+        }
+        if (ev.keyCode == 40) {
+            onOff.b = false;
+        }
+        if (ev.keyCode == 37) {
+            onOff.l = false;
+        }
+        if (ev.keyCode == 39) {
+            onOff.r = false;
+        }
+    }
+
+    function limit() {
+
+        if (box.offsetLeft < 0) {
+            box.style.left = 0;
+        }
+        if (box.offsetTop < 0) {
+            box.style.top = 0;
+        }
+        
+//        console.log(box.clientWidth+"box.clientWidth");
+        console.log(box.style.width);
+
+        if(box.offsetLeft > (document.documentElement.clientWidth - box.clientWidth)){
+            box.style.left = (document.documentElement.clientWidth - box.clientWidth) + "px";
+        }
+
+        if(box.offsetTop > (document.documentElement.clientHeight - box.clientHeight)){
+            box.style.top = (document.documentElement.clientHeight - box.clientHeight) +"px";
+        }
+
+    }
+
+
+</script>
+</html>

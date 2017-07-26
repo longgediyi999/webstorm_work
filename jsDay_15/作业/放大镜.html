@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #small {
+            width: 480px;
+            height: 288px;
+            background: url("imgs/small.png") no-repeat;
+        }
+        #dot {
+            width: 100px;
+            height: 100px;
+            background: url("imgs/dot.png") repeat;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        #big {
+            width: 400px;
+            height: 400px;
+            background: url("imgs/big.jpg") no-repeat 0% 0%;
+            position: absolute;
+            top: 20px;
+            left: 600px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="small"></div>
+<div id="dot"></div>
+<div id="big"></div>
+</body>
+
+<script>
+    var small = document.getElementById("small");
+    var dot = document.getElementById("dot");
+    var big = document.getElementById("big");
+    document.onmousemove = function (ev) {
+        ev = ev || event;
+        if (ev.clientX <= 480 && ev.clientY <= 288) {    //判断鼠标移动是否在小图范围之内
+            dot.style.display = "block";
+            big.style.display = "block";
+            dot.style.left = ev.clientX - 50 + "px";
+            dot.style.top = ev.clientY - 50 + "px";
+            if (ev.clientX <= 50) {   //小图左边控制范围
+                dot.style.left = 0;
+            }
+            if (ev.clientY <= 50) {  //小图上边控制范围
+                dot.style.top = 0;
+            }
+            if (ev.clientX >= 430) {  //小图右边控制范围
+                dot.style.left = "380px";
+            }
+            if (ev.clientY >= 238) {  //小图下边控制范围
+                dot.style.top = "188px";
+            }
+            big.style.backgroundPosition = "-" + (dot.offsetLeft * 4 ) + "px " + "-" + (dot.offsetTop * 4 ) + "px";
+            //控制右边大图变换
+            //big.style.backgroundPosition = ((dot.offsetLeft * 4 / 1920) * 100) % + ((dot.offsetTop * 4 / 1150) * 100) %;
+            //big.style.backgroundPosition=""+Math.round(((dot.offsetLeft * 4 / 1920)+(100/1920)) * 100)+"%"+""+Math.round(((dot.offsetTop * 4 / 1150)+(100/1150)) * 100)+"%";
+            //console.log(Math.round(((dot.offsetLeft * 4 / 1920)-(100/1920)) * 100));
+            //console.log(Math.round(((dot.offsetTop * 4 / 1150)-(100/1150)) * 100));
+        } else {
+            dot.style.display = "none";
+            big.style.display = "none";
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr=["关羽", 0, "张飞", 0, "赵云", 0, "马超", 0, "黄忠"];
+        var arr2 = [];
+        var num = 0;
+        for(var i = 0; i < arr.length ; i++) {
+            if(arr[i]==0){
+                arr.splice(i,1);
+            }
+            if(arr[i]!=0){
+                arr2[num] = arr[i];
+                num++;
+            }
+        }
+//        console.log(arr);
+        console.log(arr2);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #box {
+            width: 500px;
+            height: 500px;
+            background: url(bj.jpg) no-repeat;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        textarea {
+            position: absolute;
+            left: 0;
+            bottom: 37px;
+            border: 0;
+            width: 312px;
+            height: 60px;
+            outline: none;
+        }
+
+        #content {
+            width: 300px;
+            height: 290px;
+            position: absolute;
+            left: 0;
+            top: 80px;
+        }
+
+        #btn {
+            position: absolute;
+            left: 272px;
+            bottom: 15px;
+        }
+
+        #oSel {
+            position: absolute;
+            bottom: 14px;
+            height: 24px;
+            left: 314px;
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="box">
+    <div id="content"></div>
+    <textarea id="text"></textarea>
+    <input type="button" value="发送" id="btn"/>
+    <select id="oSel">
+        <option value="e">按下enter键发送信息</option>
+        <option value="c">按下ctrl+enter键发送信息</option>
+    </select>
+</div>
+</body>
+<script>
+    var btn = document.getElementById("btn");
+    var text = document.getElementById("text");
+    var content = document.getElementById("content");
+    var oSel = document.getElementById("oSel");
+
+    text.focus();
+
+    btn.onclick = function () {
+        fn();
+
+    }
+
+    function fn() {
+        content.innerHTML = content.innerHTML + '<p>' + text.value + '</p>';
+        text.value = "";
+    }
+
+    document.onkeydown = function (ev) {
+        ev = ev || event;
+        if (ev.keyCode == 13 && oSel.value == "e" && !ev.ctrlKey) {
+            fn();
+        } else if (ev.keyCode == 13 && ev.ctrlKey && oSel.value == "c") {
+            fn();
+        }
+    }
+
+
+</script>
+</html>

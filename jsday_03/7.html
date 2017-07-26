@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //        定义一个数组（十个元素） 求最后4个数为奇数的平均值
+        var arr = [1, 8, 22, 10, 3, 9, 50, 15, 44, 5];
+        var num = 0;
+        var num1 = 0;
+        for (var i = arr.length; i >= 0; i--) {
+            if (arr[i] % 2 == 1) {
+                num += arr[i];
+                num1++;
+                if(num1==4){
+                    break;
+                }
+            }
+        }
+        num = num / 4
+        document.write(num);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

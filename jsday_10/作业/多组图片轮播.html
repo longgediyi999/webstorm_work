@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body, li, ul, div {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .da {
+            height: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .ul1 {
+            float: left;
+            margin-left: 295px;
+        }
+
+        .ul1, .ul2 {
+            position: absolute;
+            top: 445px;
+            left: 315px;
+        }
+
+        .img1 {
+            width: 400px;
+            height: 400px;
+            /*background: url("img/1.jpg") fixed   no-repeat center;*/
+            position: absolute;
+            left: 114px;
+            top: 40px;
+        }
+
+        div img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .img2 {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 517px;
+            top: 40px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="da">
+    <div>
+        <input type="button" value="上一组" id="but1">
+        <input type="button" value="下一组" id="but2">
+    </div>
+    <div class="img1"><img src="img/1.jpg" alt="" id="img1"></div>
+    <div class="img2"><img src="img/pic1.jpg" alt="" id="img2"></div>
+    <div>
+        <ul class="ul1">
+            <li id="li1">1/3</li>
+            <li id="li2">第二组第1张</li>
+        </ul>
+        <ul class="ul2">
+            <li id="li3">1/4</li>
+            <li id="li4">第一组第1张</li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");   // 获取ID
+    var zuoshu = 1;
+    var youshu = 1;
+    var li1 = document.getElementById("li1");
+    var li2 = document.getElementById("li2");
+    var li3 = document.getElementById("li3");
+    var li4 = document.getElementById("li4");
+    var but1 = document.getElementById("but1");
+    var but2 = document.getElementById("but2");
+
+    function la1() {
+        zuoshu++;
+        if (zuoshu == 5) {
+            zuoshu = 1;
+        }
+        img1.src = "img/" + zuoshu + ".jpg";
+        li3.innerHTML = zuoshu + "/4";
+        li4.innerHTML = "第一组第" + zuoshu + "张";
+    }
+    function la2() {
+        youshu++;
+        if (youshu == 4) {
+            youshu = 1;
+        }
+        img2.src = "img/pic" + youshu + ".jpg";
+        li1.innerHTML = youshu + "/3";
+        li2.innerHTML = "第二组第" + youshu + "张";
+    }
+
+    function la3() {
+        zuoshu--;
+        if (zuoshu == 0) {
+            zuoshu = 4;
+        }
+        img1.src = "img/" + zuoshu + ".jpg";
+        li3.innerHTML = zuoshu + "/4";
+        li4.innerHTML = "第一组第" + zuoshu + "张";
+    }
+    function la4() {
+        youshu--;
+        if (youshu == 0) {
+            youshu = 3;
+        }
+        img2.src = "img/pic" + youshu + ".jpg";
+        li1.innerHTML = youshu + "/3";
+        li2.innerHTML = "第二组第" + youshu + "张";
+    }
+
+    img1.onclick = function () {
+        la1();
+    }
+    img2.onclick = function () {
+        la2();
+    }
+
+    but1.onclick = function () {
+        la3();
+        la4();
+    }
+
+    but2.onclick = function () {
+        la1();
+        la2();
+    }
+
+
+</script>
+</html>

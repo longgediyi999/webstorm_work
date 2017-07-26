@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<span id="miao"></span>秒后跳<a href="#">传智播客</a>
+</body>
+<script>
+    var miao = document.getElementById("miao");
+    var i = 5;
+    function fn() {
+        if (i == 0) {
+            location.href = "http://www.baidu.com";
+            return;
+        }
+        miao.innerHTML = i;
+        i--;
+    }
+    fn();
+    setInterval("fn()", 1000);
+
+
+</script>
+</html>

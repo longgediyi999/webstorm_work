@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 350px;
+            height: 230px;
+            border: 1px solid black;
+            padding: 10px;
+
+            box-sizing: border-box;
+        }
+
+        span {
+            width: 39px;
+            height: 20px;
+            background-color: green;
+            display: inline-block;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<input type="text" id="inputt"/>
+<input type="button" value="按钮" id="btnn">
+</body>
+<script>
+    // red  blue green yellow
+    var btn = document.getElementById("btnn");
+    var inputt = document.getElementById("inputt");
+    var sum = 0;
+    btn.onclick = function a() {    //获取事件  执行操作
+        var b = inputt.value;
+//        console.log(typeof b);
+//        console.log();
+        var shuzu = b.split("");     //将字符串切割成数组
+        for (var i = 0; i < shuzu.length; i++) {
+            var span1 = document.createElement("span");   //创建要添加的元素
+            var node = document.createTextNode(shuzu[i]);  //创建要添加的元素属性
+            span1.appendChild(node);                       //把元素属性与元素绑定
+            if (sum % 4 == 0) {
+                span1.style.backgroundColor = "red";
+            }
+            if (sum % 4 == 1) {
+                span1.style.backgroundColor = "green";
+            }
+            if (sum % 4 == 2) {
+                span1.style.backgroundColor = "blue";
+            }
+            if (sum % 4 == 3) {
+                span1.style.backgroundColor = "pink";
+            }
+            sum++;
+            var element = document.getElementById("div1");  //拿到div1
+            element.appendChild(span1);   //绑定
+        }
+    }
+</script>
+</html>

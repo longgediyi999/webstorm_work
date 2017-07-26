@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            cursor: pointer;
+        }
+
+        .aaa {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="lalala">1</div>
+</body>
+<script>
+    //    var div = document.getElementById("lalala");
+    //    console.log(div);
+    //    function a() {
+    //        alert(1);
+    //    }
+
+    var div = document.getElementById("lalala");
+
+    div.onclick = function () {
+        div.className = "aaa";
+    }
+    //    div.onclick = function() {
+    //        alert(1);
+    //    }
+</script>
+
+</html>

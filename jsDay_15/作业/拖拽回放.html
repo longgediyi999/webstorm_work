@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            position: absolute;
+        }
+
+        input {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="回放"/>
+<div id="box"></div>
+</body>
+<script>
+    var box = document.getElementById("box");
+    var input = document.getElementsByTagName("input");
+
+    var t = [];
+    var l = [];
+
+    box.onmousedown = function (ev) {
+
+        box.style.transition="";
+        ev = ev || event;
+
+        var disX = ev.clientX - box.offsetLeft;
+        var disY = ev.clientY - box.offsetTop;  //鼠标距离div的距离
+
+        document.onmousemove = function (ev) {
+            ev = ev || event;
+            box.style.left = ev.clientX - disX + "px";
+            box.style.top = ev.clientY - disY + "px";
+            l.push(ev.clientX - disX);
+            t.push(ev.clientY - disY);
+//            console.log(l);
+//            console.log(t);
+            i = l.length;
+        }
+        document.onmouseup = function (ev) {
+            ev = ev || event;
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+//        console.log(l);
+//        console.log(t);
+    }
+//    console.log(l);
+//    console.log(t);
+
+    input[0].onclick = function () {
+          hah = setInterval("fn()",5);
+//        fn();
+    }
+    function fn() {
+//        for (i = l.length; i > 0; i--) {
+//            box.style.left = l[i] + "px";
+//            box.style.transition = "0.5s";
+//            box.style.top = t[i] + "px";
+//        }
+       // console.log(i);
+         if(i>0){
+            box.style.left = l[i] + "px";
+            box.style.top = t[i] + "px";
+            i--;
+        }else {
+            clearInterval(hah);
+              t = [];
+              l = [];
+         }
+    }
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr = [7, 3, 5, 9, 1, 56, 21, 45];
+        var temp;    //临时变量
+        for (var i = 0; i < arr.length; i++) {
+            for (j = 0; j < arr.length - i; j++) {    //让最大的数沉底
+                if (arr[j] > arr[j + 1]) {   //判断前一个数是否大于后一个数   如果大于进循环换变量
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        document.write(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

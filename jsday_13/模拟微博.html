@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>微博</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .box {
+            width: 600px;
+            padding: 10px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            outline-style: none;
+            border: 1px solid #ccc;
+            width: 450px;
+            height: 300px;
+            resize: none;
+            font-size: 20px;
+        }
+
+        label {
+            margin-left: 8px;
+            font-size: 20px;
+        }
+
+        button {
+            width: 60px;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        ul {
+            padding: 10px 80px;
+        }
+
+        li {
+            font: 500 20px/30px "simsun";
+            border-bottom: 1px dashed #ccc;
+            position: relative;
+        }
+
+        a {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <label for="txt">请输入</label>
+    <textarea id="txt"></textarea>
+    <button>发布</button>
+    <ul>
+        <!--<li>111 <a href="#">删除</a></li>-->
+        <!--<li>111 <a href="#">删除</a></li>-->
+        <!--<li>111 <a href="#">删除</a></li>-->
+    </ul>
+</div>
+</body>
+<script src="myTool.js"></script>
+<script type="text/javascript">
+
+    /*
+     *  功能分析： 1   写完文字内容 单击发布 让文字内容放入ul中
+     *            2 单击删除  删除所在行
+     * */
+    //获取事件源
+    var box = $("#box");
+
+    var area = $("#txt");
+
+    var btn = $("button")[0];
+
+    var oUl = $("ul")[0];
+
+   
+    //单击事件
+    btn.onclick= function () {
+        oUl.innerHTML="<li>"+area.value+"<a href='#'>删除</a></li>"+oUl.innerHTML;
+        var aA = $("a",oUl);
+
+        for(var i = 0; i < aA.length ; i++) {
+            aA[i].onclick = function () {
+                this.parentNode.style.display = "none";
+            }
+        }
+
+
+
+    }
+    
+
+
+    //获取生成的a标签
+
+  // console.log(typeof aA);
+
+
+    /* dom节点操作
+     先创建一个li
+     var oLi = document.createElement("li");
+     // 创建一个文本 （你说的话）
+     var oText1 = document.createTextNode(oTxt.value);
+     // 把文本节点加入到li的里面的后面
+     oLi.appendChild(oText1);
+
+     //创建 a标签元素节点
+     var oA = document.createElement("a");
+     oA.href = "javascript:;";
+     // 创建一个删除的文本节点
+     var oText2 = document.createTextNode("删除");
+     // 将文本节点放入oa
+     oA.appendChild(oText2);
+
+     // 将a标签放入 li中
+     oLi.appendChild(oA);
+
+     // 将li放入ul中
+     //oUl.appendChild(oLi);
+
+     oUl.insertBefore(oLi,first(oUl));
+
+     // 从页面中ul中获取所有的生成的a
+     var aA = $("a",oUl);
+     */
+
+</script>
+</html>

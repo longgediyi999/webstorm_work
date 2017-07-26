@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 81px;
+            height: 85px;
+            background: url("fly.gif") no-repeat;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #box1 {
+            width: 81px;
+            height: 85px;
+            background: url("fly.gif") no-repeat;
+
+            position: absolute;
+            left: 300px;
+            top: 300px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<div id="box1"></div>
+</body>
+<script>
+    var oBox = document.getElementById("box");
+    var oBox1 = document.getElementById("box1");
+
+    var onOff = {
+        l: false,
+        r: false,
+        t: false,
+        b: false   //建立一个对象   上下左右 值都为假
+    }
+
+    var onOff1 = {
+        l: false,
+        r: false,
+        t: false,
+        b: false   //建立一个对象   上下左右 值都为假
+    }
+
+    setInterval(function () {
+        if (onOff.l) {
+            oBox.style.left = oBox.offsetLeft - 8 + "px";
+            oBox.style.transform = "rotate(270deg)";
+        } else if (onOff.r) {
+            oBox.style.left = oBox.offsetLeft + 8 + "px";
+            oBox.style.transform = "rotate(90deg)";
+        }
+        if (onOff.t) {
+            oBox.style.top = oBox.offsetTop - 8 + "px";
+            oBox.style.transform = "rotate(0deg)";
+        } else if (onOff.b) {
+            oBox.style.top = oBox.offsetTop + 8 + "px";
+            oBox.style.transform = "rotate(180deg)";
+        }
+
+        if (onOff.l && onOff.t) {
+            oBox.style.transform = "rotate(315deg)";
+        } else if (onOff.l && onOff.b) {
+            oBox.style.transform = "rotate(225deg)";
+        } else if (onOff.t && onOff.r) {
+            oBox.style.transform = "rotate(45deg)";
+        } else if (onOff.b && onOff.r) {
+            oBox.style.transform = "rotate(135deg)";
+        }
+        limit();
+
+
+    }, 30);
+
+    setInterval(function () {
+        if (onOff1.l) {
+            oBox1.style.left = oBox1.offsetLeft - 8 + "px";
+            oBox1.style.transform = "rotate(270deg)";
+        } else if (onOff1.r) {
+            oBox1.style.left = oBox1.offsetLeft + 8 + "px";
+            oBox1.style.transform = "rotate(90deg)";
+        }
+        if (onOff1.t) {
+            oBox1.style.top = oBox1.offsetTop - 8 + "px";
+            oBox1.style.transform = "rotate(0deg)";
+        } else if (onOff1.b) {
+            oBox1.style.top = oBox1.offsetTop + 8 + "px";
+            oBox1.style.transform = "rotate(180deg)";
+        }
+
+        if (onOff1.l && onOff1.t) {
+            oBox1.style.transform = "rotate(315deg)";
+        } else if (onOff1.l && onOff1.b) {
+            oBox1.style.transform = "rotate(225deg)";
+        } else if (onOff1.t && onOff1.r) {
+            oBox1.style.transform = "rotate(45deg)";
+        } else if (onOff1.b && onOff1.r) {
+            oBox1.style.transform = "rotate(135deg)";
+        }
+        limit1();
+
+
+    }, 30);
+
+
+    //按下键盘动作
+    document.onkeydown = function (ev) {
+        ev = ev || event;
+        switch (ev.keyCode) {
+            case 37:
+                onOff.l = true;
+                break;
+            case 38:
+                onOff.t = true;
+                break;
+            case 39:
+                onOff.r = true;
+                break;
+            case 40:
+                onOff.b = true;
+                break;
+        }
+
+        switch (ev.keyCode) {
+            case 65:
+                onOff1.l = true;
+                break;
+            case 87:
+                onOff1.t = true;
+                break;
+            case 68:
+                onOff1.r = true;
+                break;
+            case 83:
+                onOff1.b = true;
+                break;
+        }
+
+    }
+
+    //抬起键盘
+    document.onkeyup = function (ev) {
+        ev = ev || event;
+        switch (ev.keyCode) {
+            case 37:
+                onOff.l = false;
+                break;
+            case 38:
+                onOff.t = false;
+                break;
+            case 39:
+                onOff.r = false;
+                break;
+            case 40:
+                onOff.b = false;
+                break;
+        }
+
+        switch (ev.keyCode) {
+            case 65:
+                onOff1.l = false;
+                break;
+            case 87:
+                onOff1.t = false;
+                break;
+            case 68:
+                onOff1.r = false;
+                break;
+            case 83:
+                onOff1.b = false;
+                break;
+        }
+
+    }
+
+    function limit() {
+        if (oBox.offsetLeft < 0) {
+            oBox.style.left = 0;
+        }
+        if (oBox.offsetLeft > document.documentElement.clientWidth - oBox.clientWidth) {
+            oBox.style.left = document.documentElement.clientWidth - oBox.clientWidth +"px";
+        }
+        if (oBox.offsetTop < 0) {
+            oBox.style.top = 0;
+        }
+        if (oBox.offsetTop > document.documentElement.clientHeight - oBox.clientHeight) {
+            oBox.style.top = document.documentElement.clientHeight - oBox.clientHeight + "px";
+        }
+
+    }
+
+    function limit1() {
+        if (oBox1.offsetLeft < 0) {
+            oBox1.style.left = 0;
+        }
+        if (oBox1.offsetLeft > document.documentElement.clientWidth - oBox1.clientWidth) {
+            oBox1.style.left = document.documentElement.clientWidth - oBox1.clientWidth +"px";
+        }
+        if (oBox1.offsetTop < 0) {
+            oBox1.style.top = 0;
+        }
+        if (oBox1.offsetTop > document.documentElement.clientHeight - oBox1.clientHeight) {
+            oBox1.style.top = document.documentElement.clientHeight - oBox1.clientHeight + "px";
+        }
+
+    }
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+

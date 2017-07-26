@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="单击切换图片" id="btn"/>
+<img src="img/1.jpg" alt="" id="img1"/>
+</body>
+<script>
+    window.onload = function() {
+        var oBtn = document.getElementById("btn");
+
+        var oImg = document.getElementById("img1");
+        var onOff  = true;
+        oBtn.onclick = function () {
+
+            if(onOff) {
+                oImg.src = "img/2.jpg";
+                onOff = false;
+            }
+            else {
+                oImg.src = "img/1.jpg";
+                onOff = true;
+            }
+        }
+        
+    }
+</script>
+</html>

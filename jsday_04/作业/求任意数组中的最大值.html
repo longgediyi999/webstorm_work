@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr1 = [1, 2, 3, 4, 5];
+        var arr2 = [7, 3, 9, 12, 5];
+        function zuixiaozhi(arr) {
+            var a = arr[0]
+            for (var i = 0; i < arr.length; i++) {
+                if (a > arr[i]) {
+                    a = arr[i];
+                }
+            }
+            return a;
+        }
+        var xiao1 = zuixiaozhi(arr1);
+        var xiao2 = zuixiaozhi(arr2);
+        console.log(xiao1,xiao2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

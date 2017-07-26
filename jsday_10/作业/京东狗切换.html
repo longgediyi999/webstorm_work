@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            position: relative;
+        }
+
+        img {
+            width: 160px;
+            height: 170px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <img src="img/jd1.png" alt="" id="img1"/>
+    <img src="img/jd2.png" alt="" id="img2"/>
+</div>
+</body>
+<script>
+    var img1 = document.getElementById("img1");
+    var temp = 0;
+    function bian() {
+        img1.style.zIndex = temp;
+        if (temp == 0) {
+            temp = 1;
+        } else if (temp == 1) {
+            temp = 0;
+        }
+        img2.style.zIndex = temp;
+    }
+    img2.onclick = function () {
+        bian();
+    }
+    img1.onclick = function () {
+        bian();
+    }
+</script>
+</html>

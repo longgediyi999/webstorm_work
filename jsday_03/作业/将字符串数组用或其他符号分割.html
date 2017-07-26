@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr = ["关羽", "张飞", "刘备"];
+        var string_Demo = '';
+        var xian = '|';
+        for (var i = 0; i < arr.length; i++) {
+            if (i == 2) {
+                string_Demo = string_Demo + arr[i];
+                break;
+            }
+            string_Demo = string_Demo + arr[i] + xian;
+        }
+        console.log(string_Demo);  //刷新有错误
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

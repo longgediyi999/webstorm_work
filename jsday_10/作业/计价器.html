@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><input type="button" value="-" id="jian1"/><span id="shu1">0</span><input type="button" value="+" id="jia1"/>单价:
+        <span>12.5</span>&nbsp;&nbsp;元&nbsp;小计:
+        <span id="xiaoji1"></span>&nbsp;&nbsp;&nbsp;&nbsp;元
+    </li>
+    <li><input type="button" value="-" id="jian2"/><span id="shu2">0</span><input type="button" value="+" id="jia2"/>单价:
+        <span>10.5</span>&nbsp;&nbsp;元&nbsp;小计:
+        <span id="xiaoji2"></span>&nbsp;&nbsp;&nbsp;&nbsp;元
+    </li>
+    <li><input type="button" value="-" id="jian3"/><span id="shu3">0</span><input type="button" value="+" id="jia3"/>单价:
+        <span>8</span>&nbsp;&nbsp;元&nbsp;小计:
+        <span id="xiaoji3"></span>&nbsp;&nbsp;&nbsp;&nbsp;元
+    </li>
+    <li><input type="button" value="-" id="jian4"/><span id="shu4">0</span><input type="button" value="+" id="jia4"/>单价:
+        <span>8.5</span>&nbsp;&nbsp;元&nbsp;小计:
+        <span id="xiaoji4"></span>&nbsp;&nbsp;&nbsp;&nbsp;元
+    </li>
+    <li><input type="button" value="-" id="jian5"/><span id="shu5">0</span><input type="button" value="+" id="jia5"/>单价:
+        <span>14.5</span>&nbsp;&nbsp;元&nbsp;小计:
+        <span id="xiaoji5"></span>&nbsp;&nbsp;&nbsp;&nbsp;元
+    </li>
+
+</ul>
+商品合计: <span id="zongheji">0</span>&nbsp;&nbsp;&nbsp;&nbsp;件 <br/>
+共花费了: <span id="gonghuafei">0</span>&nbsp;&nbsp;&nbsp;&nbsp;元 <br/>
+其中最贵的商品单价是: <span id="zuigui">0</span>&nbsp;&nbsp;&nbsp;&nbsp;元
+</body>
+<script src="myTool.js"></script>
+<script>
+    var zongheji = $("#zongheji");
+    var gonghuafei = $("#gonghuafei");
+    var zuigui = $("#zuigui");
+
+    var jian1 = $("#jian1");
+    var shu1 = $("#shu1");
+    var jia1 = $("#jia1");
+    var xiaoji1 = $("#xiaoji1");
+    var i1 = 0;
+
+    var jian2 = $("#jian2");
+    var shu2 = $("#shu2");
+    var jia2 = $("#jia2");
+    var xiaoji2 = $("#xiaoji2");
+    var i2 = 0;
+
+    var jian3 = $("#jian3");
+    var shu3 = $("#shu3");
+    var jia3 = $("#jia3");
+    var xiaoji3 = $("#xiaoji3");
+    var i3 = 0;
+
+    var jian4 = $("#jian4");
+    var shu4 = $("#shu4");
+    var jia4 = $("#jia4");
+    var xiaoji4 = $("#xiaoji4");
+    var i4 = 0;
+
+    var jian5 = $("#jian5");
+    var shu5 = $("#shu5");
+    var jia5 = $("#jia5");
+    var xiaoji5 = $("#xiaoji5");
+    var i5 = 0;
+
+    function a(i, shu, danjia, xiaoji) {
+        i--;
+        if (i <= 0) {
+            shu.innerHTML = 0;
+            i = 0;
+        } else {
+            shu.innerHTML = i;
+        }
+        xiaoji.innerHTML = i * danjia;
+
+        return i;
+
+    }
+
+    function b(i, shu, danjia, xiaoji) {
+        if (i <= 0) {
+            i = 0;
+        }
+        i++;
+        shu.innerHTML = i;
+        xiaoji.innerHTML = i * danjia;
+
+        return i;
+    }
+
+    function heji() {
+        zongheji.innerHTML = i1 + i2 + i3 + i4 + i5;
+        gonghuafei.innerHTML = i1 * 12.5 + i2 * 10.5 + i3 * 8 + i4 * 8.5 + i5 * 14.5;
+        daxiao();
+
+    }
+
+    function daxiao() {
+        if(i5>0){
+            zuigui.innerHTML = 14.5;
+            return;
+        }
+        if(i1>0){
+            zuigui.innerHTML = 12.5;
+            return;
+        }
+        if(i2>0){
+            zuigui.innerHTML = 10.5;
+            return;
+        }
+        if(i4>0){
+            zuigui.innerHTML = 8.5;
+            return;
+        }
+        if(i3>0){
+            zuigui.innerHTML = 8;
+            return;
+        }
+        if(i1==0&&i2==0&&i3==0&&i4==0&&i5==0){
+            zuigui.innerHTML = 0;
+            return;
+        }
+    }
+
+    jian1.onclick = function () {
+        i1 = a(i1, shu1, 12.5, xiaoji1);
+        heji();
+    }
+
+    jia1.onclick = function () {
+        i1 = b(i1, shu1, 12.5, xiaoji1);
+        heji();
+    }
+
+    jian2.onclick = function () {
+        i2 = a(i2, shu2, 10.5, xiaoji2);
+        heji();
+    }
+
+    jia2.onclick = function () {
+        i2 = b(i2, shu2, 10.5, xiaoji2);
+        heji();
+    }
+
+    jian3.onclick = function () {
+        i3 = a(i3, shu3, 8, xiaoji3);
+        heji();
+    }
+
+    jia3.onclick = function () {
+        i3 = b(i3, shu3, 8, xiaoji3);
+        heji();
+    }
+
+    jian4.onclick = function () {
+        i4 = a(i4, shu4, 8.5, xiaoji4);
+        heji();
+    }
+
+    jia4.onclick = function () {
+        i4 = b(i4, shu4, 8.5, xiaoji4);
+        heji();
+    }
+
+    jian5.onclick = function () {
+        i5 = a(i5, shu5, 14.5, xiaoji5);
+        heji();
+    }
+
+    jia5.onclick = function () {
+        i5 = b(i5, shu5, 14.5, xiaoji5);
+        heji();
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr = [1, 2, 3, 4, 5];
+        var num;
+        for (var i = 1; i < arr.length; i++) {
+            for (var j = 0; j < arr.length - i; j++) {
+                num = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = num;
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

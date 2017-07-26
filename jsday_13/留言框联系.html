@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #oUl {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+<ul id="oUl">
+    <!--<li>你说的话<a href="javascript:;">单机隐藏</a></li>-->
+</ul>
+<input type="text"/>
+<input type="button" value="发送"/>
+</body>
+<script src="myTool.js"></script>
+<script>
+    var oUl = $("#oUl");
+    var aInp = $("input");
+
+    aInp[0].focus();
+
+    aInp[1].onclick = function () {
+
+        var str = aInp[0].value;
+
+        var oLi = document.createElement("li");
+
+        var otext1 = document.createTextNode(str);
+
+        oLi.appendChild(otext1);
+
+        var oA = document.createElement("a");
+        oA.href = "javascript:;";
+        var oText2 = document.createTextNode("隐藏");
+
+        oA.appendChild(oText2);
+
+        //将a节点放入li
+        aLi.appendChild(oA);
+
+        //最后把li放入ul里
+
+        oUl.appendChild(oLi);
+
+        aInp[0].value = "";
+        aInp[0].focus();
+
+        //获取ul中所有的a
+        var aA = oUl.getElementsByTagName("a");
+        var aLi = oUl.getElementsByTagName("li");
+
+        for (var i = 0; i < aA.length; i++) {
+            aA[i].index = i;
+
+            aA[i].onclick = function () {
+                aLi[this.index].style.display = "none";
+            }
+        }
+    }
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

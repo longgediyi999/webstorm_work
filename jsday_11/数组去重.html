@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr = ["c", "a", "z", "a", "x", "a", "a", "z", "c", "x", "a", "x"];
+//        var newArr = [arr[0]];
+//
+//        for (var i = 0;i<arr.length;i++){
+//            var onOff = true;
+//            //拿原数组中的每一项去和新数组中的值一一对比
+//            for(var j = 0;j<newArr.length;j++){
+//                if(arr[i]==newArr[j]){
+//                    onOff = false;
+//                }
+//            }
+//            if(onOff) {
+//                newArr.push(arr[i]);
+//            }
+//        }
+//        console.log(newArr);
+        //利用json键名唯一的特点 去重
+
+        var obj = {
+
+        }
+        var arr2 = [];
+        for (var i = 0; i<arr.length;i++){
+            if(!obj[arr[i]]){
+                arr2.push(arr[i]);
+                obj[arr[i]] = true;
+            }
+        }
+        console.log(arr2);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

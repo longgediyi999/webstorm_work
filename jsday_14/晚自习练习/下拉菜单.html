@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box {
+            width: 80px;
+            border: 1px solid orange;
+            margin: 50px auto;
+        }
+        li {
+            list-style: none;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        ul,h3 {
+            margin: 0;
+            padding: 0;
+        }
+        h3 {
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            height: 30px;
+            line-height: 30px;
+            -webkit-user-select: none;/*禁止用户选择内容*/
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <h3>菜单</h3>
+    <ul>
+        <li>新闻</li>
+        <li>微博</li>
+        <li>游戏</li>
+        <li>影视</li>
+    </ul>
+</div>
+</body>
+
+<script>
+    var tH3 = document.getElementsByTagName("h3");
+
+    var tUl = document.getElementsByTagName("ul");
+
+    var onOff = true;
+
+    tH3[0].onclick = function (ev) {
+
+        ev = ev||event;
+
+        if(onOff){
+            tUl[0].style.display = "none";
+        }else {
+            tUl[0].style.display = "block";
+        }
+        onOff = !onOff;
+
+        ev.cancelBubble = true; //阻止事件冒泡
+
+    }
+
+    document.onclick = function () {
+        tUl[0].style.display = "none";
+        onOff = !onOff;
+    }
+
+</script>
+
+</html>

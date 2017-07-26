@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+
+</head>
+<body>
+<div class="wrap">
+    <table>
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="theadInp">
+            </th>
+            <th>菜名</th>
+            <th>饭店</th>
+        </tr>
+        </thead>
+
+        <tbody id="tbody">
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>红烧肉</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>西红柿鸡蛋</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>红烧狮子头</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>日式肥牛</td>
+            <td>田老师</td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+</body>
+<script src="myTool.js"></script>
+<script>
+    var input1 = $("#theadInp");  //第一个选择框
+
+    var inputt = $("input", $("#tbody"));  //后四个选择列表
+    //    console.log(inputt.length);
+    var kaiguan = true;
+
+    input1.onclick = function () {
+
+        if (kaiguan) {
+            for (var i = 0; i < inputt.length; i++) {
+                inputt[i].checked = "true";
+            }
+            kaiguan = false;
+        }
+        else {
+            for (var i = 0; i < inputt.length; i++) {
+                inputt[i].checked = "";
+            }
+            kaiguan = true;
+        }
+    }
+
+    for (var i = 0; i < inputt.length; i++) {
+        inputt[i].onclick = function () {
+            var onOff = true;
+            for (var i = 0; i < inputt.length; i++) {
+                if (inputt[i].checked != true) {
+                    onOff = false;
+                }
+                kaiguan =false;  //重中之重
+            }
+            input1.checked = onOff;
+            //只要有一个不等于真 那么就选不上  开关变为true
+            /*if (inputt[0].checked == true && inputt[1].checked == true && inputt[2].checked == true && inputt[3].checked == true) {
+                    input1.checked = true;
+                    kaiguan = false;
+                }*/
+
+        }
+    }
+
+</script>
+</html>

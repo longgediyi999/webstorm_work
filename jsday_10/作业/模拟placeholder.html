@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" value="请您输入内容"/>
+</body>
+<script src="myTool.js"></script>
+<script>
+    var oinput = $("input")[0];
+
+    oinput.onfocus = function () {  //获得焦点的时候
+        if (oinput.value == "请您输入内容") {
+            oinput.value = "";
+        }
+    }
+    oinput.onblur = function () {   //失去焦点的时候
+        if (oinput.value == "") {
+            oinput.value = "请您输入内容";
+        }
+    }
+</script>
+</html>

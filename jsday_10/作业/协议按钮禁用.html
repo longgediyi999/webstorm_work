@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<textarea name="" id="" cols="30" rows="10">
+    习近平强调，中方愿同巴方一道努力，在政治上继续坚定相互支持，加强协调配合，保持高层交往，不断推动两国各领域合作。中方赞赏巴方始终奉行一个中国政策，将一如既往支持巴勒斯坦人民恢复民族合法权利的正义事业。中方愿与巴方共建“一带一路”，支持有实力、有条件的企业到巴勒斯坦开展投资合作，实现互利共赢。我们愿同巴方在工业区建设、人才培训和太阳能电站项目等方面合作，帮助巴方提升自主发展能力。双方要继续加强在文化、教育、科研、党际、地方、民间、青年等各领域各层次交流合作，不断增进两国人民友谊。
+</textarea><br/>
+<input type="button" value="" id="lala"/>
+</body>
+<!--<script src="myTool.js"></script>-->
+<script>
+//    var oinput = document.getElementsByTagName("input")[0];
+    var oinput = document.getElementById("lala");
+    var i = 5;
+
+    function a() {
+        if(i==0){
+            oinput.disabled = "";
+            oinput.value = "同意";
+            clearInterval(haha);
+            return;
+        }
+        oinput.value = "请仔细阅读协议("+i+")";
+        oinput.disabled = "true";
+        i--;
+    }
+    a();
+    var haha = setInterval(a,1000);
+
+
+</script>
+</html>

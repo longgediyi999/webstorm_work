@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 682px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        #text1 {
+            height: 40px;
+            width: 600px;
+            line-height: 40px;
+            text-indent: 10px;
+            font-size: 20px;
+            border: 1px solid #2d78f4;
+            float: left;
+            outline: none;
+        }
+
+        #btn {
+            height: 44px;
+            width: 80px;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            background-color: #2d78f4;
+            border: 0;
+            outline: none;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <img src="img/bd_logo1.png" alt="">
+    <input type="text" id="text1">
+    <input type="button" value="百度一下" id="btn">
+</div>
+</body>
+<script src="myTool.js"></script>
+<script>
+
+    var text1 = $("#text1");
+    text1.focus();
+
+    text1.onfocus = function () {
+        text1.style.border = "1px solid #2d78f4";
+    }
+    text1.onblur = function () {
+        text1.style.border = "1px solid gray"
+    }
+
+
+</script>
+</html>

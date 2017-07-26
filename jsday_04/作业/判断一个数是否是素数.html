@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function sushu(a) {
+            if (a == 1 || a == 0) {
+                console.log("既不是素数也不适合数");
+            }
+            if (a >= 2) {
+                for (var i = 2; i < a; i++) {
+                    if (a % i == 0) {
+                        console.log("合数");
+                        return;
+                    }
+                }
+                console.log("质数")
+            }
+        }
+        sushu(5)
+        sushu(6)
+        sushu(3)
+        sushu(17)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .wrap {
+        width: 410px;
+        margin: 100px auto 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #c0c0c0;
+    }
+
+    th,
+    td {
+        border: 1px solid #d0d0d0;
+        color: #404060;
+        padding: 10px;
+    }
+
+    th {
+        background-color: #09c;
+        font: bold 16px "微软雅黑";
+        color: #fff;
+    }
+
+    td {
+        font: 14px "微软雅黑";
+    }
+
+    td a.get {
+        text-decoration: none;
+    }
+
+    a.del:hover {
+        text-decoration: underline;
+    }
+
+    tbody tr {
+        background-color: #f0f0f0;
+    }
+
+    tbody tr:hover {
+        cursor: pointer;
+        background-color: #fafafa;
+    }
+
+    .btnAdd {
+        width: 110px;
+        height: 30px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .form-item {
+        height: 100%;
+        position: relative;
+        padding-left: 100px;
+        padding-right: 20px;
+        margin-bottom: 34px;
+        line-height: 36px;
+    }
+
+    .form-item > .lb {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100px;
+        text-align: right;
+    }
+
+    .form-item > .txt {
+        width: 300px;
+        height: 32px;
+    }
+
+    .mask {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.5;
+        display: none;
+    }
+
+    .form-add {
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        margin-left: -197px;
+        padding-bottom: 20px;
+        background: #fff;
+        display: none;
+    }
+
+    .form-add-title {
+        background-color: #f7f7f7;
+        border-width: 1px 1px 0 1px;
+        border-bottom: 0;
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    .form-add-title span {
+        width: auto;
+        height: 18px;
+        font-size: 16px;
+        font-family: 宋体;
+        font-weight: bold;
+        color: rgb(102, 102, 102);
+        text-indent: 12px;
+        padding: 8px 0px 10px;
+        margin-right: 10px;
+        display: block;
+        overflow: hidden;
+        text-align: left;
+    }
+
+    .form-add-title div {
+        width: 16px;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        font-size: 30px;
+        line-height: 16px;
+        cursor: pointer;
+    }
+
+    .form-submit {
+        text-align: center;
+    }
+
+    .form-submit input {
+        width: 170px;
+        height: 32px;
+    }
+
+</style>
+	</head>
+	<body>
+
+<div class="wrap">
+    <!--添加按钮-->
+    <div>
+        <input type="button" value="添加数据" id="j_btnAddData" class="btnAdd">
+    </div>
+    <!--表格-->
+    <table>
+        <thead>
+        <tr>
+            <!-- <th><input type="checkbox" id="j_cbAll" /></th> -->
+            <th>课程名称</th>
+            <th>所属学院</th>
+            <th>已学会</th>
+        </tr>
+        </thead>
+        <tbody id="j_tb">
+        <tr>
+            <!-- <td><input type="checkbox"/></td> -->
+            <td>JavaScript</td>
+            <td>传智播客-前端与移动开发学院</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        <tr>
+            <!-- <td><input type="checkbox"/></td> -->
+            <td>css</td>
+            <td>传智播客-前端与移动开发学院</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        <tr>
+            <!-- <td><input type="checkbox"/></td> -->
+            <td>html</td>
+            <td>传智播客-前端与移动开发学院</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        <tr>
+            <!-- <td><input type="checkbox"/></td> -->
+            <td>jQuery</td>
+            <td>传智播客-前端与移动开发学院</td>
+            <td><a href="javascrip:;" class="get">GET</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--遮罩层-->
+<div id="j_mask" class="mask" style=" display: none;"></div>
+<!--添加区域-->
+<div id="j_formAdd" class="form-add" style=" display: none;">
+    <div class="form-add-title">
+        <span>添加数据</span>
+        <div id="j_hideFormAdd">x</div>
+    </div>
+    <div class="form-item">
+        <label class="lb" for="j_txtLesson">课程名称：</label>
+        <input class="txt" type="text" id="j_txtLesson" placeholder="请输入课程名称">
+    </div>
+    <div class="form-item">
+        <label class="lb" for="j_txtBelSch">所属学院：</label>
+        <input class="txt" type="text" id="j_txtBelSch" >
+    </div>
+    <div class="form-submit">
+        <input type="button" value="添加" id="j_btnAdd">
+    </div>
+</div>
+<!--引入外部写好的函数工具-->
+<script src="myTool.js"></script>
+<script>
+
+    var btnAdddata = $("#j_btnAddData");  //外部添加数据按钮
+
+    var j_mask = $("#j_mask");   //遮罩层
+    var j_formAdd = $("#j_formAdd"); //添加区域
+
+    var j_hideFormAdd = $("#j_hideFormAdd");  // 小窗口小X
+
+    var j_btnAdd = $("#j_btnAdd"); //小窗口的添加按钮
+
+    var j_txtLesson = $("#j_txtLesson"); //小窗口课程名称
+
+    var j_txtBelSch = $("#j_txtBelSch"); //小窗口所属学院
+
+
+    var j_tb = $("#j_tb");  // 获取表格身体元素
+
+    var aA = $("a",$("#j_tb"));
+
+    btnAdddata.onclick = function () {  //当点击外部添加数据按钮  让遮罩层和添加区域的隐藏属性变为显示
+        j_mask.style.display = "block";
+        j_formAdd.style.display = "block";
+    }
+
+    j_hideFormAdd.onclick = function () {  //当点击小窗口的X的时候 让遮罩层和添加区域的显示按钮变为隐藏
+        j_mask.style.display = "none";
+        j_formAdd.style.display = "none";
+    }
+    
+    j_btnAdd.onclick = function () { //点击小窗口的添加按钮的时候触发的事件
+
+        var o = document.createElement("tr");  //创建一个tr节点
+
+        var td = document.createElement("td");  //创建一个td节点
+        var text = document.createTextNode(j_txtLesson.value);  //创建一个节点值  值为添加的名称
+        td.appendChild(text);   //值与TD拼接
+
+        o.appendChild(td);  //把td拼接到大节点中
+
+
+
+        var td1 = document.createElement("td");
+        var text1 = document.createTextNode(j_txtBelSch.value);
+        td1.appendChild(text1);
+
+        o.appendChild(td1);
+
+        j_tb.appendChild(o);  //把这个创建的节点放到tbody的子元素末位
+
+        var td2 = document.createElement("td");
+        var a = document.createElement("a");
+        var texta = document.createTextNode("GET");
+        a.appendChild(texta);
+        a.href = "javascript:;";
+        a.setAttribute("class","get");
+        td2.appendChild(a);
+
+        o.appendChild(td2);
+
+
+
+        var aA = $("a",$("#j_tb"));
+        for(var i = 0; i < aA.length ; i++) {
+            aA[i].onclick = function () {
+                this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+            }
+        }
+    }
+
+    for(var i = 0; i < aA.length ; i++) {
+        aA[i].onclick = function () {
+            this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>
