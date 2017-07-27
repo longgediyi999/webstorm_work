@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            top: 0px;
+        }
+
+        #btn {
+            position: absolute;
+            top: 900px;
+        }
+
+        #btn1 {
+            position: absolute;
+            top: 1000px;
+        }
+
+    </style>
+</head>
+<body>
+<button id="btn">开始</button>
+<button id="btn1">开始1</button>
+</body>
+<script>
+    window.onload = function () {
+        var rootElement = document.body;   //取得body元素
+        var oBtn = document.getElementById("btn");
+        var oBtn1 = document.getElementById("btn1");
+        var timer = null;
+        //0 150 300
+        for (var i = 0; i < 12; i++) {   //循环创建div
+            var newDiv = document.createElement("div");
+            rootElement.appendChild(newDiv);
+            newDiv.setAttribute("id", "div" + (i + 1) + "");
+            newDiv.style.left = i * 150 + "px";
+//            if (i % 4 == 0) {
+//                newDiv.style.backgroundColor = "red";
+//            }
+//            if (i % 4 == 1) {
+//                newDiv.style.backgroundColor = "pink";
+//            }
+//            if (i % 4 == 2) {
+//                newDiv.style.backgroundColor = "yellow";
+//            }
+//            if (i % 4 == 3) {
+//                newDiv.style.backgroundColor = "green";
+//            }
+        }
+
+        var div = document.getElementsByTagName("div");
+        var jishu = 0;
+        var ii = 0;
+        var offOn = true;
+        oBtn.onclick = function () {
+//            clearInterval(timer);
+//            timer = null;
+            if (offOn) {
+                for (var i = 0; i < div.length; i++) {
+                    move(div[i], "top", (20 - i), 700);
+                }
+            }
+            else {
+
+                for (var j = 0; j < div.length; j++) {
+                    move(div[j], "top", (20 - j), 0);
+                }
+            }
+            offOn = !offOn;
+
+        }
+//        oBtn1.onclick = function () {
+//
+//            clearInterval(timer);
+//               // timer = null;
+//            console.log(timer);
+//        }
+
+        function move(obj, attr, speed, target, fn) {
+            clearInterval(obj.timer);
+            // 通过getStyle函数去获取样式表中的样式 当初的样式
+            var current = parseFloat(getStyle(obj, attr));
+            // 在内部通过自动判断正负
+            speed = current > target ? -speed : speed;
+            console.log(timer);
+            // 开启一个定时器
+            obj.timer = setInterval(function () {
+                //current = current + speed;
+                current += speed;
+                // 如果当前的值 大于等于 目标点
+                // 如果当前值大于等于目标点 并且速度是正  说明目标点 大于初始位置  往前走
+                if (current >= target && speed > 0 || current <= target && speed < 0) {
+                    // 则让当前值等于目标点
+                    current = target;
+                }
+                // 让div 的left 值 赋值为当前的 值
+                obj.style[attr] = current + "px";
+                // 如果当前的值为目标点了，清除定时器 并且设定时器为空对象
+                if (current == target) {
+                    clearInterval(obj.timer);
+                    timer = null;
+
+                    // 这里 一定是已经当前运动物体运动完了
+                    // 这里面的事情一定是物体运动完了之后做的 但是你要做的事情 可能很多 或者每次不一样
+                    // 把复杂的功能实现 放到核心函数的外面去 作为参数传进来 保证代码的可复用性
+                    /*if(fn){
+                     fn();
+                     }*/
+                    fn && fn();
+
+//                    if(ii==div.length){
+//                        return;
+//                    }
+//                    ii++;
+//                    move(div[ii],"top",30,700);
+
+                }
+            }, 30);
+        }
+
+    }
+
+
+    function getStyle(obj, attr) {
+        return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj)[attr];
+    }
+
+
+</script>
+</html>

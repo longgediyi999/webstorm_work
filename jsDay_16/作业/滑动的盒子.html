@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        li:first-child {
+            background-color: #2d78f4;
+            width: 166px;
+        }
+
+        li:nth-child(3) {
+            display: inline-block;
+            height: 400px;
+            width: 166px;
+            background: url("img/content.jpg") no-repeat;
+            background-position-y: -14px;
+            background-position-x: -9px;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>传智播客</li>
+    <li><img src="img/top.png" alt=""/></li>
+    <li></li>
+    <li><img src="img/btm.png" alt=""/></li>
+</ul>
+</body>
+
+<script>
+    window.onload = function () {
+        var oUl = document.getElementsByTagName("ul");
+        var oLi = oUl[0].getElementsByTagName("li");
+
+        var oImg = oUl[0].getElementsByTagName("img");
+
+
+        //运动函数
+        var timer = null;
+
+        function startMove(obj, attr, obj1) {
+
+            if(obj1 == oImg[0]){
+                var speed = 5;
+            }else {                       //用对象判断速度的正负
+                var speed = -5;
+            }
+
+            timer = setInterval(function () {
+
+                if(parseFloat(getStyle(obj, attr))>-14){
+                    obj.style[attr] = -14 + "px";
+                    clearInterval(timer);
+                    return;
+                }
+                if(parseFloat(getStyle(obj, attr))<-730){
+                    obj.style[attr] = -730 + "px";
+                    clearInterval(timer);
+                    return;
+                }
+
+                obj.style[attr] = parseFloat(getStyle(obj, attr)) - speed + "px";
+
+            }, 30);
+
+        }
+
+        oImg[0].onmousedown = function () {
+            startMove(oLi[2], "backgroundPositionY",this);
+        }
+        oImg[1].onmousedown = function () {
+            startMove(oLi[2], "backgroundPositionY",this);
+        }
+        oImg[0].onmouseup = function () {
+            clearInterval(timer);
+        }
+        oImg[1].onmouseup = function () {
+            clearInterval(timer);
+        }
+    }
+    function getStyle(obj, attr) {
+        return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj)[attr];
+    }
+
+
+</script>
+</html>
