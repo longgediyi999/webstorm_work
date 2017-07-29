@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 50px;
+				top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="走一圈" id="btn" />
+		<div id="box"></div>
+	</body>
+	<script src="myTool.js"></script>
+	<script type="text/javascript">
+		
+		var oBox = document.getElementById("box");
+		var oBtn = document.getElementById("btn");
+	
+		// 定义一个变量 让它初始化为空  后面用来存定时器
+		var timer = null;
+		
+		oBtn.onclick = function() {
+			move(oBox,"left",30,800);
+		}
+		
+		
+		
+		
+		
+		//=============================================
+		// 封装一个实现运动物体   上下 左右    速度我可以控制  目标点  匀速运动的函数
+		function move(obj,attr,speed,target,fn) {			
+			clearInterval(timer);
+		 // 通过getStyle函数去获取样式表中的样式 当初的样式
+		     var current = parseFloat(getStyle(obj,attr));
+		     // 在内部通过自动判断正负 
+		     speed = current> target ? -speed : speed;
+			// 开启一个定时器
+			timer = setInterval(function(){
+			    //current = current + speed;
+			    current += speed;
+			     // 如果当前的值 大于等于 目标点
+			     // 如果当前值大于等于目标点 并且速度是正  说明目标点 大于初始位置  往前走
+			    if (current >= target&&speed > 0 || current <= target &&speed<0) {
+			     	// 则让当前值等于目标点
+			     	current = target;
+			    }
+			     // 让div 的left 值 赋值为当前的 值
+				 obj.style[attr] = current +"px";
+				// 如果当前的值为目标点了，清除定时器 并且设定时器为空对象
+				 if(current == target) {
+				 	clearInterval(timer);
+				 	timer = null;
+				 	
+				 	// 这里 一定是已经当前运动物体运动完了
+				 	// 这里面的事情一定是物体运动完了之后做的 但是你要做的事情 可能很多 或者每次不一样
+				 	// 把复杂的功能实现 放到核心函数的外面去 作为参数传进来 保证代码的可复用性
+				 	/*if(fn){
+				 		fn();
+				 	}*/
+				 	fn&&fn();
+				 }				
+			},30);		
+		}
+		
+		// 这是一个获取样式的兼容性函数
+		function getStyle(obj,attr) {
+			return obj.currentStyle? obj.currentStyle[attr]:getComputedStyle(obj)[attr];
+		}
+	</script>
+</html>

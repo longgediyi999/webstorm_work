@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>无标题文档</title>
+    <style type="text/css">
+        body, ul, ol, li, img {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            width: 490px;
+            height: 170px;
+            padding: 5px;
+            position: relative;
+            border: 1px solid #ccc;
+            margin: 100px auto 0;
+            overflow: hidden;
+        }
+
+        .ad {
+            width: 490px;
+            height: 170px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #box img {
+            width: 490px;
+        }
+
+        .ad ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .ad ol li {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            background: #fff;
+            float: left;
+            margin-right: 10px;
+            cursor: pointer;
+            _display: inline;
+        }
+
+        .ad ol li.current {
+            background: yellow;
+        }
+
+        .ad ul li {
+            float: left;
+        }
+
+        .ad ul {
+            position: absolute;
+            top: 0;
+            left: -490px;
+            width: 3430px;
+        }
+
+        .ad ul li.current {
+            display: block;
+        }
+
+        #arr {
+            display: none;
+        }
+
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
+    <!--$  move-->
+    <script src="move(1).js"></script>
+
+
+</head>
+<body>
+
+<div id="box" class="all">
+    <div class="ad">
+        <ul id="imgs">
+            <li><img src="images/5.jpg"/></li>
+            <li><img src="images/1.jpg"/></li>
+            <li><img src="images/2.jpg"/></li>
+            <li><img src="images/3.jpg"/></li>
+            <li><img src="images/4.jpg"/></li>
+            <li><img src="images/5.jpg"/></li>
+            <li><img src="images/1.jpg"/></li>
+        </ul>
+    </div>
+    <!--左右小三角-->
+    <div id="arr">
+        <span id="left"><</span>
+        <span id="right">></span>
+    </div>
+</div>
+
+
+</body>
+<script>
+    window.onload = function () {
+
+        var xiaosanjiao = document.getElementById("arr");
+        var oBox = document.getElementById("box");
+        var sLeft = document.getElementById("left");
+        var sRight = document.getElementById("right");
+        var oUl = document.getElementById("imgs");
+        var oImg = document.getElementsByTagName("img");
+        var i = 1;
+        oBox.onmousemove = function () {
+            xiaosanjiao.style.display = "block";  //鼠标移动到上面
+        }
+        oBox.onmouseout = function () {
+            xiaosanjiao.style.display = "none";   //鼠标移开
+        }
+
+        //点击右  向右移动一个图片的宽度 当图片到5显示到头了
+        //点击左  向左移动一个图片的宽度 当图片到1显示到头了
+
+        setInterval(function () {
+            you();
+
+
+        },2000);
+
+        sLeft.onclick = function () {
+
+            i--;
+
+            move(oUl,"left",10,-oImg[0].offsetWidth*(i), function () {
+                document.title = i;
+                if(i<=0){
+                    oUl.style.left = -oImg[0].offsetWidth*5 + "px";
+                    i = 5;
+                }
+            });
+
+        }
+        
+        sRight.onclick = function () {
+            you();
+        }
+
+        function you() {
+            move(oUl,"left",10,-oImg[0].offsetWidth*(i+1), function () {
+                document.title = i;
+                if(i>=6){
+                    oUl.style.left = -oImg[0].offsetWidth*1 + "px";
+                    i = 1;
+                }
+            });
+            i++;
+            document.title = i;
+        }
+
+
+
+
+
+    }
+</script>
+</html>
+

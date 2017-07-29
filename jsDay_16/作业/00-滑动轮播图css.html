@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .outer {
+            width: 490px;
+            height: 170px;
+            margin: 100px auto;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .inner {
+            width: 490px;
+            height: 170px;
+            position: relative;
+            /*overflow: hidden;*/
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        ul {
+            width: 510%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        ul li {
+            float: left;
+        }
+
+        ol {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        ol li {
+            float: left;
+            width: 16px;
+            height: 16px;
+            margin: 0 7px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 16px;
+            cursor: pointer;
+            background-color: #fff;
+        }
+
+        .current {
+            color: #fff;
+            background-color: orange;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var oOl = document.getElementsByTagName("ol");
+            var oLi = oOl[0].getElementsByTagName("li");
+            var oUl = document.getElementsByTagName("ul");
+            var timer = null;
+
+            //document.title = oLi[1];
+
+            for (var i = 0; i < oLi.length; i++) {
+                oLi[i].setAttribute("aa", i);
+                oLi[i].onmouseover = function () {
+                    for (var i = 0; i < oLi.length; i++) {
+                        oLi[i].setAttribute("class", "");
+                    }
+                    startMove(oUl[0], this.getAttribute("aa"), "left");
+                    this.setAttribute("class", "current");
+                }
+                oLi[i].onmouseout = function () {
+                    // clearInterval(timer);
+
+                }
+            }
+
+            //移动到位置 左右晃动  class残留行内
+
+            //left->移动到 - 490
+
+            function startMove(obj, i, attr) {
+                clearInterval(timer);
+                var current = parseFloat(getStyle(obj, attr));
+                console.log(current);   // left的值
+                var iTarget = -490 * i;
+
+                if (iTarget > obj.offsetLeft) {
+                    var speed = -8;
+                } else {
+                    var speed = 8;
+                }
+
+                timer = setInterval(function () {
+                    document.title = obj.offsetLeft;
+                    current = current - speed;
+                    if (current < iTarget && speed > 0 || current > iTarget && speed < 0) {
+                        current = iTarget;
+                    }
+                    obj.style[attr] = current + "px";
+                    if (obj.offsetLeft == iTarget) {
+                        clearInterval(timer);
+                        timer = null;
+                    }
+                }, 30);
+
+            }
+
+        }
+
+        function getStyle(obj, attr) {
+            return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj)[attr];
+        }
+
+    </script>
+</head>
+<body>
+
+<div class="outer" id="outer">
+    <div class="inner">
+        <ul>
+            <li><img src="images/01.jpg" alt=""/></li>
+            <li><img src="images/02.jpg" alt=""/></li>
+            <li><img src="images/03.jpg" alt=""/></li>
+            <li><img src="images/04.jpg" alt=""/></li>
+            <li><img src="images/05.jpg" alt=""/></li>
+        </ul>
+
+        <ol>
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+    </div>
+</div>
+
+
+</body>
+</html>
