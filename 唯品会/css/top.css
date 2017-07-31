@@ -1,0 +1,310 @@
+#test {
+    position: absolute;
+    top: 3000px;
+}
+body, button, input, select, textarea {
+    font: 11px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+}
+.header {
+    position: relative;
+    z-index: 101;
+    color: #333;
+}
+.top-nav {
+    position: relative;
+    z-index: 21;
+    height: 28px;
+    line-height: 26px;
+    background-color: #f5f5f5;
+    color: #777;
+}
+
+.head-inner {
+    width: 1170px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.sel-area {
+    float: left;
+    position: relative;
+    z-index: 10;
+}
+
+.sel-area-div {
+    height: 28px;
+    width: 87px;
+}
+
+.sel-area-div-j {
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    background-color: #fff;
+}
+
+.sel-area span {
+    padding-left: 17px;
+    line-height: 26px;
+}
+
+.sel-area-i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-width: 4px;
+    vertical-align: middle;
+    border-color: #999 transparent transparent transparent;
+    border-style: solid dashed dotted dashed;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.sel-area-d {
+    width: 295px;
+    height: 460px;
+    position: absolute;
+    left: 0;
+    top: 28px;
+    background-color: #FFFFFF;
+    line-height: 26px;
+    border: 1px solid #cdcdcd;
+    display: none;
+    /*border-top-style: none;*/
+}
+
+.sel-area-d-i {
+    height: 3px;
+    width: 87px;
+    display: inline-block;
+    background-color: #fff;
+    position: relative;
+    top: -17px;
+    left: -1px;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+}
+
+.sab-title {
+    width: 255px;
+    margin: 0 0 14px 0;
+    padding-left: 4px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dotted #666;
+    font-weight: 700;
+    text-align: left;
+    color: #000;
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 18px;
+}
+
+.sab-table {
+    width: 260px;
+    height: 390px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #343434;
+    position: absolute;
+    left: 25px;
+    top: 37px;
+}
+
+.sab-table span {
+    cursor: pointer;
+    padding: 2px 5px;
+    color: #676767;
+    margin-right: 3px;
+}
+
+.sab-table tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.sab-table td {
+    text-align: left;
+}
+
+.top-nav-tool {
+    float: right;
+    width: 676px;
+
+}
+
+.top-nav-tool a {
+    color: #666
+}
+
+.top-nav-tool li {
+    display: inline-block;
+    height: 28px;
+    float: left;
+    padding-right: 10px;
+
+}
+
+.top-nav-tool i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/weipin_index/header.png") -134px 0px no-repeat;
+    position: relative;
+    bottom: -8px;
+}
+
+.top-nav-tool li:nth-child(7) a i {
+    background: url("../images/weipin_index/header.png") -100px -150px no-repeat;
+}
+
+.top-nav-tool li:nth-child(8) {
+    position: relative;
+    top: 3px;
+}
+
+.top-nav-tool span > i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-width: 4px;
+    vertical-align: middle;
+    border-color: #999 transparent transparent transparent;
+    border-style: solid dashed dotted dashed;
+    margin-bottom: 12px;
+    margin-left: 11px;
+}
+
+/*最上方nav部分*/
+.head-logo {
+    height: 100px;
+    position: relative;
+}
+
+.header-inner {
+    width: 1170px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-inner img {
+    height: 100px;
+}
+
+.header-logo-dop {
+
+}
+
+.header-logo-dop a {
+    position: relative;
+    left: -26px;
+
+}
+
+.header-vip {
+    position: absolute;
+    right: 165px;
+    top: 0;
+}
+
+.head-cart {
+    position: relative;
+    width: 134px;
+    float: right;
+    right: 45px;
+    top: -75px;
+}
+
+.head-cart i {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url("../images/weipin_index/header.png") 5px -53px no-repeat;
+}
+
+.counti-cons-bg {
+    display: inline-block;
+    background: #f10180;
+    height: 16px;
+    width: 24px;
+    border-radius: 8px;
+    height: 16px;
+    width: 24px;
+    line-height: 16px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: -13px;
+    left: 40px;
+}
+
+/*红色导航条*/
+.main-nav {
+    height: 40px;
+    line-height: 40px;
+    background-color: #f10180;
+    font-size: 14px;
+    color: #fff;
+}
+/*红色导航条*/
+
+/*中间部分*/
+.index-content {
+    height: 10000px;
+    background: url("../images/weipin_index/1.jpg") no-repeat;
+}
+
+.focus-banner {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    position: relative;
+    height: 392px;
+    margin-bottom: 10px;
+}
+
+.focus-banner-con-wrq {
+    width: 1105px;
+    height: 384px;
+    position: absolute;
+    margin: 0 auto;
+    box-shadow: 0 1px 3px rgba(167,167,167,.4);
+    background-color: red;
+    left: 408px;
+    top: 58px;
+}
+
+.focus-banner-con-wrq ul li{
+    display: inline-block;
+    width: 1105px;
+    height: 384px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.focus-banner-con-wrq ul li:first-child {
+    background: url("../images/weipin_index/15012464584003.jpg") no-repeat;
+    z-index: 1;
+}
+
+.focus-banner-con-wrq ul li:nth-child(2) {
+    background: url("../images/weipin_index/15013276066602.jpg") no-repeat;
+    z-index: 1;
+}
+
+.focus-banner-con-wrq span{
+    position: absolute;
+    width: 33px;
+    margin-top: -53px;
+    height: 66px;
+    line-height: 66px;
+    font-size: 24px;
+    cursor: pointer;
+    top: 50%;
+    z-index: 2;
+}
+
+

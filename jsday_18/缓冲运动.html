@@ -3,8 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+        }
+
+        #div2 {
+            width: 1px;
+            height: 1000px;
+            position: absolute;
+            left: 800px;
+            top: 0;
+            background-color: #0099cc;
+        }
+
+    </style>
 </head>
 <body>
-
+    <div id="div1"></div>
+    <div id="div2"></div>
 </body>
+<script>
+    var div1 = document.getElementById("div1");
+
+    document.onclick = function () {
+        huanchong("div1","left",800);
+    }
+    
+    function huanchong(obj,attr,target) {
+        var timer = null;
+        //距离越近 速度越慢  成正比
+        var speed = 0;
+        timer = setInterval(function () {
+            var mubiao = target - parseFloat(getStyle(obj,attr));  //距离目标点的距离
+            speed = mubiao/target;
+
+
+        },30);
+    }
+
+    function getStyle(obj,attr) {
+        return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj,attr);
+    }
+</script>
 </html>

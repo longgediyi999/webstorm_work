@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 150px;
+				height: 300px;
+				background: red;
+				position: fixed;
+				left: -150px;
+				top: 100px;
+				cursor: pointer;
+			}
+			#side {
+				width: 30px;
+				height: 60px;
+				line-height: 20px;
+				text-align: center;
+				color: white;
+				background: black;
+				position: absolute;
+				right: -30px;
+				top: 80px;
+			}
+			#img {
+				width: 500px;
+				position: absolute;
+				left: 100px;
+				opacity: 0.3;
+				filter:alpha(opacity=30);
+				czbk:123;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="side">分享到</div>
+		</div>
+		<img src="1.jpg" alt="" id="img" />
+	</body>
+	<script type="text/javascript">
+		// 获取box元素
+		var oBox = document.getElementById("box");
+		var oImg = document.getElementById("img");
+		// 设置一个变量  为空对象 后续用来存定时器
+		/*var timer = null;*/
+		// 当box 鼠标移上的时候 触发该事件
+		oBox.onmouseover = function() {
+			// 调用封装好的运动函数
+			animate(oBox,"left",0,10);
+		}
+		// 当鼠标移出box身上 触发该事件
+		oBox.onmouseout = function() {
+			// 调用封装好的运动函数
+			animate(oBox,"left",-150,-10);
+		}
+		
+		// 鼠标移到图片上 让图片透明度变成1  
+		oImg.onmouseover = function() {
+			
+			
+			opacityFn(this,"opacity",100,10);
+			
+		}
+		
+		
+		alert(getStyle(oImg,"czbk"))
+		
+		
+		//鼠标移开图片  透明度变回0.3
+		oImg.onmouseout = function() {
+			
+			opacityFn(this,"opacity",30,-10);
+			
+		}
+		// 尝试封装一个透明度变化的函数 
+		function opacityFn(obj,attr,target,speed) {
+			// 用定时器之前 先清除定时器 保证页面上只有一个定时器
+			clearInterval(obj.timer);
+			// 设置一个变量iCur 当前值  初始化为0
+			var iCur = 0;
+			obj.timer = setInterval(function(){
+				
+				// 在IE中想要生效透明度 必须使用filter   标准浏览器中想要生效 必须使用opacity
+				// 在css中写上的属性  IE就算不支持属性 但是它也可以读取的
+				// 根据权衡利弊 还是采用opacity  但是它是小数 
+				// 我们不妨 将小数 改成整数 进行运算   运算完之后 再改回小数进行赋值
+				iCur =  Math.round(getStyle(obj,attr)*100);// 
+				// 如果透明度 达到目标值了 则清除定时器
+				if (iCur == target ) {
+					clearInterval(obj.timer);
+					obj.timer = null;
+				} else {
+					// 将变化后的值 进行赋值  
+					// 标准浏览器下的赋值
+					obj.style[attr]= (iCur + speed)/100;
+					// IE6 7 8 下的赋值
+					obj.style.filter = 'alpha(opacity='+  (iCur + speed)+')';
+				}
+				
+			},30)
+			
+			
+		}
+		
+		
+		// 封装一个运动函数  参数： 运动对象  运动属性  目标点   速度
+		function animate(obj,attr,target,speed) {
+			
+			// 用定时器之前 先清除定时器 保证页面上只有一个定时器
+			clearInterval(obj.timer);
+			// 设置一个变量iCur 当前值  初始化为0
+			var iCur = 0;
+			// 开定时器
+			obj.timer = setInterval(function(){
+				// iCur获取当前的需要运动物体属性  left ： 150px===> 150数字类型
+				iCur =  parseFloat(getStyle(obj,attr));
+				// 判断 当前值 是否已经等于目标值 如果等于说明到了
+				if (iCur == target) {
+					// 清除定时器
+					clearInterval(obj.timer);
+					// 设定时器timer变量为空 清除里面的数字编号
+					obj.timer = null;
+				} else {
+					// 否则接着走
+					obj.style[attr] = iCur + speed + "px";
+				}
+				
+			},30);
+			
+		}
+		
+		
+		function getStyle(obj,attr) {
+			return obj.currentStyle? obj.currentStyle[attr] : getComputedStyle(obj)[attr];
+		}
+	</script>
+</html>
