@@ -456,6 +456,51 @@ body, button, input, select, textarea {
     top: -13px;
     z-index: 2;
     cursor: pointer;
-    background: url("");
+    background: url("../images/weipin_index/icon.png") no-repeat;
 }
 
+.index-rank-list a:nth-child(2) span {
+    background: url("../images/weipin_index/icon.png") no-repeat 0px -45px;
+}
+
+.index-rank-list a:nth-child(3) span {
+    background: url("../images/weipin_index/icon.png") no-repeat 0px -95px;
+}
+
+/*轮播图下方的下方*/
+.index-new-wrap {
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+
+.index-new-inner {
+    width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.index-new-title {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.index-new-title img{
+    max-width: 100%;
+    vertical-align: top;
+    border: 0 none;
+}
+
+.index-new-sec {
+    margin-bottom: 10px;
+}
+
+.index-new-sec-list {
+    width: 110%;
+}
+
+.index-new-sec-item {
+    width: 111px;
+    margin-right: 40px;
+    float: left;
+}
