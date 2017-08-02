@@ -2,14 +2,17 @@
     position: absolute;
     top: 3000px;
 }
+
 body, button, input, select, textarea {
-    font: 11px/1.5 tahoma,arial,Hiragino Sans GB,WenQuanYi Micro Hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+    font: 11px/1.5 tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
 }
+
 .header {
     position: relative;
     z-index: 101;
     color: #333;
 }
+
 .top-nav {
     position: relative;
     z-index: 21;
@@ -249,45 +252,68 @@ body, button, input, select, textarea {
     font-size: 14px;
     color: #fff;
 }
+
+.main-nav-js {
+    position: fixed;
+    width: 100%;
+    z-index: 9999999;
+    -webkit-transition: .3s linear;
+    top: 0;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+
+}
+
 /*红色导航条*/
 
 /*中间部分*/
 .index-content {
     height: 10000px;
-    background: url("../images/weipin_index/1.jpg") no-repeat;
+    background: url("../images/weipin_index/1.jpg") no-repeat center top;
+    position: relative;
 }
 
 .focus-banner {
     padding-top: 30px;
     padding-bottom: 20px;
     position: relative;
-    height: 392px;
     margin-bottom: 10px;
 }
 
 .focus-banner-con-wrq {
-    width: 1105px;
-    height: 384px;
-    position: absolute;
+    width: 1146px;
+    background: rgba(255, 255, 255, .86);
+    position: relative;
     margin: 0 auto;
-    box-shadow: 0 1px 3px rgba(167,167,167,.4);
-    background-color: red;
-    left: 408px;
-    top: 58px;
+    box-shadow: 0 1px 3px rgba(167, 167, 167, .4);
+    padding: 12px;
 }
 
-.focus-banner-con-wrq ul li{
-    display: inline-block;
-    width: 1105px;
-    height: 384px;
+.focus-banner-con {
+    width: 1146px;
+    height: 440px;
+    border-bottom: none;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.focus-banner-con ul {
+    height: 450px;
+    overflow: hidden;
+}
+
+.focus-banner-con-wrq ul li {
+    width: 1146px;
+    height: 400px;
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
 }
 
 .focus-banner-con-wrq ul li:first-child {
     background: url("../images/weipin_index/15012464584003.jpg") no-repeat;
-    z-index: 1;
+    z-index: 2;
 }
 
 .focus-banner-con-wrq ul li:nth-child(2) {
@@ -295,16 +321,141 @@ body, button, input, select, textarea {
     z-index: 1;
 }
 
-.focus-banner-con-wrq span{
+.focus-banner-con-wrq ul li:nth-child(3) {
+    background: url("../images/weipin_index/15014978870752.jpg") no-repeat;
+    z-index: 1;
+}
+
+.focus-banner-con-wrq ul li:nth-child(4) {
+    background: url("../images/weipin_index/15012308697773.jpg") no-repeat;
+    z-index: 1;
+}
+
+.focus-banner-con-wrq span {
+    background: rgba(0, 0, 0, .2);
+    border-radius: 2px;
     position: absolute;
     width: 33px;
-    margin-top: -53px;
     height: 66px;
     line-height: 66px;
     font-size: 24px;
     cursor: pointer;
     top: 50%;
+    margin-top: -53px;
     z-index: 2;
+    text-align: center;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
 }
 
+.focus-banner-con .focus-banner-con-class1 {
+    left: -33px;
+}
+
+.focus-banner-con .focus-banner-con-class1:hover {
+    background: rgba(0, 0, 0, .5);
+}
+
+.focus-banner-con .focus-banner-con-class2 {
+    right: -33px;
+}
+
+.focus-banner-con .focus-banner-con-class2:hover {
+    background: rgba(0, 0, 0, .5);
+}
+
+.fbc-trigger {
+    width: 1146px;
+    margin-left: -573px;
+    text-align: center;
+    left: 50%;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+}
+
+.fbc-trigger-con {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+.fbc-trigger-con li {
+    display: inline-block;
+    width: 229px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 40px;
+    font: 12px/40px 'microsoft Yahei';
+    color: #666;
+    cursor: pointer;
+    border-bottom: transparent 3px solid;
+    position: relative;
+}
+
+.fbc-trigger-line {
+    background-color: #e6057d;
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    left: 115px;
+    width: 229px;
+}
+
+/*中间下一点点部分*/
+.index-rank-wrap {
+    background-color: #fff;
+    padding: 8px 0 20px;
+}
+
+.index-rank-w {
+    width: 1170px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.index-rank-inner {
+    position: relative;
+}
+
+.index-rank-inner img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 0 none;
+    display: inline;
+}
+
+.index-rank-list {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+
+}
+
+.index-rank-item {
+    width: 166px;
+    height: 144px;
+    margin-right: 20px;
+    text-align: center;
+    float: left;
+    display: inline;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.index-rank-item-icon {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: -15px;
+    top: -13px;
+    z-index: 2;
+    cursor: pointer;
+    background: url("");
+}
 
