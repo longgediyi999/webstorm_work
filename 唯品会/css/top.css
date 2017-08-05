@@ -309,26 +309,30 @@ body, button, input, select, textarea {
     position: absolute;
     left: 0;
     top: 0;
+    display: none;
 }
 
 .focus-banner-con-wrq ul li:first-child {
     background: url("../images/weipin_index/15012464584003.jpg") no-repeat;
-    z-index: 2;
+    display: list-item;
+    /*z-index: 1;*/
 }
+
+
 
 .focus-banner-con-wrq ul li:nth-child(2) {
     background: url("../images/weipin_index/15013276066602.jpg") no-repeat;
-    z-index: 1;
+    /*z-index: 1;*/
 }
 
 .focus-banner-con-wrq ul li:nth-child(3) {
     background: url("../images/weipin_index/15014978870752.jpg") no-repeat;
-    z-index: 1;
+    /*z-index: 1;*/
 }
 
 .focus-banner-con-wrq ul li:nth-child(4) {
     background: url("../images/weipin_index/15012308697773.jpg") no-repeat;
-    z-index: 1;
+    /*z-index: 1;*/
 }
 
 .focus-banner-con-wrq span {
@@ -499,8 +503,434 @@ body, button, input, select, textarea {
     width: 110%;
 }
 
+/*.index-new-sec-list a{*/
+    /*text-decoration: none;*/
+/*}*/
+
 .index-new-sec-item {
+    float: left;
     width: 111px;
     margin-right: 40px;
-    float: left;
+
 }
+
+.index-new-sec-item img {
+    height: 111px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.index-new-item-name {
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+
+.index-new-third {
+    position: relative;
+}
+
+.index-new-third-con {
+    float: left;
+    width: 570px;
+    height: 366px;
+}
+
+.index-new-third-con-0 {
+    margin-right: 30px;
+}
+
+.index-new-third-list {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+
+.index-new-third-list a {
+    font-size: 16px;
+}
+
+
+.index-new-third-item {
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    margin-left: 10px;
+    float: left;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.index-new-third-item img {
+    width: 68px;
+    height: 68px;
+    margin-top: 23px;
+    max-width: 100%;
+}
+
+.index-new-third-list1 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/*中间核心展示部分*/
+
+.today-new {
+    width: 1170px;
+    margin: 0 auto 70px;
+}
+
+.shop-title {
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 68px;
+}
+
+.coundown-img {
+    position: absolute;
+    left: 50%;
+    margin-left: -585px;
+    top: 0;
+}
+
+.brand-wrap {
+    width: 1200px;
+}
+
+.today-new .hotSale-item {
+    width: 570px;
+    height: 350px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    float: left;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+
+}
+
+.hotSale-info {
+    position: absolute;
+    width: 320px;
+    height: 100px;
+    left: 50%;
+    bottom: 25px;
+    margin-left: -160px;
+    border-radius: 4px;
+    line-height: 1.2;
+    background: rgba(255,255,255,.9);
+}
+
+.hotSale-logo-img {
+    display: inline;
+    width: 100px;
+    height: 50px;
+    margin: 6px 0 3px;
+    vertical-align: top;
+}
+
+.hotSale-brand-img {
+    display: inline;
+    width: 570px;
+    height: 350px;
+}
+
+.hotSale-name {
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+    margin: 0 55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*控制中间是否显示*/
+.hotSale-hover {
+    width: 520px;
+    height: 300px;
+    top: 25px;
+    left: 25px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #fff center 100px;
+    /*background-color: #fff;*/
+    /*background-position: center 100px;*/
+    border-radius: 4px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.hotSale-pro-list {
+    padding-left: 34px;
+    margin-top: 16px;
+    height: 218px;
+    border-bottom: 1px dotted #333;
+}
+
+.hotSale-pro-item {
+    width: 140px;
+    height: 217px;
+    float: left;
+    margin-right: 16px;
+}
+
+.hotSale-pro-img {
+    width: 140px;
+    height: 177px;
+    margin-right: 16px;
+}
+
+.hotSale-pro-price {
+    line-height: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+}
+
+.hotSale-logo-img-bian {
+    display: inline;
+    width: 100px;
+    height: 50px;
+    vertical-align: top;
+    float: left;
+    margin-left: 34px;
+    margin-right: 20px;
+}
+
+.ui-btn-fav {
+    display: block;
+    float: left;
+    margin-top: 20px;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 63px;
+    cursor: pointer;
+}
+
+.ui-btn-fav-like {
+    width: 71px;
+    padding: 0 6px;
+    background: #fff;
+    border: 1px solid #ededed;
+    line-height: 18px;
+    border-radius: 12px;
+    color: #666;
+}
+
+
+
+.fav-hidden {
+    line-height: 20px;
+    vertical-align: top;
+}
+
+/*女装品牌*/
+.shop-sort {
+    width: 1170px;
+    margin: 0 auto 70px;
+    position: relative;
+}
+
+.shop-sort-title {
+    margin-bottom: 20px;
+    min-height: 43px;
+    border-bottom: 1px #1a1a1a solid;
+    position: relative;
+}
+
+.shop-all-btn {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.vipFont {
+    color: red;
+    font-size: 14px;
+    position: relative;
+    top: 1px;
+    font-family: iconfont;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+}
+
+
+/*.vipFont {*/
+    /*font-family:"iconfont";*/
+    /*margin-top: 2px;*/
+    /*line-height: 1;*/
+/*}*/
+
+.brand-wrap {
+    width: 1200px;
+}
+
+.brand-item {
+    width: 568px;
+    height: 312px;
+    margin-right: 30px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.brand-img {
+    width: 570px;
+    height: 273px;
+}
+
+.pms-info {
+    width: 445px;
+    top: 243px;
+    position: absolute;
+    left: 0;
+    background: rgba(0,0,0,.6);
+    height: 30px;
+    line-height: 30px;
+    padding: 0 100px 0 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.brand-info {
+    position: relative;
+    padding: 0 120px 0 10px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+}
+
+.brand-discount {
+    color: #4d4d4d;
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100px;
+    display: inline-block;
+}
+
+.salebg2 {
+    font-size: 24px;
+    color: #f10582;
+    margin-right: 3px;
+    font-weight: 700;
+}
+
+.brand-name {
+    cursor: pointer;
+    font-size: 14px;
+    color: #4d4d4d;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 230px;
+    display: inline-block;
+}
+
+.brand-time {
+    width: 52px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    height: 16px;
+    line-height: 16px;
+    color: #4d4d4d;
+    white-space: nowrap;
+}
+
+.time-icon {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    background: url("../images/woman_ad/index_imgs.png") no-repeat -50px 0;
+}
+
+.J_time_icon {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ui-btn-fav1 {
+    top: 248px;
+    display: block;
+    position: absolute;
+    height: 20px;
+    line-height: 20px;
+    right: 10px;
+    opacity: 1;
+    width: auto;
+    min-width: 34px;
+}
+
+.ui-btn-fav-like {
+    width: 71px;
+    background: #fff;
+    border: 1px solid #ededed;
+    color: #333;
+    border-radius: 12px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 8px;
+    display: block;
+}
+
+.fav-hidden {
+    display: inline-block;
+}
+
+.shop-sort-ft {
+    border-top: 1px solid #e8e8e8;
+}
+
+.shop-more-btn {
+    width: 324px;
+    display: block;
+    color: #fff;
+    height: 44px;
+    background-color: #f10180;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 44px;
+    margin: -1px auto 20px;
+}
+
+.vipIndexFont {
+    vertical-align: middle;
+    font-size: 34px;
+    /*font-family: vipIndexFont;*/
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

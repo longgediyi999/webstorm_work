@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="开灯"/>
+<input type="button" value="关灯"/>
+
+
+<img src="09.jpg" alt=""/>
+</body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $("input:eq(0)").click = function () {
+            $("body").css("background","white");
+        };
+        $("input:eq(1)").click = function () {
+            $("body").css("background","black");
+        };
+    });
+</script>
+</html>
