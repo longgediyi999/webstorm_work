@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="range" min="0" max="255" step="1" value="0" id="redBtn"/>
+<input type="range" min="0" max="255" step="1" value="0" id="greenBtn"/>
+<input type="range" min="0" max="255" step="1" value="0" id="blueBtn"/>
+</body>
+<script>
+    var redBtn = document.getElementById("redBtn");
+    var greenBtn = document.getElementById("greenBtn");
+    var blueBtn = document.getElementById("blueBtn");
+
+    var red = redBtn.value;
+    var green = greenBtn.value;
+    var blue = blueBtn.value;
+
+    document.body.style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+
+    redBtn.oninput = function () {
+        var red = redBtn.value;
+        var green = greenBtn.value;
+        var blue = blueBtn.value;
+
+        document.body.style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+    }
+    greenBtn.oninput = function () {
+        var red = redBtn.value;
+        var green = greenBtn.value;
+        var blue = blueBtn.value;
+
+        document.body.style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+    }
+    blueBtn.oninput = function () {
+        var red = redBtn.value;
+        var green = greenBtn.value;
+        var blue = blueBtn.value;
+
+        document.body.style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+    }
+
+
+
+
+
+</script>
+</html>

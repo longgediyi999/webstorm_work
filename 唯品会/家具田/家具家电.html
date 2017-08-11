@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>家居电器</title>
+    <link rel="stylesheet" href="css/chushihua.css">
+    <link rel="stylesheet" href="css/dian.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/standard.css">
+
+</head>
+<body>
+
+<div style="height: 170px;width: 100%;">
+    <div class="header clearfix">
+
+        <div class="nav">
+            <div class="nava m">
+                <!--地区选择部分-->
+                <!--北京这里的鼠标变成小手 是鼠标放到整个div上发生改变，不只是给北京加了一个a标签-->
+                <div class="area fl">
+                    <span style="font-size: 2px;">北京</span>
+                    <div class="selected fr selecteda"></div>
+                    <!--地区选择隐藏部分-->
+                    <div class="areaSelected disn">
+                        <div class="cover covera"></div>
+                        <h5>请选择所在的收获地区</h5>
+                        <ul class="selectedArea" id="area">
+                            <li><span>A</span><a href="#">安徽</a><a href="#">澳门</a></li>
+                            <li><span>B</span><a href="#">北京</a></li>
+                            <li><span>C</span><a href="#">重庆</a></li>
+                            <li><span>F</span><a href="#">福建</a></li>
+                            <li><span>G</span><a href="#">广东</a><a href="#">广西</a><a href="#">贵州</a><a href="#">甘肃</a>
+                            </li>
+                            <li><span>H</span><a href="#">河北</a><a href="#">河南</a><a href="#">黑龙江</a><a
+                                    href="#">海南</a><a href="#">湖北</a><a href="#">湖南</a></li>
+                            <li><span>J</span><a href="#">江苏</a><a href="#">吉林</a><a href="#">江西</a></li>
+                            <li><span>L</span><a href="#">辽宁</a></li>
+                            <li><span>N</span><a href="#">内蒙古</a><a href="#">宁夏</a></li>
+                            <li><span>Q</span><a href="#">青海</a></li>
+                            <li><span>S</span><a href="#">上海</a><a href="#">山东</a><a href="#">山西</a><a href="#">四川</a><a
+                                    href="#">陕西</a></li>
+                            <li><span>T</span><a href="#">台湾</a><a href="#">天津</a></li>
+                            <li><span>X</span><a href="#">西藏</a><a href="#">香港</a><a href="#">新疆</a></li>
+                            <li><span>Y</span><a href="#">云南</a></li>
+                            <li><span>Z</span><a href="#">浙江</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--ul里的li都有ａ链接-->
+                <ul class="vip fl">
+                    <li class="onloadf">
+                        <a href="#">请登录</a>
+                        <!--请登录隐藏部分-->
+                        <div class="onload disn">
+                            <div class="cover coverb"></div>
+                            <div class="onloadperson">
+                                <div class="onloadhead fl"></div>
+                                <div class="onloadin fl">
+                                    <a href="#">您好[请登录]</a>
+                                </div>
+                            </div>
+                            <div class="onloadselected">
+                                <div class="onloadcoin fl">
+                                    <a href="#">我的收藏</a><br/>
+                                    <a href="#">零钱</a><br/>
+                                    <a href="#">我的唯品币</a>
+                                </div>
+                                <div class="onloadorder fl">
+                                    <a href="#">我的订单</a><br/>
+                                    <a href="#">我的优惠券</a><br/>
+                                    <a href="#">唯品金融</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li><a href="#">注册</a></li>
+                    <li></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li></li>
+                    <li class="discountf">
+                        <a href="#">我的特卖</a>
+                        <div class="selected fr selectedb"></div>
+                        <!--特卖隐藏部分-->
+                        <div class="discount disn">
+                            <div class="cover coverc"></div>
+                            <a href="#">品牌收藏(0)</a><br/>
+                            <a href="#">商品收藏(0)</a><br/>
+                            <a href="#">我的足迹(0)</a>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li class="clubf"><a href="#">会员俱乐部</a>
+                        <div class="selected fr selectedb"></div>
+                        <!--会员俱乐部隐藏部分-->
+                        <div class="club disn">
+                            <div class="cover coverd"></div>
+                            <a href="#">俱乐部首页</a><br/>
+                            <a href="#">维品币兑换</a><br/>
+                            <a href="#">免费抽大奖</a>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li class="servicef"><a href="#">客户服务</a>
+                        <div class="selected fr selectedb"></div>
+                        <!--客户服务隐藏部分-->
+                        <div class="service disn">
+                            <div class="cover covere"></div>
+                            <a href="#">联系客服</a><br/>
+                            <a href="#">帮助中心</a><br/>
+                            <a href="#">服务中心</a><br/>
+                            <a href="#">知识产权投诉</a>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li class="phonef">
+                        <span class="fl"></span>
+                        <a href="#">手机版</a>
+                        <!--手机隐藏部分-->
+                        <div class="phone disn">
+                            <div class="cover coverf"></div>
+                            <a href="#"><img src="images/1466134037230.jpg" alt=""/></a>
+                            <a href="#" id="phone">随时逛&nbsp;及时抢</a><br/>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li class="moref"><a href="#">更多</a>
+                        <div class="selected fr selectedb"></div>
+                        <!--更多选择隐藏部分-->
+                        <div class="more disn">
+                            <div class="cover coverg"></div>
+                            <div class="cooperate">
+                                <h5>合作专区</h5>
+                                <a href="#">联名卡申请</a>
+                                <a href="#">唯品卡</a>
+                                <a href="#">支付专区</a>
+                            </div>
+                            <div class="aboutUs">
+                                <h5>关于我们</h5>
+                                <a href="#">Sell on vip</a>
+                                <a href="#">品牌招商</a>
+                                <a href="#">官方微博</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--右侧边栏-->
+        <div id="sidebar">
+            <!--账号部分-->
+            <div id="account">
+                <!--账号隐藏部分-->
+                <div id="accountHide">
+                    <button id="button" class="fr">
+                        <i class="iconfont">&#xe72a;</i>
+                    </button>
+                    <a href="#">
+                        <div id="headPortrait" class="m">
+                            <img src="images/zimages/tubiao.jpg" alt="" id="headImg"/>
+                        </div>
+                    </a>
+                    <span id="enrollAndOnload" class="m">你好！请 <a href="#">登陆</a>|<a href="#">注册</a></span>
+                    <div id="my">
+                        <div id="myContent">
+                            <div id="myOrder">
+                                <div id="myOrderIcon" class="m">
+                                    <i class="iconfont">&#xe623;</i>
+                                </div>
+                                <a href="#" class="m">我的订单</a>
+                            </div>
+                            <div id="myNews">
+                                <div id="myNewsIcon" class="m">
+                                    <i class="iconfont">&#xe636;</i>
+                                </div>
+                                <a href="#" class="m">我的消息</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="vipClub">
+                        <a href="#">会员俱乐部</a>
+                    </div>
+                </div>
+                <div id="accountIcon" class="m">
+                    <img src="images/zimages/tx.png"/>
+                </div>
+                <span id="accountNumber">账号</span>
+            </div>
+            <!--购物袋部分-->
+            <div id="shopping">
+                <!--购物袋隐藏部分-->
+                <div id="shoppingHide">
+                    <button class="button fr">
+                        <i class="iconfont">&#xe72a;</i>
+                    </button>
+                    <a href="#">
+                        <div class="headPortrait">
+                            <img src="images/zimages/tubiao.jpg" alt="" class="headImg"/>
+                        </div>
+                    </a>
+                    <span class="enrollAndOnload m">你好！请 <a href="#">登陆</a>|<a href="#">注册</a></span>
+                </div>
+                <div id="shoppingIcon" class="m">
+                    <img src="images/zimages/daizi.png" alt=""/>
+                </div>
+                <span id="shoppingBag" class="m">购物袋</span>
+                <div id="shoppingCount" class="m">
+                    <span>0</span>
+                </div>
+            </div>
+            <!--优惠券部分-->
+            <div id="coupon">
+                <!--优惠券隐藏部分-->
+                <div id="myCouponHide">我的优惠券</div>
+                <div id="couponHide">
+                    <button class="button fr">
+                        <i class="iconfont">&#xe72a;</i>
+                    </button>
+                    <a href="#">
+                        <div class="headPortrait">
+                            <img src="images/zimages/tubiao.jpg" alt="" class="headImg"/>
+                        </div>
+                    </a>
+                    <span class="enrollAndOnload m">你好！请 <a href="#">登陆</a>|<a href="#">注册</a></span>
+                </div>
+                <div id="couponIcon" class="m">
+                    <img src="images/zimages/youhui.png" alt=""/>
+                </div>
+            </div>
+            <!--品牌部分-->
+            <div id="brand">
+                <!--品牌隐藏部分-->
+                <div id="myBrandHide">品牌收藏</div>
+                <div id="brandHide">
+                    <button class="button fr">
+                        <i class="iconfont">&#xe72a;</i>
+                    </button>
+                    <a href="#">
+                        <div class="headPortrait">
+                            <img src="images/zimages/tubiao.jpg" alt="" class="headImg"/>
+                        </div>
+                    </a>
+                    <span class="enrollAndOnload m">你好！请 <a href="#">登陆</a>|<a href="#">注册</a></span>
+                </div>
+                <div id="brandIcon" class="m">
+                    <img src="images/zimages/pinpai.png" alt=""/>
+                </div>
+            </div>
+            <!--商品部分-->
+            <div id="commodity">
+                <!--商品隐藏部分-->
+                <div id="myCommodityHide">商品收藏</div>
+                <div id="commodityHide">
+                    <button class="button fr">
+                        <i class="iconfont">&#xe72a;</i>
+                    </button>
+                    <a href="#">
+                        <div class="headPortrait">
+                            <img src="images/zimages/tubiao.jpg" alt="" class="headImg"/>
+                        </div>
+                    </a>
+                    <span class="enrollAndOnload m">你好！请 <a href="#">登陆</a>|<a href="#">注册</a></span>
+                </div>
+                <div id="commodityIcon" class="m">
+                    <img src="images/zimages/shangpin.png" alt=""/>
+                </div>
+            </div>
+            <!--我的足迹-->
+            <div id="footmark">
+                <!--我的足迹隐藏部分-->
+                <div id="myFootMarkHide">我的足迹</div>
+                <div id="footmarkHide">
+                    <button class="button fr">
+                        <i class="iconfont">&#xe72a;</i>
+                    </button>
+                    <a href="#">
+                        <div class="headPortrait">
+                            <img src="images/zimages/tubiao.jpg" alt="" class="headImg"/>
+                        </div>
+                    </a>
+                    <span class="enrollAndOnload m">你好！请 <a href="#">登陆</a>|<a href="#">注册</a></span>
+                </div>
+                <div id="footmarkIcon" class="m">
+                    <img src="images/zimages/zuji.png" alt=""/>
+                </div>
+            </div>
+            <!--会员反馈-->
+            <div id="vipTicklingfarther">
+                <!--会员反馈隐藏部分-->
+                <div id="myVipTicklingHide">会员反馈</div>
+                <a href="#">
+                    <div id="vipTickling">
+                        <div id="vipTicklingIcon" class="m">
+                            <img src="images/zimages/fankui.png" alt=""/>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!--返回顶部部分-->
+            <div id="backTop">
+                <!--返回顶部隐藏部分-->
+                <!--这里和底部调查问卷产生了层级顺序问题，调用JS时解决
+                该问题已经解决，给隐藏部分的的定位的父元素加层级999-->
+                <div id="myBackTopHide">返回顶部</div>
+                <div id="backTopIcon" class="m">
+                    <img src="images/zimages/dingbu.png" alt=""/>
+                </div>
+            </div>
+        </div>
+        <!--底部问卷调查-->
+        <a href="#">
+            <div id="questionnaireSurvey"></div>
+        </a>
+        <!--LOGO部分-->
+        <div id="logo" class="m">
+            <!--viplogo部分-->
+            <div id="logoImg" class="fl">
+                <a href="#">
+                    <img src="images/1496219443500.png" alt=""/>
+                </a>
+            </div>
+            <!--品质保证部分-->
+            <div id="quality" class="fl">
+                <ul>
+                    <!--这里的三个li没有添加a链接，JQ的时候添加链接路径-->
+                    <li id="qualityProducts"></li>
+                    <li id="sevenDay"></li>
+                    <li id="returnedPurchase"></li>
+                </ul>
+            </div>
+            <!--顶部购物袋部分-->
+            <div id="myTopShoppingBags" class="fl">
+                <!--顶部购物袋隐藏部分-->
+                <div id="myTopShoppingBagsHide" class="disn" style="z-index: 100000">
+                    <div class="cover coverh"></div>
+                    <div id="topContent" class="m">
+                        <span style="font-size: 12px;">好像还未登录！<a href="#">马上登录</a> 查看购物袋吧！</span>
+                    </div>
+                </div>
+                <div id="cutOffRule" class="fl"></div>
+                <div id="myTopShoppingBagsIcon" class="fl">
+                    <i id="count">0</i>
+                </div>
+                <p id="bagsWord" class="fl">我的购物袋</p>
+            </div>
+        </div>
+        <!--主要的导航-->
+        <div id="mianNav">
+            <div id="mianNavContent" class="m">
+                <!--主要的各种分类-->
+                <ul>
+                    <li><a href="../index.html">首页</a></li>
+                    <li id="vipgj"><a href="../唯品国际/VIP.html">唯品国际</a></li>
+                    <li><a href="../母婴强/MotherAndBady.html">母婴</a></li>
+                    <li><a href="#">家具家电</a></li>
+                    <li><a href="../男士/index.html">男士</a></li>
+                    <li><a href="#">美妆</a></li>
+                    <li><a href="#">生活超市</a></li>
+                    <li><a href="#">金融</a></li>
+                    <li id="topMore">
+                        <span id="topMoreWord" style="font-size: 16px; line-height: 20px;">更多</span>
+                        <div id="topMores" class="selectedm fr"></div>
+                        <!--更多部分的隐藏部分-->
+                        <div id="topMoreHide" class="disn">
+                            <ul>
+                                <li id="topMoreHiden">
+                                    <div class="shadow"></div>
+                                    <div class="brand-text">
+                                        <p class="brand-name-Chinses">女装</p>
+                                    </div>
+                                </li>
+                                <li id="topMoreHidex">
+                                    <div class="shadow"></div>
+                                    <div class="brand-text">
+                                        <p class="brand-name-Chinses">鞋包</p>
+                                    </div>
+                                </li>
+                                <li id="topMoreHidep">
+                                    <div class="shadow"></div>
+                                    <div class="brand-text">
+                                        <p class="brand-name-Chinses">配饰</p>
+                                    </div>
+                                </li>
+                                <li id="topMoreHidey">
+                                    <div class="shadow"></div>
+                                    <div class="brand-text">
+                                        <p class="brand-name-Chinses">运动</p>
+                                    </div>
+                                </li>
+                                <li id="topMoreHidew">
+                                    <div class="shadow"></div>
+                                    <div class="brand-text">
+                                        <p class="brand-name-Chinses">唯品奢</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!--分类与预告-->
+                <div id="classifyAndNotice" class="fl">
+                    <a href="#">
+                        <div id="classify">
+                            <img src="images/zimages/fenlei.png" alt=""/>
+                            <span style="font-size: 16px">分类</span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div id="notice">
+                            <img src="images/zimages/yugao.png" alt=""/>
+                            <span style="font-size: 16px">预告</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--=======================顶部轮播图=====================================-->
+<div id="top_box">
+    <div id="u_box">
+        <ul id="u_top">
+            <li><img src="img/3.png" alt=""></li>
+            <li><img src="img/1.png" alt=""></li>
+            <li><img src="img/2.png" alt=""></li>
+            <li><img src="img/3.png" alt=""></li>
+            <li><img src="img/1.png" alt=""></li>
+        </ul>
+        <div id="sanJiao">
+            <span id="top_l"> &lt; </span>
+            <span id="top_r"> &gt; </span>
+        </div>
+        <ul id="circle" class="c_li">
+            <li style="background-color: #ccc"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="hot_kind_top">
+        <p>———————</p><span>热门</span><span>分类</span>
+        <p>———————</p>
+        <h5>HOT CATEGORY</h5>
+    </div>
+
+    <div class="hot_kind">
+        <div class="hot_kind_left">
+            <ul id="left1">
+                <li>家纺布艺 <span> &gt; </span></li>
+                <li>家居百货 <span> &gt; </span></li>
+                <li>小 家 电 <span> &gt; </span></li>
+                <li>3C 数 码 <span> &gt; </span></li>
+                <li>大 家 电 <span> &gt; </span></li>
+                <li>家居家装 <span> &gt; </span></li>
+            </ul>
+        </div>
+        <div id="pic_right">
+            <div id="div1">
+                <ul id="right_top" class="right_top">
+                    <li>
+                        <img src="img/14824023723993.jpg" alt="">
+                        <span>床上套件</span>
+                    </li>
+                    <li>
+                        <img src="img/14824025718411.jpg" alt="">
+                        <span>保暖被芯</span>
+                    </li>
+                    <li>
+                        <img src="img/14824026639286.jpg" alt="">
+                        <span>舒适枕芯</span></li>
+                    <li>
+                        <img src="img/14824028813824.jpg" alt="">
+                        <span>床  垫</span>
+                    </li>
+                    <li>
+                        <img src="img/14824029257772.jpg" alt="">
+                        <span>毛  毯</span>
+                    </li>
+                </ul>
+                <ul id="right_bottom" class="right_bottom">
+                    <li>
+                        <img src="img/14824030074552.jpg" alt="">
+                        <span>床用单品</span></li>
+                    <li>
+                        <img src="img/14824030433732.jpg" alt="">
+                        <span> &nbsp; &nbsp; 抱 枕</span></li>
+                    <li>
+                        <img src="img/14824030950762.jpg" alt="">
+                        <span>布艺家局</span></li>
+                    <li>
+                        <img src="img/14824793220004.jpg" alt="">
+                        <span>毛巾浴巾</span></li>
+                    <li>
+                        <img src="img/more.png" alt="" height="80px" width="80px">
+                        <span> &nbsp;查看更多 </span>
+                    </li>
+                </ul>
+            </div>
+            <div id="div2">
+                <ul class="right_top">
+                    <li>
+                        <img src="img/14824032716005.jpg" alt="">
+                        <span>杯壶炊具</span>
+                    </li>
+                    <li>
+                        <img src="img/14824033297129.jpg" alt="">
+                        <span>烹饪用品</span>
+                    </li>
+                    <li>
+                        <img src="img/14824033748043.jpg" alt="">
+                        <span>餐具食器</span></li>
+                    <li>
+                        <img src="img/14824034273597.jpg" alt="">
+                        <span>收纳洗晒</span>
+                    </li>
+                    <li>
+                        <img src="img/14824034657764.jpg" alt="">
+                        <span>清洁用品</span>
+                    </li>
+                </ul>
+                <ul class="right_bottom">
+                    <li>
+                        <img src="img/14824035231116.jpg" alt="">
+                        <span>个人用品</span></li>
+                    <li>
+                        <img src="img/14824035685511.jpg" alt="">
+                        <span> 家居拖鞋</span></li>
+                    <li>
+                        <img src="img/14824038593772.jpg" alt="">
+                        <span>装饰用品</span></li>
+                    <li>
+                        <img src="img/14824037177559.jpg" alt="">
+                        <span>车生活</span></li>
+                    <li>
+                        <img src="img/more.png" alt="" height="80px" width="80px">
+                        <span> &nbsp;查看更多 </span>
+                    </li>
+                </ul>
+            </div>
+            <div id="div3">
+                <ul class="right_top">
+                    <li>
+                        <img src="img/14824031126475.jpg" alt="">
+                        <span>电饭煲</span>
+                    </li>
+                    <li>
+                        <img src="img/14824031783522.jpg" alt="">
+                        <span>电压力煲</span>
+                    </li>
+                    <li>
+                        <img src="img/14824032270037.jpg" alt="">
+                        <span>豆浆机</span>
+                    <li>
+                        <img src="img/14824032681352.jpg" alt="">
+                        <span>电热水壶</span>
+                    </li>
+                    <li>
+                        <img src="img/14824033179741.jpg" alt="">
+                        <span>榨汁机/搅拌机</span>
+                    </li>
+                </ul>
+                <ul class="right_bottom">
+                    <li>
+                        <img src="img/14829179270644.jpg" alt="">
+                        <span> &nbsp;剃须刀</span></li>
+                    <li>
+                        <img src="img/14829176223550.jpg" alt="">
+                        <span> &nbsp;扫地机</span></li>
+                    <li>
+                        <img src="img/14824035135206.jpg" alt="">
+                        <span> &nbsp;电暖器</span></li>
+                    <li>
+                        <img src="img/14824034703697.jpg" alt="">
+                        <span> &nbsp;挂烫机</span></li>
+                    <li>
+                        <img src="img/more.png" alt="" height="80px" width="80px">
+                        <span> &nbsp;查看更多 </span>
+                    </li>
+                </ul>
+            </div>
+            <div id="div4">
+                <ul class="right_top">
+                    <li>
+                        <img src="img/14824627645682.jpg" alt="">
+                        <span>手 机</span>
+                    </li>
+                    <li>
+                        <img src="img/14824628066043.jpg" alt="">
+                        <span>电脑整机</span>
+                    </li>
+                    <li>
+                        <img src="img/14824628564180.jpg" alt="">
+                        <span>摄影摄像</span></li>
+                    <li>
+                        <img src="img/14824629049099.jpg" alt="">
+                        <span>平板电脑</span>
+                    </li>
+                    <li>
+                        <img src="img/14824629650070.jpg" alt="">
+                        <span>手机配件</span>
+                    </li>
+                </ul>
+                <ul class="right_bottom">
+                    <li>
+                        <img src="img/14824630096261.jpg" alt="">
+                        <span>时尚影音</span>
+                    </li>
+                    <li>
+                        <img src="img/14824631118452.jpg" alt="">
+                        <span> 电脑配件</span>
+                    </li>
+                    <li>
+                        <img src="img/14824631525572.jpg" alt="">
+                        <span>智能设备</span>
+                    </li>
+                    <li>
+                        <img src="img/more.png" alt="" height="80px" width="80px">
+                        <span> &nbsp;查看更多 </span>
+                    </li>
+                </ul>
+            </div>
+            <div id="div5">
+                <ul class="right_top">
+                    <li>
+                        <img src="img/14824026084919.jpg" alt="">
+                        <span>电  视</span>
+                    </li>
+                    <li>
+                        <img src="img/14824031963211.jpg" alt="">
+                        <span>烟  灶</span>
+                    </li>
+                    <li>
+                        <img src="img/14824032428428.jpg" alt="">
+                        <span>洗衣机</span></li>
+                    <li>
+                        <img src="img/14824032721379.jpg" alt="">
+                        <span>冰 箱</span>
+                    </li>
+                    <li>
+                        <img src="img/14824033052702.jpg" alt="">
+                        <span>空 调</span>
+                    </li>
+                </ul>
+                <ul class="right_bottom">
+                    <li>
+                        <img src="img/14824033425670.jpg" alt="">
+                        <span>热水器</span></li>
+                    <li>
+                        <img src="img/14824033697808.jpg" alt="">
+                        <span> &nbsp; 浴 霸</span></li>
+                    <li>
+                        <img src="img/14824033949493.jpg" alt="">
+                        <span>&nbsp;消毒柜</span></li>
+                    <li>
+                        <img src="img/14824034327974.jpg" alt="">
+                        <span>&nbsp;洗碗机</span></li>
+                    <li>
+                        <img src="img/more.png" alt="" height="80px" width="80px">
+                        <span> &nbsp;查看更多 </span>
+                    </li>
+                </ul>
+            </div>
+            <div id="div6">
+                <ul class="right_top">
+                    <li>
+                        <img src="img/14824037901816.jpg" alt="">
+                        <span>灯饰照明</span>
+                    </li>
+                    <li>
+                        <img src="img/14824038401662.jpg" alt="">
+                        <span>五金卫浴</span>
+                    </li>
+                    <li>
+                        <img src="img/14824039370636.jpg" alt="">
+                        <span>马桶洁具</span></li>
+                    <li>
+                        <img src="img/14824039756007.jpg" alt="">
+                        <span>简易家具</span>
+                    </li>
+                    <li>
+                        <img src="img/14824040626561.jpg" alt="">
+                        <span>&nbsp; 床 &nbsp; </span>
+                    </li>
+                </ul>
+                <ul class="right_bottom">
+                    <li>
+                        <img src="img/14824040977202.jpg" alt="">
+                        <span>茶几柜类</span></li>
+                    <li>
+                        <img src="img/14824041361006.jpg" alt="">
+                        <span> &nbsp; 桌 椅 </span></li>
+                    <li>
+                        <img src="img/14824041644325.jpg" alt="">
+                        <span> &nbsp; 床 垫 </span></li>
+                    <li>
+                        <img src="img/more.png" alt="" height="80px" width="80px">
+                        <span> &nbsp;查看更多 </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="hot_pic"><img src="img/newhot.png" alt=""></div>
+
+
+    <div id="main">
+        <div>
+            <img src="images/360_cznq.jpg" alt="">
+            <span class="op"></span>
+            <i class="iconfont">&#xe68a;</i>
+            <span class="q12">购物即享7折优惠</span>
+            <h4 class="zhe">1.5</h4>
+            <p class="zi">折起 &nbsp; 美的Midea精品专场</p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩三天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/360_oibe.jpg" alt="">
+            <span class="op"></span>
+            <i class="iconfont">&#xe68a;</i>
+            <span class="q12">购物即享7折优惠</span>
+            <h4 class="zhe">1.4</h4>
+            <p class="zi">折起 &nbsp; 美的Midea精品专场</p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩两天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp; 收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/23022636.jpg" alt="">
+           <!-- <span class="op"></span>
+            <i class="iconfont">&#xe68a;</i>
+            <span class="q12">购物即享3折优惠</span>-->
+            <h4 class="zhe">1.2</h4>
+            <p class="zi">折起&nbsp;9月家电专场-提前逛</p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩三天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/ias_150054862694558.jpg" alt="">
+            <h4 class="zhe">3.9</h4>
+            <p class="zi">折起 &nbsp; 美的Midea精品专场</p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩三天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/ias_150112270511746.jpg" alt="">
+            <span class="op"></span>
+            <i class="iconfont">&#xe68a;</i>
+            <span class="q12">购物即享5折优惠</span>
+            <h4 class="zhe">2.2</h4>
+            <p class="zi">折起 &nbsp; OPPO手机直降专场&nbsp;</p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩一天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/ias_150114551699597.jpg" alt="">
+            <h4 class="zhe">1.8</h4>
+            <p class="zi">折起 &nbsp; 沁园洁净直销&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩三天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/ias_149794806439576.jpg" alt="">
+            <span class="op"></span>
+            <i class="iconfont">&#xe68a;</i>
+            <span class="q12">购物即享5折优惠</span>
+            <h4 class="zhe">2.1</h4>
+            <p class="zi">折起 &nbsp; 美的Midea精品专场</p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩一天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/ias_150123058687517.jpg" alt="">
+            <span class="op"></span>
+            <i class="iconfont">&#xe68a;</i>
+            <span class="q12">购物即享5折优惠</span>
+            <h4 class="zhe">4.3</h4>
+            <p class="zi">折起 &nbsp; 维达系列直降专场&nbsp; &nbsp; </p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩三天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/ias_150155250791579.jpg" alt="">
+            <h4 class="zhe">1.4</h4>
+            <p class="zi">折起 &nbsp; 美的Midea精品专场</p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩三天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/ias_150148545682475.jpg" alt="">
+            <span class="op"></span>
+            <i class="iconfont">&#xe68a;</i>
+            <span class="q12">购物即享5折优惠</span>
+            <h4 class="zhe">1.1</h4>
+            <p class="zi">折起 &nbsp; 美的Midea精品专场</p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩两天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/ias_150149427569917.jpg" alt="">
+           <!-- <span class="op"></span>
+            <i class="iconfont">&#xe68a;</i>
+            <span class="q12">购物即享5折优惠</span>-->
+            <h4 class="zhe">0.9</h4>
+            <p class="zi">折起 &nbsp; 爱仕达厨具专场直发</p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩三天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+        </div>
+        <div>
+            <img src="images/ias_150163947548195.jpg" alt="">
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; 苏泊尔SUPOR专场&nbsp;&nbsp;</p>
+            <i class="ifont">&#xe602;</i>
+            <p class="zi">剩一天</p>
+            <div class="sc"><i class="icofont">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+        </div>
+    </div>
+
+
+    <div class="content_top">
+        <img src="img/final.png" class="tu">
+    </div>
+
+    <div class="main_content">
+
+        <div class="content_item">
+            <img src="pic/ias_149933219540270.jpg" alt="">
+            <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/ias_149939505364027.jpg" alt="">
+            <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/ias_150129474573471.jpg" alt="">
+           <!-- <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>-->
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/ias_150149629340903.jpg" alt="">
+            <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/ias_150156781634942.jpg" alt="">
+            <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/ias_150157437548345.jpg" alt="">
+           <!-- <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>-->
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/ias_150157011275147.jpg" alt="">
+            <!--<div class="gray_bottom"></div>-->
+           <!-- <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>-->
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/ias_150175927432768.jpg" alt="">
+            <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/ias_150158064238905.jpg" alt="">
+            <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/ias_150164349932130.jpg" alt="">
+            <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩两天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/shoe.jpg" alt="">
+            <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/3.jpg" alt="">
+            <!--<div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享7折优惠</span>-->
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/2.jpg" alt="">
+            <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享8折优惠</span>
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+        <div class="content_item">
+            <img src="img/1.jpg" alt="">
+           <!-- <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享9折优惠</span>-->
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">2.9</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩一天</p>
+        </div>
+        <div class="content_item">
+            <img src="pic/ias_149984011780059.jpg" alt="">
+            <div class="gray_bottom"></div>
+            <i class="iconfont iconfont1">&#xe68a;</i>
+            <span>购物即享8折优惠</span>
+            <div class="circle">
+                <div class="sc"><i class="ifont ifont1">&#xe6a9;</i> &nbsp; &nbsp; &nbsp; &nbsp;收藏品牌</div>
+            </div>
+
+            <p class="wen_zi">migo品牌推荐</p>
+            <h4 class="zhe">1.3</h4>
+            <p class="zi">折起 &nbsp; </p>
+            <i class="icofont icofont1">&#xe602;</i>
+            <p class="zi" style="margin-left: 170px">剩三天</p>
+        </div>
+    </div>
+</div>
+
+<footer id="footer" class="footer">
+    <div class="footer-inner">
+        <ul class="footer-vip">
+            <li>
+                <i class="footer-vip-ico01">中国第三</i>
+            </li>
+            <li>
+                <i class="footer-vip-ico02">全球直采</i>
+            </li>
+            <li>
+                <i class="footer-vip-ico03">一手货源</i>
+            </li>
+            <li>
+                <i class="footer-vip-ico04">入仓全检</i>
+            </li>
+            <li>
+                <i class="footer-vip-ico05">自营物流</i>
+            </li>
+            <li>
+                <i class="footer-vip-ico06">线下验真</i>
+            </li>
+            <li>
+                <i class="footer-vip-ico07">假货必赔</i>
+            </li>
+            <li>
+                <i class="footer-vip-ico08">任意退货</i>
+            </li>
+            <li>
+                <i class="footer-vip-ico09">万千信赖</i>
+            </li>
+            <li>
+                <i class="footer-vip-ico10">权威荣誉</i>
+            </li>
+        </ul>
+        <div class="footer-list">
+            <dl class="link-anim">
+                <dt>服务保障</dt>
+                <dd>
+                    <a href="#">正品保证</a>
+                </dd>
+                <dd>
+                    <a href="#">7天无理由放心退</a>
+                </dd>
+                <dd>
+                    <a href="#">退货返运费</a>
+                </dd>
+                <dd>
+                    <a href="#">7x15小时客户服务</a>
+                </dd>
+            </dl>
+            <dl class="link-anim">
+                <dt>购物指南</dt>
+                <dd>
+                    <a href="#">导购演示</a>
+                </dd>
+                <dd>
+                    <a href="#">订单操作</a>
+                </dd>
+                <dd>
+                    <a href="#">会员注册</a>
+                </dd>
+                <dd>
+                    <a href="#">账户管理</a>
+                </dd>
+                <dd>
+                    <a href="#">收货样品</a>
+                </dd>
+                <dd>
+                    <a href="#">会员等级</a>
+                </dd>
+            </dl>
+            <dl class="link-anim">
+                <dt>支付方式</dt>
+                <dd>
+                    <a href="#">快捷支付</a>
+                </dd>
+                <dd>
+                    <a href="#">23家主流网银支付</a>
+                </dd>
+                <dd>
+                    <a href="#">货到付款</a>
+                </dd>
+                <dd>
+                    <a href="#">支付宝、银联等支付</a>
+                </dd>
+                <dd>
+                    <a href="#">信用卡支付</a>
+                </dd>
+                <dd>
+                    <a href="#">零钱支付</a>
+                </dd>
+            </dl>
+            <dl class="link-anim">
+                <dt>配送方式</dt>
+                <dd>
+                    <a href="#">全场满288元免运费</a>
+                </dd>
+                <dd>
+                    <a href="#">配送范围及运费</a>
+                </dd>
+                <dd>
+                    <a href="#">验货与签收</a>
+                </dd>
+            </dl>
+            <dl class="link-anim">
+                <dt>售后服务</dt>
+                <dd>
+                    <a href="#">退货政策</a>
+                </dd>
+                <dd>
+                    <a href="#">退货流程</a>
+                </dd>
+                <dd>
+                    <a href="#">退款方式和时效</a>
+                </dd>
+            </dl>
+            <dl class="tc last">
+                <dt>唯品会APP二维码</dt>
+                <dd>
+                    <img class="lazy" src="images/b.png" alt="唯品会APP二维码" height="100" width="100">
+                </dd>
+                <dd>下载唯品会移动APP</dd>
+            </dl>
+        </div>
+        <div class="footer-infor">
+            <p class="footer-infor-link">
+                <a href="#" title="关于我们">关于我们</a>|
+                <a href="#" title="About us">About
+                    us</a>|
+                <a href="#" title="Investor Relations">Investor
+                    Relations</a>|
+                <a href="#" title="媒体报道">媒体报道</a>|
+                <a href="#" title="品牌招商">品牌招商</a>|
+                <a href="#" title="隐私条款">隐私条款</a>|
+                <a href="#" title="唯品诚聘">唯品诚聘</a>|
+                <a href="#" title="365爱心基金">365爱心基金</a>|
+                <a href="#" title="唯品卡">唯品卡</a>|
+                <a href="#" title="唯品地图">唯品地图</a>|
+                <a href="#" title="品牌大全">品牌大全</a>|
+                <a href="#" title="联系我们">联系我们</a>
+            </p>
+            <p class="footer-infor-txt">
+                Copyright © 2008-2017 vip.com，All Rights Reserved&nbsp;&nbsp;使用本网站即表示接受
+                <a href="#">唯品会用户协议</a>。版权所有
+                <a href="#">广州唯品会信息科技有限公司</a><br>
+                <a href="#"><img src="images/c.png" style="margin: 2px 3px 0 0;" height="14" width="14">粤公网安备44010302111111号</a>&nbsp;&nbsp;
+                <a href="#">粤ICP备08114786号</a>
+                <a href="#">ICP经营许可证：粤B2-20080329 </a>
+                <a href="#">网络文化经营许可证：粤网文〔2015〕1528-229</a><br>
+                <a href="#">自营主体经营证照</a>&nbsp;&nbsp;
+                <a href="#">风险监测信息</a>&nbsp;&nbsp;
+                <a href="#">互联网药品交易服务资格证（粤C20140002）</a>
+            </p>
+        </div>
+    </div>
+    <div class="footer-ft">
+        <p class="footer-pic">
+            <a href="#">
+                <i class="footer-pic-ico01" title="银联特约商户"></i>
+            </a>
+            <a href="#">
+                <i class="footer-pic-ico04" title="消费维权服务站"></i>
+            </a>
+            <a href="#">
+                <i class="footer-pic-ico05" title="红盾电子链接标识"></i>
+            </a>
+            <a href="#">
+                <i class="footer-pic-ico06" title="网络警察报警平台"></i>
+            </a>
+            <a href="#">
+                <i class="footer-pic-ico07" title="公安局网络警察支队"></i>
+            </a>
+            <a href="" id="___szfw_logo___">
+                <i class="footer-pic-ico09" title="诚信网站"></i>
+            </a>
+            <a href="#">
+                <i class="footer-pic-ico10" title="可信网站"></i>
+            </a>
+        </p>
+    </div>
+</footer>
+
+</body>
+<script src="jQuery/jquery-1.12.4.js"></script>
+<script src="jQuery/dian.js"></script>
+<script src="jQuery/standard.js"></script><!---->
+<script src="jQuery/tupian5.js"></script>
+</html>

@@ -1,0 +1,20 @@
+.nav-bar { height: 36px; background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(207, 198, 191); box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); width: 100%; position: fixed; top: -52px; left: 0; z-index: 9; transition: all 0.3s ease 0s; }
+.nav-bar.show { top: 0; }
+.wrap.nav-bar-center { height: 100%; }
+.logo { float: left; margin-right: 6px; }
+.nav { color: rgb(102, 102, 102); float: left; padding-top: 6px; }
+.nav-item { float: left; height: 24px; }
+.nav-link { font-size: 12px; line-height: 24px; height: 100%; padding: 0 14px 0 40px; border-radius: 12px; display: block; position: relative; white-space: nowrap; }
+.nav-item:hover .nav-link { color: rgb(255, 255, 255); background-color: rgb(207, 148, 108); }
+.icon { display: none; width: 24px; height: 24px; position: absolute; left: 16px; top: 0; cursor: pointer; background: rgba(0, 0, 0, 0) url('../images/icon_v2.png') no-repeat scroll 0% 0%; }
+.nav-item:hover .icon { display: block; }
+.nav-item .icon-t-shirt { background-position: 0 0; }
+.nav-item .icon-polo { background-position: -24px 0; }
+.nav-item .icon-shirt { background-position: -48px 0; }
+.nav-item .icon-casual-pants { background-position: -72px 0; }
+.nav-item .icon-shoes { background-position: -96px 0; }
+.nav-item .icon-bag { background-position: -120px 0; }
+.nav-item .icon-sport { background-position: -144px 0; }
+.nav-item .icon-watch { background-position: -168px 0; }
+.nav-item .icon-3c { background-position: -192px 0; }
+.nav-item .icon-skin { background-position: -216px 0; }

@@ -6,8 +6,10 @@
 body, button, input, select, textarea {
     font: 11px/1.5 tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
 }
-
-.header {
+.m {
+    margin: 0 auto;
+}
+/*.header {
     position: relative;
     z-index: 101;
     color: #333;
@@ -73,7 +75,7 @@ body, button, input, select, textarea {
     line-height: 26px;
     border: 1px solid #cdcdcd;
     display: none;
-    /*border-top-style: none;*/
+    !*border-top-style: none;*!
 }
 
 .sel-area-d-i {
@@ -180,7 +182,7 @@ body, button, input, select, textarea {
     margin-left: 11px;
 }
 
-/*最上方nav部分*/
+!*最上方nav部分*!
 .head-logo {
     height: 100px;
     position: relative;
@@ -244,7 +246,7 @@ body, button, input, select, textarea {
     left: 40px;
 }
 
-/*红色导航条*/
+!*红色导航条*!
 .main-nav {
     height: 40px;
     line-height: 40px;
@@ -262,7 +264,7 @@ body, button, input, select, textarea {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 
-}
+}*/
 
 /*红色导航条*/
 
@@ -317,8 +319,6 @@ body, button, input, select, textarea {
     display: list-item;
     /*z-index: 1;*/
 }
-
-
 
 .focus-banner-con-wrq ul li:nth-child(2) {
     background: url("../images/weipin_index/15013276066602.jpg") no-repeat;
@@ -477,11 +477,14 @@ body, button, input, select, textarea {
     padding-bottom: 20px;
 }
 
-
 .index-new-inner {
     width: 1170px;
     margin: 0 auto;
     overflow: hidden;
+}
+
+.index-new-inner a {
+    display: block;
 }
 
 .index-new-title {
@@ -489,7 +492,7 @@ body, button, input, select, textarea {
     margin-bottom: 20px;
 }
 
-.index-new-title img{
+.index-new-title img {
     max-width: 100%;
     vertical-align: top;
     border: 0 none;
@@ -504,14 +507,14 @@ body, button, input, select, textarea {
 }
 
 /*.index-new-sec-list a{*/
-    /*text-decoration: none;*/
+/*text-decoration: none;*/
 /*}*/
 
 .index-new-sec-item {
     float: left;
     width: 111px;
     margin-right: 40px;
-
+    cursor: pointer;
 }
 
 .index-new-sec-item img {
@@ -527,9 +530,9 @@ body, button, input, select, textarea {
     font-size: 16px;
 }
 
-
 .index-new-third {
     position: relative;
+    pointer-events: auto;
 }
 
 .index-new-third-con {
@@ -551,7 +554,6 @@ body, button, input, select, textarea {
 .index-new-third-list a {
     font-size: 16px;
 }
-
 
 .index-new-third-item {
     width: 130px;
@@ -623,7 +625,7 @@ body, button, input, select, textarea {
     margin-left: -160px;
     border-radius: 4px;
     line-height: 1.2;
-    background: rgba(255,255,255,.9);
+    background: rgba(255, 255, 255, .9);
 }
 
 .hotSale-logo-img {
@@ -664,7 +666,7 @@ body, button, input, select, textarea {
     /*background-position: center 100px;*/
     border-radius: 4px;
     overflow: hidden;
-    opacity: 1;
+    opacity: 0;
 }
 
 .hotSale-pro-list {
@@ -724,8 +726,6 @@ body, button, input, select, textarea {
     color: #666;
 }
 
-
-
 .fav-hidden {
     line-height: 20px;
     vertical-align: top;
@@ -765,11 +765,10 @@ body, button, input, select, textarea {
     text-transform: none;
 }
 
-
 /*.vipFont {*/
-    /*font-family:"iconfont";*/
-    /*margin-top: 2px;*/
-    /*line-height: 1;*/
+/*font-family:"iconfont";*/
+/*margin-top: 2px;*/
+/*line-height: 1;*/
 /*}*/
 
 .brand-wrap {
@@ -798,7 +797,7 @@ body, button, input, select, textarea {
     top: 243px;
     position: absolute;
     left: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, .6);
     height: 30px;
     line-height: 30px;
     padding: 0 100px 0 25px;
@@ -918,10 +917,130 @@ body, button, input, select, textarea {
 
 .vipIndexFont {
     vertical-align: middle;
-    font-size: 34px;
-    /*font-family: vipIndexFont;*/
+    font-size: 20px;
+    font-family: iconfont;
     line-height: 20px;
+    font-style: normal;
 }
+
+/*悬浮导航*/
+.index-nav-sort {
+    width: 78px;
+    height: 456px;
+    left: 50%;
+    margin-left: -720px;
+    background-color: #fff;
+    z-index: 99999;
+
+}
+
+.is-lift-nav-fixed {
+    position: fixed;
+    top: 112px;
+    display: none;
+}
+
+.index-nav-sort .index-nav-wrap {
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+}
+
+.index-nav-item {
+    display: block;
+}
+
+.index-nav-sort .index-nav-item {
+    display: block;
+    padding: 8px 10px;
+    height: 20px;
+    border-bottom: 1px solid #eaeaea;
+    color: #666;
+}
+
+.index-nav-list .curr {
+    position: relative;
+    z-index: 1;
+    left: 4px;
+    margin-top: -1px;
+    padding: 8px 8px 10px;
+    width: 52px;
+    border-bottom: 0;
+    color:#666;
+    border-radius: 4px;
+}
+
+.index-nav-sort .nav-icon {
+    margin-right: 6px;
+    width: 20px;
+    height: 20px;
+    color: #949494;
+    display: inline-block;
+}
+
+.nav-title {
+    line-height: 20px;
+    white-space: nowrap;
+    display: inline-block;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.nav-icon {
+    color: #fff;
+    position: relative;
+    top: 1px;
+}
+
+.index-nav-sort .nav-icon1 {
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+    color: #949494;
+    display: inline-block;
+}
+
+.daohangdingwei {
+    width: 200px;
+    height: 43px;
+}
+
+.daohangbgc {
+    background-color: #f10180;
+}
+
+
+.shadow {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index: 3;
+    width: 170px;
+    height: 96px;
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.9) 100%);
+    transition: transform 300ms linear;
+}
+
+.brand-text {
+    position: absolute;
+    z-index: 3;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    bottom: 10px;
+    overflow: hidden;
+    transition: transform 300ms linear;
+}
+
+.brand-name-Chinses {
+    height: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
 
 
 

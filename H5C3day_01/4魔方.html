@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .view {
+            width: 300px;
+            margin: 100px auto;
+        }
+        ul {
+            list-style: none;
+            width: 100%;
+            height: 50px;
+        }
+        li {
+            float: left;
+            width: 33.33%;
+            height: 100%;
+            background-color: skyblue;
+            color: #3e3e3e;
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        .active {
+            background-color: #000;
+            color: #fff;
+        }
+
+        section {
+            width: 100%;
+            height: 200px;
+            position: relative;
+        }
+
+        section>div {
+            width: 100%;
+            height: 100%;
+            background-color: greenyellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #lp {
+            z-index: 1;
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="view">
+        <ul>
+            <li data-target="lp" class="active">凉皮</li>
+            <li data-target="kdm">裤带面</li>
+            <li data-target="nrm">牛肉面</li>
+        </ul>
+        <section>
+            <div id="lp">凉皮7</div>
+            <div id="kdm">裤带面20</div>
+            <div id="nrm">牛肉面30</div>
+        </section>
+    </div>
+</body>
+
+<script>
+    var lis = document.querySelectorAll("li");
+
+    var zindex = 2;
+    for(var i = 0; i < lis.length ; i++) {
+        lis[i].onclick = function () {
+            for(var j = 0; j < lis.length ; j++) {
+                lis[j].classList.remove("active");
+            }
+            zindex++;
+            this.classList.add("active");
+            var target = this.dataset.target;
+            document.querySelector("#"+target).style.zIndex = zindex;
+        };
+    }
+
+</script>
+
+</html>

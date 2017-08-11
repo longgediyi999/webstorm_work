@@ -1,0 +1,52 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+
+body, button, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    font-size: 12px; }
+
+body { font-size: 12px; font-family: microsoft yahei; color: #666;}
+
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+
+address, cite, dfn, em, var { font-style:normal; }
+
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+
+small{ font-size:12px; }
+
+ul, ol { list-style:none; }
+
+a { text-decoration:none; color: black}
+
+sup { vertical-align:text-top; }
+
+sub{ vertical-align:text-bottom; }
+
+fieldset, img { border:0; }
+
+button, input, select, textarea { font-size:100%; }
+
+table { border-collapse:collapse; border-spacing:0; }
+
+img { border: 0 none;  vertical-align: top;}
+
+i,em { font-style: normal;}
+
+strong { font-weight: 400;}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix { zoom: 1;}
+
+.fl { float: left;}
+
+.fr { float: right;}
+
+.w { width: 1000px; margin: 0 auto;}

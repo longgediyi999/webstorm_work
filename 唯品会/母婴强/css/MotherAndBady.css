@@ -1,0 +1,796 @@
+body{
+    position:relative;
+}
+/*公共颜色 天蓝*/
+.bgcolor{
+     background-color: rgb(233,253,254);
+}
+/*轮播图*/
+.focus-banner{
+    width: 100%;
+    height: 412px;
+    background: url(../images/nuzg.jpg);
+    padding-top: 30px ;
+}
+#slideshow {
+    margin: 0 auto;
+    width: 976px;
+    height: 378px;
+    position: relative;
+    padding:12px 12px 0;
+    background-color: #fff;
+    overflow: hidden;
+    
+}
+#slideshow  li img {
+    width: 976px;
+    height: 340px;
+}
+            
+#slideshow_list {
+    width: 976px;
+    height: 340px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+#slideshow_list  li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+
+#slideshow_nav li {
+    width: 300px;
+    height: 35px; 
+    float: left;
+    text-align: center;
+    
+    line-height: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    
+}
+
+#slideshow_nav {
+    position: absolute;
+    left: 50px;
+    bottom: 0px;
+}
+#slideshow .slideshow_span1{
+    border-radius: 2px;
+    position: absolute;
+    width: 0px;
+    height: 66px;
+    line-height: 66px;
+    font-size: 40px;
+    color:white;
+    cursor: pointer;
+    top: 50%;
+    left:12px;
+    margin-top: -53px;  
+    text-align: center;
+    background-color: black;
+    opacity: 0;
+    /*display: none;*/
+}
+#slideshow .slideshow_span2{
+    border-radius: 2px;
+    position: absolute;
+    width: 0px;
+    height: 66px;
+    color:white;
+    line-height: 66px;
+    font-size: 40px;
+    cursor: pointer;
+    top: 50%;
+    right:12px;
+    background-color: black;
+    margin-top: -53px;
+    text-align: center;
+    opacity: 0;
+    /*display: none;*/
+}
+
+.active {
+    border-bottom:2px solid #fd628d;
+}
+/*轮播图下面的图*/
+.kid-brands-goods-wrap{
+    width: 100%;
+    background-color: rgb(233,253,254);
+}
+.kid-brands-goods{
+    height: 103px;
+    background: url(../images/kid.png) no-repeat 50% 0px;
+}
+/*宝宝档案*/
+.kid-show-wrap{
+    height: 331px;
+    width: 1000px;
+    margin: 15px auto 20px;
+
+}
+.baby-card-creat{
+    width: 308px;
+    height: 331px;
+    float: left;
+}
+.creat-top{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fd628d;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+.creat-content{
+    padding:20px;
+    width: 266px;
+    height: 242px;
+    background-color: #fff;
+}
+#create_Birthday_input{
+    height: 18px;
+    line-height: 18px;
+    width: 245px;
+    position: relative;
+    background: 0 0;
+    border:1px solid #b2b2b2;
+    padding: 6px 10px;
+    border-radius: 3px;
+    margin-bottom: 25px;
+
+}
+#nickName_input{
+    height: 18px;
+    line-height: 18px;
+    width: 245px;
+    position: relative;
+    background: 0 0;
+    border:1px solid #b2b2b2;
+    padding: 6px 10px;
+    border-radius: 3px;
+    margin-bottom: 25px;
+}
+.wangzi,.gongzhu{
+    display: block;
+    float: left;
+    width: 82px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 8px;
+    background-color: #e4e4e4;
+    color: #999;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom:20px;
+}
+.et{
+    display: block;
+    float: left;
+    width: 82px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #e4e4e4;
+    color: #999;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom:20px;
+}
+.create_bady_Btn{
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: #fd628d;
+    border: 0;
+    height: 46px;
+    font-size: 20px;
+    color: white;
+    /*margin-top: 20px;*/
+
+}
+.font1{
+  font-family:"iconfont" !important;
+  font-size:20px;font-style:normal;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.bcc-count-num {
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #374551;
+}
+.bcc-count-num i{
+    color: #fd628d;
+}
+#kid-push-list{
+    width: 672px;
+    height: 331px;   
+     float:right;
+
+}
+
+#kid-push-list  li{
+    float:left;
+    width: 222px;
+    height: 164px;
+    background-color: white;
+    border:1px solid #aaa;
+    margin-left: -1px;
+    margin-bottom: -1px;
+    position: relative;
+    
+
+}
+#kid-push-list i{
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    top: 30px;
+    left: 10px;
+    background: url(../images/bg.png) no-repeat;
+}
+
+#kid-push-list  b{
+    position: absolute;
+    width: 171px;
+    height: 148px;
+    bottom: 0;
+    right: 10px;
+    background: url(../images/bg.png) no-repeat;
+}
+/*遮罩层部分*/
+#zhezaoceng {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+#huiyuanzhuce {
+    width: 430px;
+    height: 423px;
+    background-color: white;
+    position: absolute;
+    
+
+}
+
+#frameContent{
+    width: 380px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    
+}
+/*登录界面*/
+#frameContent1{
+   /* display: none;*/
+}
+#frameTitle {
+    width: 384px;
+    padding-left: 13px;
+    border-left: 3px solid #f4359d;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    
+    font-size: 16px;
+    margin: 15px auto 17px auto;
+    color :black;
+}
+#frameTitle span i{
+    color:#aaa;
+}
+#closeFrame{
+    cursor: pointer;
+}
+#frameTab {
+    padding-left: 23px;
+    border-bottom: 1px solid #f10180;
+    margin-bottom: 25px;
+    line-height: 18px;
+    overflow: hidden;
+    
+    
+}
+#frameTabLeft {
+    display: inline-block;
+    font-size: 16px;
+    
+    padding: 0 20px;
+    padding-bottom: 5px;
+    width: 36px;
+    cursor: pointer;
+}
+#frameTabRight{
+    display: inline-block;
+    font-size: 16px;    
+    padding: 0 20px;
+    padding-bottom: 5px;
+    width: 36px;
+    cursor: pointer;
+}
+#vip_name {
+    width: 260px;
+    height: 33px;
+    line-height: 33px;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid #bfbdbf;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-left: 40px;
+}
+
+#vip_password{
+    width: 260px;
+    height: 33px;
+    line-height: 33px;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid #bfbdbf;
+    border-radius: 3px;
+    background-color: #fff;
+    
+    margin-left: 40px;
+}
+#frameContent p{
+    height: 25px;
+    color:red;
+    line-height: 25px;
+    font-size: 12px;
+    margin-left: 40px;
+
+}
+#frameContent b{
+    height: 25px;
+    color:red;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+
+#vipLogin{
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    color:white;
+    border-radius: 3px;
+    background-color: #f10180;
+    margin-left: 40px;
+}
+#vip_checkbox{
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 14px;
+    height: 15px;
+    cursor: pointer;
+    zoom: 1;
+    vertical-align: bottom;
+}
+#frameContent .yangshi{
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    padding-left: 10px;
+    color: #666;
+    font-size: 12px;
+    line-height: 16px;
+
+}
+#frameContent .yangshi+.yangshi{
+    border-left: 1px solid #aaa;
+    color: #f10180;
+}
+#frameBottom{
+    margin:40px 40px 0;
+    height: 100px;
+}
+#yangshi2{
+    display: block;
+    background:url(../images/icon_links.png) no-repeat;
+    width: 168px;
+    height: 24px;
+}
+/*注册界面*/
+#frameContent2{
+    display: none;
+    position: relative;
+}
+#zhuce_name{
+    width: 260px;
+    height: 33px;
+    line-height: 33px;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid #bfbdbf;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-left: 40px;
+}
+#zhuce_password{
+    width: 260px;
+    height: 33px;
+    line-height: 33px;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid #bfbdbf;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-left: 40px;
+}
+#repeat_password{
+    width: 260px;
+    height: 33px;
+    line-height: 33px;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid #bfbdbf;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-left: 40px;
+}
+#yanzhengma{
+    width: 110px;
+    height: 33px;
+    line-height: 33px;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid #bfbdbf;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-left: 40px;
+}
+#yanzhengmatu{
+    background:url("../images/20140211150347-932725320.jpg") no-repeat -14px -22px;
+    /*display: inline-block;*/
+    width: 220px;
+    height: 37px;
+    position: absolute;
+    bottom: 64px;
+    right: -10px;
+
+}
+#lijizhuce{
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    color:white;
+    border-radius: 3px;
+    background-color: #f10180;
+    margin-left: 40px;
+}
+.zhuce_color{
+    color: #f00180;
+    border-bottom: 2px solid #f00180;
+}
+
+
+
+
+
+
+
+
+
+
+/*主题标题部分*/
+#shangPinMain_title {
+    overflow: hidden;
+    position: relative;
+    height:100px;
+    padding-top: 40px;
+}
+#shangPinMain_title img{
+   position: absolute;
+   top:40px;
+   left: -75px;   
+}
+
+
+
+
+/*商品内容*/
+#main {
+    width: 1000px;
+    height: 1720px;
+    margin:0 auto;
+}
+
+#main div {
+    width: 480px;
+    height:290px;
+    display: inline-block;
+    margin-right: 18px;
+    margin-left: 0px;
+    position: relative;
+}
+
+#main div img{
+    width: 490px;
+    height:235px;
+}
+
+.op{
+    width: 490px;
+    height: 30px;
+    background-color: #444444;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 55px;
+}
+
+
+#main .q12{
+    position: absolute;
+    bottom: 62px;
+    left:0px;
+    font-size: 14px;
+    color: white;
+    margin-left: 35px;
+    line-height: 12px;
+}
+
+#main .zhe{
+    color: #f10582;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 20px;
+    /*vertical-align: middle;*/
+}
+
+#main .zi{
+    display: inline-block;
+    color: #666666;
+    font-size: 14px;
+    padding:0px;
+    margin:0px;
+   /*vertical-align: middle;*/
+}
+
+#main .sc{
+    width: 80px;
+    height:20px;
+    background-color: white;
+    border-radius:10px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 59px;
+    right:-20px;
+    line-height: 20px;
+    display: none;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont.woff') format('woff'),
+    url('../font/iconfont.ttf') format('truetype'),
+    url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color: #f1b13b;
+    position: absolute;
+    bottom:60px;
+    left: 10px;
+}
+
+.ifont{
+    font-family:"iconfont" !important;
+    font-size:20px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color: #f105a2;
+    margin-left: 176px;
+    font-weight: 700;
+}
+
+.icofont{
+    font-family:"iconfont" !important;
+    font-size:18px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color: #f105a2;
+    position: absolute;
+    bottom: -1px;
+    margin-left: 4px;
+}
+
+
+/*固定导航栏部分*/
+#fix_nav{
+    width: 100%;
+    height: 43px;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    left:0px;
+    top:0px;
+    display: none;
+    
+
+}
+#fix_nav_content>img{
+    float: left;
+    padding-right: 24px;
+}
+#fix_nav_content  ul li{
+    float: left;
+    color: #666;
+    line-height: 42px;
+    border-radius: 16px;
+    height: 42px;
+    padding-right: 24px;
+    display: list-item;
+
+}
+#fix_nav_content  ul li img{
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    margin-right: 3px;
+}
+
+/*最后疯抢内容*/
+.main_content {
+    width: 1020px;
+    height: 1160px;
+    
+}
+
+.content_item {
+    width: 320px;
+    height: 210px;
+    display: inline-block;
+    padding-right: 10px;
+    margin-bottom: 26px;
+    position: relative;
+}
+
+.content_item img {
+    width: 320px;
+    height: 153px;
+}
+
+.content_item>.gray_bottom{
+    width: 320px;
+    height: 30px;
+    background-color:#444444 ;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 56px;
+}
+
+.content_item span {
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    left:40px;
+    font-size: 14px;
+    line-height: 38px;
+}
+
+.iconfont1 {
+    position: absolute;
+    bottom: 63px;
+    left:14px;
+}
+
+.ifont1 {
+    position: absolute;
+    bottom: -1px;
+    right:57px;
+    font-weight: 400;
+}
+
+.icofont1{
+    color: #f105a2;
+    position: absolute;
+    bottom: 2px;
+    margin-left: 147px;
+}
+
+.circle .sc{
+    width: 80px;
+    height:20px;
+    background-color: white;
+    border-radius:10px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 61px;
+    right:28px;
+    line-height: 20px;
+    display: none;
+ /*   display: none;*/
+}
+
+.content_item .zhe{
+    color: #f10582;
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 16px;
+    height:26px;
+    /*vertical-align: middle;*/
+}
+
+.content_item .wen_zi{
+    display: block;
+    color: #666666;
+    font-size: 14px;
+    padding:0px;
+    margin-left: 15px;
+    margin-top: 7px;
+    height:20px;
+    /*vertical-align: middle;*/
+}
+
+.content_item .zi {
+    display: inline-block;
+    color: #666666;
+    font-size: 14px;
+    padding:0px;
+    margin:0px;
+    height: 26px;
+}
+#shangPinQiang_title {
+    overflow: hidden;
+    position: relative;
+    height:100px;
+    padding-top: 40px;
+}
+#shangPinQiang_title img{
+   position: absolute;
+   top:40px;
+   left: -75px;   
+}
+.dibudatu2{
+    position: relative;
+    height:450px;
+}
+.dibudatu{
+
+    position:absolute;
+    bottom:0px;
+    left:50%;
+    margin-left: -720px;
+
+}
+
+
+
+
+ 

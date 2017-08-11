@@ -1,0 +1,29 @@
+.classify-cate-inner {    position: relative;    height: 328px;    border: 1px solid rgb(51, 51, 51);}
+
+.classify-cate-left {    width: 154px;    float: left;    background-color: rgb(51, 51, 51);}
+
+.classify-cate-right {    width: 844px;    height: 100%;    float: right;    overflow: hidden;    position: relative;}
+
+.classify-cate-tab {    font-size: 16px;    font-weight: bold;    color: rgb(255, 255, 255);    text-align: center;    line-height: 82px;  height: 82px;  cursor: pointer;  position: relative;  }
+
+.classify-cate-tab-text {    padding: 0px 5px;    height: 100%;    display: inline-block;    position: relative;    z-index: 3;  }
+
+.classify-cate-tab0 .classify-cate-tab-line {    display: none;}
+
+.classify-cate-tab-line {    width: 76px;    height: 1px;    position: absolute;    top: 0px;    left: 50%;    z-index: 1;    margin-left: -38px;  background-color: rgb(102, 102, 102);  }
+
+.classify-cate-current {    width: 170px;    height: 84px; position: absolute; left: -4px;top: -1px; z-index: 2;background: rgba(0, 0, 0, 0) url('../images/tab_current.png') no-repeat scroll right top;  }
+
+.classify-cate-con { padding: 0px 10px 0px 12px;  height: 100%;}
+
+.classify-cate-item {text-align: center;width: 20%; height: 152px; margin-bottom: 8px; float: left;}
+
+.classify-cate-item-link {  display: block;    padding-top: 20px;}
+
+.classify-cate-item-img {    width: 100px;    height: 100px;    display: inline-block;}
+
+.classify-cate-item-img img {    width: 100%;}
+
+.classify-cate-item-name {padding: 10px 10px 0px;font-size: 14px;color: rgb(102, 102, 102);overflow: hidden;white-space: nowrap;  text-overflow: ellipsis;  }
+
+.classify-cate-item:hover .brand-img {   animation: 1s ease 0s normal none 1;}

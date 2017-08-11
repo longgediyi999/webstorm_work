@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .view {
+            width: 300px;
+            margin: 100px auto;
+        }
+
+        ul {
+            list-style: none;
+            width: 100%;
+            height: 50px;
+        }
+
+        li {
+            float: left;
+            width: 33.33%;
+            height: 100%;
+            background-color: aqua;
+            color: blue;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .active {
+            background-color: #000;
+            color: #fff;
+        }
+
+        section {
+            width: 100%;
+            height: 200px;
+            position: relative;
+        }
+
+        section>div {
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #lp{
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+<div class="view">
+    <ul>
+        <li data-target="lp" class="active">凉皮</li>
+        <li data-target="kdm">裤带面</li>
+        <li data-target="nrm">牛肉面</li>
+    </ul>
+    <section>
+        <div id="lp">凉皮-7块一份 </div>
+        <div id="kdm">裤带面-20块</div>
+        <div id="nrm">牛肉面-30块 </div>
+    </section>
+</div>
+</body>
+<script>
+    // 获取所有标题
+    var lis=document.querySelectorAll("li");
+
+    // 定义一个zindex 层级
+    var zindex=2;
+    for (var i = 0; i < lis.length; i++) {
+        var element = lis[i];
+        // 给li标签绑定了点击事件
+        element.onclick=function(){
+            // 循环所有的li标签 移除active
+            for (var j = 0; j < lis.length; j++) {
+                var tmp = lis[j];
+                tmp.classList.remove("active");
+            }
+            // 需要给当前点击的li标签添加选中效果
+            zindex++;
+            this.classList.add("active");
+            // 要去激活的div 内容  target是一个id  #id
+            var target=this.dataset.target;
+            // 通过id 去添加zindex
+            document.querySelector("#"+target).style.zIndex=zindex;
+        }
+    }
+</script>
+
+</html>

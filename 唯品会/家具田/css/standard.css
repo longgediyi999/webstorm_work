@@ -1,0 +1,1575 @@
+/*����������*/
+.nav {
+    height: 30px;
+    background-color: #f5f5f5;
+}
+.nava {
+    width: 1000px;
+    height: 30px;
+    font-size: 12px;
+}
+.area {
+    margin-left: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    width: 56px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.area,.vip {
+    line-height: 30px;
+}
+.nav .vip {
+    margin-left: 110px;
+}
+.selected {
+    margin-top: 12px;
+    /*�ñ߿���һ��������*/
+    border-style: solid;
+    border-width: 6px;
+    border-color: #999 transparent transparent transparent;
+}
+.selecteda {
+    margin-left: 20px;
+}
+.selectedb {
+    margin-left: 6px;
+}
+.area>span,#area a,.vip a {
+    color: #666a73;
+}
+.vip li {
+    float: left;
+}
+.onloadf {
+    width: 36px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.discountf {
+    width: 66px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+
+.clubf {
+    width: 78px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.servicef {
+    width: 66px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.phonef {
+    width: 52px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.moref {
+    width: 43px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+/*�߿��ڸ�*/
+.cover {
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: -2px;
+}
+.covera {
+    width: 88px;
+}
+.coverb {
+    width: 68px;
+}
+.coverc {
+    width: 98px;
+    left: 0;
+}
+.coverd {
+    width: 110px;
+    left: 0;
+}
+.covere {
+    width: 98px;
+    left: 0;
+}
+.coverf {
+    width: 84px;
+    left: 125px;
+}
+.coverg {
+    width: 75px;
+    left: 225px;
+}
+.coverh {
+    width: 132px;
+    left: 218px;
+}
+/*��Զ�λ*/
+.onloadf,.discountf,.clubf,.servicef,.phonef,.moref {
+    position: relative;
+}
+.vip li:nth-child(2),.vip li:nth-child(4),.vip li:nth-child(6),.vip li:nth-child(8),.vip li:nth-child(10),.vip li:nth-child(12),.vip li:nth-child(14) {
+    width: 14px;
+    height: 14px;
+    margin-top: 10px;
+    background: url("../images/zimages/jinglingtu.png") -138px -3px;
+}
+.vip li:nth-child(1),.vip li:nth-child(3),.vip li:nth-child(5),.vip li:nth-child(7),.vip li:nth-child(9),.vip li:nth-child(11),.vip li:nth-child(13),.vip li:nth-child(15) {
+    padding: 0 16px;
+}
+.vip li:nth-child(13) span{
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    margin-top: 8px;
+    background: url("../images/zimages/jinglingtu.png")-98px -150px;
+}
+.disn {
+    display: none;
+}
+/*����ѡ�����ز���*/
+.areaSelected {
+    z-index: 3;
+    background-color: white;
+    left: -1px;
+    position: absolute;
+    height: 460px;
+    width: 300px;
+    border: 1px solid #cdcdcd;
+}
+.areaSelected h5 {
+    width: 258px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    color: black;
+    margin-left: 20px;
+    padding-left: 4px;
+    font-weight: 700;
+    border-bottom: 1px #666 dotted;
+}
+.selectedArea {
+    margin-left: 20px;
+    margin-top: 22px;
+}
+.selectedArea li {
+    height: 26px;
+}
+.selectedArea li span {
+    font-size: 12px;
+    color: #343434;
+}
+.selectedArea li a {
+    display: inline-block;
+    padding: 0 3px;
+    line-height: 18px;
+    height: 18px;
+    margin-left: 10px;
+}
+/*���¼���ز���*/
+.onload {
+    z-index: 3;
+    background-color: white;
+    left: -1px;
+    width: 280px;
+    height: 175px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+}
+.onloadperson {
+    height: 40px;
+    width: 260px;
+    margin-top: 30px;
+}
+.onloadhead {
+    margin-left: 20px;
+    width: 40px;
+    height: 38px;
+    background: url("../images/zimages/jinglingtu.png") 0 -182px;
+}
+.onloadin {
+    height: 34px;
+    width: 180px;
+    line-height: 34px;
+    margin-left: 10px;
+    padding-left: 6px;
+    border-bottom: 1px #666 dotted;
+}
+.onloadselected {
+    height: 75px;
+    width: 220px;
+    margin-top: 8px;
+}
+.onloadcoin {
+    margin-left: 26px;
+}
+.onloadorder {
+    margin-left: 60px;
+}
+/*�ҵ��������ز���*/
+.discount {
+    background-color: white;
+    left: -1px;
+    width: 80px;
+    height: 108px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+    padding-top: 12px;
+    padding-left: 18px;
+}
+/*��Ա���ֲ����ز���*/
+/*==������������ҳ����ĸ��ಿ���в㼶����=*/
+.club {
+    z-index: 99;
+    background-color: white;
+    left: -1px;
+    width: 94px;
+    height: 108px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+    padding-top: 10px;
+    padding-left: 16px;
+}
+/*�ͻ��������ز���*/
+.service {
+    z-index: 3;
+    background-color: white;
+    left: -1px;
+    width: 85px;
+    height: 138px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+    padding-top: 10px;
+    padding-left: 13px;
+}
+/*�ֻ����ز���*/
+/*==����������LOGO����Ĺ���������в㼶����=*/
+.phone {
+    z-index: 99;
+    background-color: white;
+    left: -126px;
+    width: 209px;
+    height: 220px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+}
+.phone img {
+    width: 161px;
+    height: 161px;
+    padding-top: 22px;
+    padding-left: 24px;
+}
+#phone {
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+/*����ѡ��  ���ز���*/
+/*==����������LOGO����Ĺ���������в㼶����=*/
+.more {
+    z-index: 99;
+    background-color: white;
+    left: -226px;
+    width: 300px;
+    height: 164px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+}
+.cooperate,.aboutUs {
+    margin-left: 20px;
+    height: 80px;
+    width: 260px;
+}
+.cooperate {
+    border-bottom: 1px #666 dotted;
+}
+.more h5 {
+    padding-top: 12px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+/*�Ҳ����*/
+#sidebar {
+    /*========��������㼶����==================*/
+    z-index: 9;
+    width: 36px;
+    /*��ӵײ�������ʱ��Ҫ�������� ��ȥ16px*/
+    height: 1120px;
+    background-color: #262626;
+    position: fixed;
+    right: 0;
+    top: -30px;
+}
+/*�˺Ų���*/
+#account {
+    height: 56px;
+    margin-top: 116px;
+    overflow: hidden;
+}
+#accountIcon {
+    height: 26px;
+    width: 24px;
+}
+#accountIcon img {
+    margin-top: 4px;
+    height: 26px;
+    width: 24px;
+}
+#accountNumber {
+    margin-top: 6px;
+    margin-left: 7px;
+    display: block;
+    height: 16px;
+    width: 26px;
+    color: #fff;
+    font-size: 12px;
+}
+/*�˺����ز���*/
+#accountHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 304px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+#button {
+    margin-top: 16px;
+    margin-right: 18px;
+    background-color: white;
+}
+#button i {
+    color: #c4c4c4;
+    font-size: 20px;
+}
+#headPortrait {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    padding: 1px;
+    margin-top: 30px;
+}
+#enrollAndOnload {
+    display: block;
+    height: 18px;
+    width: 110px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666a73;
+}
+#enrollAndOnload a {
+    color: #f14087;
+}
+#my {
+    height: 104px;
+    border: solid #e5e5e5;
+    border-width: 1px 0;
+    background-color: #f8f8f8;
+}
+#myContent {
+    margin-top: 14px;
+}
+#myOrder,#myNews {
+    float: left;
+    height: 76px;
+    width: 136px;
+}
+#myOrder {
+    margin-left: 1px;
+    border-right: 1px solid #e5e5e5;
+}
+#myContent i {
+    color: #c4c4c4;
+    font-size: 27px;
+}
+#myOrderIcon,#myNewsIcon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+#my a {
+    width: 50px;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #666a73;
+}
+#vipClub {
+    height: 14px;
+    width: 60px;
+    font-size: 12px;
+    line-height: 14px;
+    float: right;
+    margin-top: 24px;
+    margin-right: 26px;
+}
+#vipClub a {
+    color: #26a0cd;
+}
+/*���������*/
+#shopping {
+    overflow: hidden;
+    height: 151px;
+    /*margin-top: 1px;*/
+    background-color: #df147f;
+}
+#shoppingIcon {
+    margin-top: 18px;
+    width: 26px;
+}
+#shoppingIcon img {
+    height: 26px;
+    width: 26px;
+}
+#shoppingBag {
+    display: block;
+    margin-top: 6px;
+    height: 52px;
+    line-height: 20px;
+    width: 17px;
+    font-size: 16px;
+    color: #fff;
+}
+#shoppingCount {
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 14px;
+}
+#shoppingCount span {
+    color: #f1037f;
+    font-size: 14px;
+    font-weight: 600;
+}
+/*��������ز���*/
+#shoppingHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 198px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+.button {
+    width: 20px;
+    margin-top: 16px;
+    margin-right: 18px;
+    background-color: white;
+}
+.button i {
+    color: #c4c4c4;
+    font-size: 20px;
+    margin-left: 225px;
+    margin-bottom: 107px;
+}
+.headPortrait {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    padding: 1px;
+    margin: 30px auto;
+}
+.enrollAndOnload {
+    display: block;
+    height: 18px;
+    width: 110px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666a73;
+}
+.enrollAndOnload a {
+    color: #f14087;
+}
+/*�Ż�ȯ����*/
+#coupon {
+    height: 36px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+#couponIcon {
+    height: 18px;
+    width: 24px;
+    margin-top: 7px;
+}
+#couponIcon img {
+    height: 20px;
+    width: 24px;
+}
+/*�Ż�ȯ���ز���*/
+#myCouponHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*couponHide�����class��ʽ����shoppingHide�����class��ʽ*/
+#couponHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 198px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+/*Ʒ�Ʋ���*/
+#brand {
+    height: 36px;
+    overflow: hidden;
+}
+#brandIcon {
+    height: 22px;
+    width: 24px;
+    margin-top: 8px;
+}
+#brandIcon img {
+    width: 24px;
+}
+/*Ʒ�����ز���*/
+#myBrandHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*brandHide�����class��ʽ����shoppingHide�����class��ʽ*/
+#brandHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 198px;
+    width: 274px;
+   right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+/*��Ʒ����*/
+#commodity {
+    height: 36px;
+    overflow: hidden;
+}
+#commodityIcon {
+    height: 24px;
+    width: 24px;
+    margin-top: 6px;
+}
+#commodityIcon img {
+    width: 24px;
+}
+/*��Ʒ���ز���*/
+#myCommodityHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*commodityHide�����class��ʽ����shoppingHide�����class��ʽ*/
+#commodityHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 198px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+/*�ҵ��㼣����*/
+#footmark {
+    height: 36px;
+    overflow: hidden;
+}
+#footmarkIcon {
+    height: 24px;
+    width: 24px;
+    margin-top: 6px;
+}
+#footmarkIcon img {
+    width: 24px;
+}
+/*�ҵ��㼣���ز���*/
+#myFootMarkHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*footMarkHide�����class��ʽ����shoppingHide�����class��ʽ*/
+#footmarkHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 198px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+/*��Ա��������*/
+#vipTickling {
+    /*��ӵײ�������ʱ��Ҫ�������� ��ȥ16px*/
+    margin-top: 140px;
+    height: 36px;
+    overflow: hidden;
+}
+#vipTicklingIcon {
+    width: 24px;
+    margin-top: 6px;
+}
+#vipTicklingIcon img {
+    height: 24px;
+}
+/*��Ա�������ز���*/
+#myVipTicklingHide {
+    z-index: -3;
+    background-color: white;
+    position: absolute;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*���ض�������*/
+#backTop {
+    height: 36px;
+    overflow: hidden;
+}
+#backTopIcon {
+    height: 12px;
+    width: 24px;
+    margin-top: 12px;
+}
+#backTopIcon img {
+    width: 24px;
+    height: 20px;
+}
+/*���ض������ز���*/
+#myBackTopHide {
+    z-index: -3;
+    background-color: white;
+    position: absolute;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*�ײ��ʾ����*/
+/*Ŀǰ�ײ��������ﻹ��ԭ��ҳ��һ�£��������ײ���������ʱ����Զ�����okay*/
+#questionnaireSurvey {
+    height: 35px;
+    width: 111px;
+    border: 1px solid #e0dfdf;
+    position: fixed;
+    /*��ӵײ�������ʱ��Ҫ�������� ����16px*/
+    bottom: 3px;
+    right: 40px;
+    background: url("../images/zimages/wenjuan.png");
+}
+/*<!--LOGO����-->*/
+/*viplogo����*/
+#logo {
+    width: 1000px;
+    height: 100px;
+    /*background-color: red;*/
+}
+#logoImg {
+    width: 250px;
+    height: 100px;
+}
+#logoImg img {
+    margin-top: 5px;
+    width: 250px;
+}
+/*Ʒ�ʱ�֤����*/
+#quality {
+    height: 44px;
+    width: 393px;
+    margin-left: 223px;
+    margin-top: 28px;
+}
+#quality li {
+    float: left;
+    width: 115px;
+    height: 44px;
+    margin-right: 16px;
+}
+#qualityProducts {
+    background: url("../images/zimages/jinglingtu.png") -150px -55px;
+}
+#sevenDay {
+    background: url("../images/zimages/jinglingtu.png") -150px -104px;
+}
+#returnedPurchase {
+    background: url("../images/zimages/jinglingtu.png") -150px -155px;
+}
+/*logo���������*/
+/*==����������ͨ�����ֵ� �ֻ����  ���ಿ��  �в㼶����=*/
+#myTopShoppingBags {
+    position: relative;
+    height: 50px;
+    width: 132px;
+    margin-top: 18px;
+    border: solid white;
+    border-width: 1px 1px 0 1px;
+}
+#cutOffRule {
+    height: 10px;
+    width: 20px;
+    margin-left: -1px;
+    margin-top: 24px;
+    border-left: 1px solid #ccc;
+}
+#myTopShoppingBagsIcon {
+    height: 22px;
+    width: 16px;
+    margin-top: 16px;
+    position: relative;
+    background: url("../images/zimages/jinglingtu.png") 0 -58px;
+}
+#count {
+    height: 16px;
+    width: 24px;
+    position: absolute;
+    top:-5px;
+    left: 10px;
+    border-radius: 8px;
+    background-color: #f10180;
+    text-align: center;
+    line-height: 16px;
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+}
+#bagsWord {
+    font-size: 12px;
+    color: #666a73;
+    width:80px;
+    margin-left: 58px;
+    margin-top: -16px;
+}
+/*������������ز���*/
+#myTopShoppingBagsHide {
+    z-index: 3;
+    position: absolute;
+    height: 80px;
+    width: 350px;
+    border: 1px solid #ccc;
+    top: 49px;
+    right: -1px;
+    background-color: #fff;
+}
+#topContent {
+    width: 226px;
+    height: 14px;
+    font-size: 12px;
+    margin-top: 33px;
+    color: #666a73;
+}
+#topContent a {
+    color: #f1037f;
+}
+/*��Ҫ�ĵ���*/
+/*��Ҫ�ĸ��ַ���*/
+#mianNav {
+    height: 40px;
+    background-color: #f10180;
+}
+#mianNavContent {
+    width: 1000px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    /*height: 40px;*/
+}
+#mianNavContent>ul>li {
+    float: left;
+    padding: 12px 13px 0;
+    height: 28px;
+}
+/*ΨƷ���ʵĶ��屳��ɫ*/
+/*#vipgj {*/
+    /*background-color: #bd1067;*/
+/*}*/
+#mianNavContent a,#topMoreWord {
+    color: white;
+    font-weight: bold;
+}
+/*��Ҫ�ĸ����ַ�����ĸ��ಿ��*/
+/*==���������Ļ�Ա���ֲ��в㼶����=*/
+#topMore {
+    position: relative;
+}
+.selectedm {
+    margin-top: 8px;
+    margin-left: 6px;
+    /*�ñ߿���һ��������*/
+    border-style: solid;
+    border-width: 5px;
+    border-color: #fff transparent transparent transparent;
+}
+/*���ಿ�ֵ����ز���*/
+#topMoreHide {
+    z-index: 999;
+    padding: 26px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    height: 260px;
+    width: 594px;
+    background-color: white;
+}
+#topMoreHide li {
+    float: left;
+    width: 170px;
+    height: 96px;
+    border-radius: 5px;
+}
+#topMoreHiden {
+    position: relative;
+    margin-bottom: 16px;
+    background: url("../images/zimages/nvzhuang.jpg")no-repeat;
+    overflow: hidden;
+}
+#topMoreHidex {
+    position: relative;
+    margin: 0 16px  16px;;
+    background: url("../images/zimages/xiebao.jpg") no-repeat;
+    overflow: hidden;
+}
+#topMoreHidep {
+    position: relative;
+    margin-bottom: 16px;
+    background: url("../images/zimages/peishi.jpg") no-repeat;
+    overflow: hidden;
+}
+#topMoreHidey {
+    position: relative;
+    margin-bottom: 16px;
+    background: url("../images/zimages/yundong.jpg") no-repeat;
+    overflow: hidden;
+}
+#topMoreHidew {
+    position: relative;
+    margin: 0 16px 16px;;
+    background: url("../images/zimages/weipinshe.jpg") no-repeat;
+    overflow: hidden;
+}
+/*������Ԥ��*/
+#classifyAndNotice {
+    width: 170px;
+    height: 40px;
+    margin-left: 178px;
+}
+#classify,#notice {
+    float: left;
+    width: 85px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+    vertical-align: middle;
+}
+#classify img,#notice img {
+    padding-left: 16px;
+    padding-top: 5px;
+    width: 20px;
+    height: 32px;
+}
+/*ΨƷ���ʴ�ͼ����*/
+#vipInternational {
+    position: relative;
+    height: 360px;
+    width: 100%;
+    overflow: hidden;
+}
+#vipWord {
+    height: 60px;
+    width: 650px;
+    /*color: white;*/
+    background-color: red;
+    display: block;
+    font-size: 50px;
+    margin: 200px auto;
+}
+#vipInternational img {
+    position: absolute;
+    bottom: 0;
+    height: 360px;
+}
+
+/*ȫ�����������*/
+#global {
+    width: 1000px;
+    height: 230px;
+}
+#global img {
+    margin-top: 50px;
+    width: 200px;
+}
+/*���Ż��ⲿ��*/
+#hot {
+    height: 52px;
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+#hot img {
+    position: absolute;
+    left: -85px;
+}
+/*��Ĥ����ͼƬ*/
+#facial {
+    width: 1010px;
+    margin-top: 30px;
+}
+#facial div {
+    width: 490px;
+    height: 320px;
+    border: 1px solid #e5e6e1;
+}
+#facial img {
+    width: 490px;
+}
+#facial p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+}
+#facial span {
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    color: #868686;
+    font-size: 16px;
+}
+/*��Ʒ�Ƽ�����*/
+#recommend {
+    height: 52px;
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+#recommend img {
+    position: absolute;
+    left: -85px;
+}
+/*��Ʒ�Ƽ��ֲ����ݲ���*/
+#best {
+    width: 1000px;
+    height: 300px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+/*JS����ʱҪ���������͸����*/
+#bestLeft,#bestRight {
+    position: absolute;
+    height: 70px;
+    width: 30px;
+    top: 72px;
+    opacity: 0;
+}
+#bestLeft {
+    left: 10px;
+    background: url("../images/zimages/xiangzuo.png");
+}
+#bestRight {
+    right: 10px;
+    background: url("../images/zimages/xiangyou.png");
+}
+#best ul {
+    /*===�ֶ����������˶���===*/
+    /*position: relative;*/
+    /*left: -1035px;*/
+    width: 2070px;
+}
+#best li>a>img {
+    width: 170px;
+    border: 1px solid #f3f3f3;
+}
+#best li {
+    float: left;
+    margin-right: 35px;
+    height: 300px;
+    width: 172px;
+}
+/*li����ʽ*/
+.ta {
+    height: 83px;
+    width: 172px;
+}
+.taStar {
+    margin: 10px auto;
+    height: 16px;
+    width: 122px;
+}
+.tj {
+    width: 50px;
+    display: inline-block;
+    font-size: 12px;
+    color: #392f26;
+}
+.star {
+    margin-top: 4px;
+    width: 72px;
+}
+.summary {
+    font-size: 12px;
+    text-align: center;
+    color: #392f26;
+}
+.price {
+    text-align: center;
+}
+.price span {
+    color: #e2367e;
+    font-weight: bold;
+    font-size: 14px;
+}
+.price i {
+    color: #d1d1d1;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+/*���ݲ�ױ����*/
+#cosmetics {
+    width: 1000px;
+    height: 600px;
+}
+/*���ݲ�ױ��������*/
+#cosmeticsNav {
+    height: 40px;
+    overflow: hidden;
+    border-bottom: 2px solid #ff7988;
+}
+#cometicsLogo {
+    width: 98px;
+    height: 24px;
+    margin-top: 8px;
+    margin-right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #3e3e3e;
+}
+#cosmeticsNav li {
+    float: left;
+    padding: 14px 7px  0;
+    font-size: 14px;
+    color: #a99db5;
+}
+#cosmeticsNav a {
+    color: #a99db5;
+}
+#cometicsMore {
+    margin-top: 15px;
+    color: #a99db5;
+    font-size: 14px;
+}
+/*���ݲ�ױ���ݲ���*/
+/*���ݲ�ױ������߲���*/
+#cosmeticsContent {
+    height: 558px;
+}
+#coscLeft {
+    width: 830px;
+}
+/*����*/
+#coscLeftTop div {
+    position: relative;
+    display: inline-block;
+}
+#coscLeftTop button {
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    border: 2px solid #ff7988;
+    bottom: 30px;
+    left: 56px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+}
+#royal {
+     margin-left: 14px;
+ }
+#coscLeftTop img {
+    height: 255px;
+}
+/*�ײ�*/
+/*�ײ��ֲ�����*/
+#coscLeftBottom {
+    height: 295px;
+    width: 830px;
+    position: relative;
+    overflow: hidden;
+}
+/*JS����ʱҪ���������͸����*/
+#coscLeftButton,#coscRightButton {
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    top: 92px;
+    opacity: 0;
+}
+#coscLeftButton {
+    left: 10px;
+    background: url("images/jinglingtuhot.png") -33px 0;
+}
+#coscRightButton {
+    right: 10px;
+    background: url("images/jinglingtuhot.png");
+}
+#coscLeftBottom ul {
+    /*===�ֶ����������˶���===*/
+    /*position: relative;*/
+    /*left: -876px;*/
+    width: 1752px;
+}
+#coscLeftBottom li>a>img {
+    width: 170px;
+    border: 1px solid #f3f3f3;
+}
+#coscLeftBottom li {
+    float: left;
+    margin-right: 47px;
+    margin-top: 16px;
+    height: 270px;
+    width: 172px;
+}
+/*li����ʽ*/
+.cos {
+    height: 62px;
+    width: 172px;
+}
+.cossummary {
+    padding-top: 15px;
+    font-size: 12px;
+    text-align: center;
+    color: #392f26;
+}
+.cosprice {
+    text-align: center;
+}
+.cosprice span {
+    color: #e2367e;
+    font-weight: bold;
+    font-size: 14px;
+}
+.cosprice i {
+    color: #d1d1d1;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+/*���ݲ�ױ�����ұ߲���*/
+#coscRight {
+    width:170px;
+    height:550px;
+}
+#remai {
+    height: 60px;
+    width: 136px;
+    line-height: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+#coscRight ul {
+    text-align: center;
+    width: 137px;
+    height: 490px;
+}
+#coscRight img {
+    width: 135px;
+    border: 1px solid #f3f3f3;
+}
+#coscRight span {
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    margin-left: 13px;
+    color: #999;
+    font-size: 13px;
+    height: 52px;
+}
+/*����ר������*/
+#hotSell {
+    height: 52px;
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+#hotSell img {
+    position: absolute;
+    left: -85px;
+}
+/*����ר�����ݲ���*/
+#hotSellContentA {
+    width: 1000px;
+    height: 265px;
+    margin-top: 35px;
+}
+#hotSellContentA img {
+     width: 490px;
+ }
+#hotSellContentA a {
+    display: block;
+    width: 490px;
+    height: 265px;
+}
+/*����ר����ಿ��*/
+#hotSellContentALeft {
+    position: relative;
+    width: 490px;
+    height: 235px;
+}
+#hotSCLBottomL {
+    position: absolute;
+    bottom: 0;
+    width: 490px;
+    height: 30px;
+    opacity: 0.5;
+    background-color: #000;
+}
+#hotSCLBottomLC {
+    position: absolute;
+    bottom: 5px;
+    height: 20px;
+    width: 490px;
+}
+#bottomaL,#bottombL{
+    display: block;
+}
+#bottomaL{
+    margin-top: 3px;
+    margin-left: 20px;
+    height: 13px;
+    width: 13px;
+    background: url("images/jinglingtuhot.png") -2px -56px;
+}
+#bottombL {
+    margin-top: 3px;
+    margin-left: 5px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+/*����ר���Ҳಿ��*/
+#hotSellContentARight {
+    position: relative;
+    width: 490px;
+    height: 235px;
+}
+#hotSCRBottomR {
+    position: absolute;
+    bottom: 0;
+    width: 490px;
+    height: 30px;
+    opacity: 0.5;
+    background-color: #000;
+}
+#hotSCRBottomRC {
+    position: absolute;
+    bottom: 5px;
+    height: 20px;
+    width: 490px;
+}
+#bottomaR,#bottombR{
+    display: block;
+}
+#bottomaR{
+    margin-top: 3px;
+    margin-left: 20px;
+    height: 13px;
+    width: 13px;
+    background: url("images/jinglingtuhot.png") -2px -56px;
+}
+#bottombR {
+    margin-top: 3px;
+    margin-left: 5px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+/*�����Ƴ�����*/
+#coming {
+    height: 60px;
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+#coming img {
+    position: absolute;
+    left: -85px;
+}
+/*�����Ƴ������ݲ���*/
+#comingContent {
+    width: 1000px;
+    height: 180px;
+    margin-top: 20px;
+    /*background-color: red;*/
+}
+#comingContent li {
+    width: 320px;
+    height: 180px;
+    float: left;
+    /*background-color: yellow;*/
+    position: relative;
+}
+#comingContent img {
+    width: 320px;
+    height: 153px;
+}
+/*�����Ƴ���������ݲ���*/
+#cl {
+    position: absolute;
+    bottom: 26px;
+    width: 320px;
+    height: 26px;
+    opacity: 0.5;
+    background-color: #000;
+}
+#clc {
+    position: absolute;
+    bottom: 30px;
+    height: 14px;
+    width: 320px;
+}
+#clba,#clbb{
+    display: block;
+}
+#clba{
+    margin-left: 14px;
+    height: 12px;
+    width: 12px;
+    background: url("images/jinglingtuhot.png") -2px -56px;
+}
+#clbb {
+    margin-left: 6px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+#clw {
+    width: 320px;
+    height: 27px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #666;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/*�����Ƴ����м����ݲ���*/
+#ccCenter {
+    margin: 0 20px;
+}
+#cc {
+    position: absolute;
+    bottom: 26px;
+    width: 320px;
+    height: 26px;
+    opacity: 0.5;
+    background-color: #000;
+}
+#ccc {
+    position: absolute;
+    bottom: 30px;
+    height: 14px;
+    width: 320px;
+}
+#ccba,#ccbb{
+    display: block;
+}
+#ccba{
+    margin-left: 14px;
+    height: 12px;
+    width: 12px;
+    background: url("images/jinglingtuhot.png") -2px -56px;
+}
+#ccbb {
+    margin-left: 6px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+#ccw {
+    width: 320px;
+    height: 27px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #666;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/*�����Ƴ����Ҳ����ݲ���*/
+#cr {
+    position: absolute;
+    bottom: 26px;
+    width: 320px;
+    height: 26px;
+    opacity: 0.5;
+    background-color: #000;
+}
+#crc {
+    position: absolute;
+    bottom: 30px;
+    height: 14px;
+    width: 320px;
+}
+#crba,#crbb{
+    display: block;
+}
+#crba{
+    margin-left: 14px;
+    height: 12px;
+    width: 12px;
+    background: url("images/jinglingtuhot.png") -2px -56px;
+}
+#crbb {
+    margin-left: 6px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+#crw {
+    width: 320px;
+    height: 27px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #666;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+/*JS��Ҫ���õ���ʽ*/
+/*�������ײ��߿�ϲ�*/
+.hidden {
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    background-color: white;
+}
+/*�����Ϻ��������*/
+.selectedc {
+    margin-top: 6px;
+    border-style: solid;
+    border-width: 6px;
+    border-color: transparent transparent #f10180 transparent;
+}
+.selectedmc {
+    margin-top: 2px;
+    margin-left: 6px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent transparent #fff transparent;
+}
+/*ѡ�����ʱ���õ���ʽ*/
+#area .background {
+    background-color: #f1037f;
+    color: white;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font3/iconfont.eot');
+    src: url('../font3/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font3/iconfont.woff') format('woff'),
+    url('../font3/iconfont.ttf') format('truetype'),
+    url('../font3/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#mianNavContent ul li a{
+    font-size: 16px;
+    line-height:20px;
+}
+

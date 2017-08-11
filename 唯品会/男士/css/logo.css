@@ -1,0 +1,14 @@
+.logo .logo_con {
+    height: 100px;
+}
+.logo .logo_con .logo_pic{
+    height: 100px;
+    position: relative;
+    background-color: red ;
+}
+.logo .logo_con .logo_pic img {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    left: -10px;
+}

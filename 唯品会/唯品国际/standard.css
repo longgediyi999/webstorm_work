@@ -1,0 +1,1585 @@
+/*导航栏部分*/
+.nav {
+    height: 30px;
+    background-color: #f5f5f5;
+}
+.nava {
+    width: 1000px;
+    height: 30px;
+    font-size: 12px;
+}
+.area {
+    margin-left: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    width: 56px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.area,.vip {
+    line-height: 30px;
+}
+.nav .vip {
+    margin-left: 110px;
+}
+.selected {
+    margin-top: 12px;
+    /*用边框做一个三角形*/
+    border-style: solid;
+    border-width: 6px;
+    border-color: #999 transparent transparent transparent;
+}
+.selecteda {
+    margin-left: 20px;
+}
+.selectedb {
+    margin-left: 6px;
+}
+.area>span,#area a,.vip a {
+    color: #666a73;
+}
+.vip li {
+    float: left;
+}
+.onloadf {
+    width: 36px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.discountf {
+    width: 66px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+
+.clubf {
+    width: 78px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.servicef {
+    width: 66px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.phonef {
+    width: 52px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.moref {
+    width: 43px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+/*边框遮盖*/
+.cover {
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: -2px;
+}
+.covera {
+    width: 88px;
+}
+.coverb {
+    width: 68px;
+}
+.coverc {
+    width: 98px;
+    left: 0;
+}
+.coverd {
+    width: 110px;
+    left: 0;
+}
+.covere {
+    width: 98px;
+    left: 0;
+}
+.coverf {
+    width: 84px;
+    left: 125px;
+}
+.coverg {
+    width: 75px;
+    left: 225px;
+}
+.coverh {
+    width: 132px;
+    left: 218px;
+}
+/*相对定位*/
+.onloadf,.discountf,.clubf,.servicef,.phonef,.moref {
+    position: relative;
+}
+.vip li:nth-child(2),.vip li:nth-child(4),.vip li:nth-child(6),.vip li:nth-child(8),.vip li:nth-child(10),.vip li:nth-child(12),.vip li:nth-child(14) {
+    width: 14px;
+    height: 14px;
+    margin-top: 10px;
+    background: url("images/jinglingtu.png") -138px -3px;
+}
+.vip li:nth-child(1),.vip li:nth-child(3),.vip li:nth-child(5),.vip li:nth-child(7),.vip li:nth-child(9),.vip li:nth-child(11),.vip li:nth-child(13),.vip li:nth-child(15) {
+    padding: 0 16px;
+}
+.vip li:nth-child(13) span{
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    margin-top: 8px;
+    background: url("images/jinglingtu.png")-98px -150px;
+}
+.disn {
+    display: none;
+}
+/*地区选择隐藏部分*/
+.areaSelected {
+    z-index: 3;
+    background-color: white;
+    left: -1px;
+    position: absolute;
+    height: 460px;
+    width: 300px;
+    border: 1px solid #cdcdcd;
+}
+.areaSelected h5 {
+    width: 258px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    color: black;
+    margin-left: 20px;
+    padding-left: 4px;
+    font-weight: 700;
+    border-bottom: 1px #666 dotted;
+}
+.selectedArea {
+    margin-left: 20px;
+    margin-top: 22px;
+}
+.selectedArea li {
+    height: 26px;
+}
+.selectedArea li span {
+    font-size: 12px;
+    color: #343434;
+}
+.selectedArea li a {
+    display: inline-block;
+    padding: 0 3px;
+    line-height: 18px;
+    height: 18px;
+    margin-left: 10px;
+}
+/*请登录隐藏部分*/
+.onload {
+    z-index: 3;
+    background-color: white;
+    left: -1px;
+    width: 280px;
+    height: 175px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+}
+.onloadperson {
+    height: 40px;
+    width: 260px;
+    margin-top: 30px;
+}
+.onloadhead {
+    margin-left: 20px;
+    width: 40px;
+    height: 38px;
+    background: url("images/jinglingtu.png") 0 -182px;
+}
+.onloadin {
+    height: 34px;
+    width: 180px;
+    line-height: 34px;
+    margin-left: 10px;
+    padding-left: 6px;
+    border-bottom: 1px #666 dotted;
+}
+.onloadselected {
+    height: 75px;
+    width: 220px;
+    margin-top: 8px;
+}
+.onloadcoin {
+    margin-left: 26px;
+}
+.onloadorder {
+    margin-left: 60px;
+}
+/*我的特卖隐藏部分*/
+.discount {
+    background-color: white;
+    left: -1px;
+    width: 80px;
+    height: 108px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+    padding-top: 12px;
+    padding-left: 18px;
+}
+/*会员俱乐部隐藏部分*/
+/*==这里和下面的首页里面的更多部分有层级问题=*/
+.club {
+    z-index: 99;
+    background-color: white;
+    left: -1px;
+    width: 94px;
+    height: 108px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+    padding-top: 10px;
+    padding-left: 16px;
+}
+/*客户服务隐藏部分*/
+.service {
+    z-index: 3;
+    background-color: white;
+    left: -1px;
+    width: 85px;
+    height: 138px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+    padding-top: 10px;
+    padding-left: 13px;
+}
+/*手机隐藏部分*/
+/*==这里和下面的LOGO里面的购物袋部分有层级问题=*/
+.phone {
+    z-index: 99;
+    background-color: white;
+    left: -126px;
+    width: 209px;
+    height: 220px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+}
+.phone img {
+    width: 161px;
+    height: 161px;
+    padding-top: 22px;
+    padding-left: 24px;
+}
+#phone {
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+/*更多选择  隐藏部分*/
+/*==这里和下面的LOGO里面的购物袋部分有层级问题=*/
+.more {
+    z-index: 99;
+    background-color: white;
+    left: -226px;
+    width: 300px;
+    height: 164px;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+}
+.cooperate,.aboutUs {
+    margin-left: 20px;
+    height: 80px;
+    width: 260px;
+}
+.cooperate {
+    border-bottom: 1px #666 dotted;
+}
+.more h5 {
+    padding-top: 12px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+/*右侧边栏*/
+#sidebar {
+    /*========这里调整层级问题==================*/
+    z-index: 9;
+    width: 36px;
+    /*添加底部滚动条时需要调整这里 减去16px*/
+    height: 694px;
+    background-color: #262626;
+    position: fixed;
+    right: 0;
+    top: -30px;
+}
+/*账号部分*/
+#account {
+    height: 56px;
+    margin-top: 116px;
+    overflow: hidden;
+}
+#accountIcon {
+    height: 26px;
+    width: 24px;
+}
+#accountIcon img {
+    margin-top: 4px;
+    height: 26px;
+    width: 24px;
+}
+#accountNumber {
+    margin-top: 6px;
+    margin-left: 7px;
+    display: block;
+    height: 16px;
+    width: 26px;
+    color: #fff;
+    font-size: 12px;
+}
+/*账号隐藏部分*/
+#accountHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 304px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+#button {
+    margin-top: 16px;
+    margin-right: 18px;
+    background-color: white;
+}
+#button i {
+    color: #c4c4c4;
+    font-size: 20px;
+}
+#headPortrait {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    padding: 1px;
+    margin-top: 30px;
+}
+#enrollAndOnload {
+    display: block;
+    height: 18px;
+    width: 110px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666a73;
+}
+#enrollAndOnload a {
+    color: #f14087;
+}
+#my {
+    height: 104px;
+    border: solid #e5e5e5;
+    border-width: 1px 0;
+    background-color: #f8f8f8;
+}
+#myContent {
+    margin-top: 14px;
+}
+#myOrder,#myNews {
+    float: left;
+    height: 76px;
+    width: 136px;
+}
+#myOrder {
+    margin-left: 1px;
+    border-right: 1px solid #e5e5e5;
+}
+#myContent i {
+    color: #c4c4c4;
+    font-size: 27px;
+}
+#myOrderIcon,#myNewsIcon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+#my a {
+    width: 50px;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #666a73;
+}
+#vipClub {
+    height: 14px;
+    width: 60px;
+    font-size: 12px;
+    line-height: 14px;
+    float: right;
+    margin-top: 24px;
+    margin-right: 26px;
+}
+#vipClub a {
+    color: #26a0cd;
+}
+/*购物袋部分*/
+#shopping {
+    overflow: hidden;
+    height: 151px;
+    /*margin-top: 1px;*/
+    background-color: #df147f;
+}
+#shoppingIcon {
+    margin-top: 18px;
+    width: 26px;
+}
+#shoppingIcon img {
+    height: 26px;
+    width: 26px;
+}
+#shoppingBag {
+    display: block;
+    margin-top: 6px;
+    height: 52px;
+    line-height: 20px;
+    width: 17px;
+    font-size: 16px;
+    color: #fff;
+}
+#shoppingCount {
+    height: 22px;
+    width: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 14px;
+}
+#shoppingCount span {
+    color: #f1037f;
+    font-weight: 600;
+}
+/*购物袋隐藏部分*/
+#shoppingHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 198px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+.button {
+    width: 20px;
+    margin-top: 16px;
+    margin-right: 18px;
+    background-color: white;
+}
+.button i {
+    color: #c4c4c4;
+    font-size: 20px;
+}
+.headPortrait {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    padding: 1px;
+    margin: 30px auto;
+}
+.enrollAndOnload {
+    display: block;
+    height: 18px;
+    width: 110px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666a73;
+}
+.enrollAndOnload a {
+    color: #f14087;
+}
+/*优惠券部分*/
+#coupon {
+    height: 36px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+#couponIcon {
+    height: 18px;
+    width: 24px;
+    margin-top: 7px;
+}
+#couponIcon img {
+    height: 20px;
+    width: 24px;
+}
+/*优惠券隐藏部分*/
+#myCouponHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*couponHide里面的class样式调用shoppingHide里面的class样式*/
+#couponHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 198px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+/*品牌部分*/
+#brand {
+    height: 36px;
+    overflow: hidden;
+}
+#brandIcon {
+    height: 22px;
+    width: 24px;
+    margin-top: 8px;
+}
+#brandIcon img {
+    width: 24px;
+}
+/*品牌隐藏部分*/
+#myBrandHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*brandHide里面的class样式调用shoppingHide里面的class样式*/
+#brandHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 198px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+/*商品部分*/
+#commodity {
+    height: 36px;
+    overflow: hidden;
+}
+#commodityIcon {
+    height: 24px;
+    width: 24px;
+    margin-top: 6px;
+}
+#commodityIcon img {
+    width: 24px;
+}
+/*商品隐藏部分*/
+#myCommodityHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*commodityHide里面的class样式调用shoppingHide里面的class样式*/
+#commodityHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 198px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+/*我的足迹部分*/
+#footmark {
+    height: 36px;
+    overflow: hidden;
+}
+#footmarkIcon {
+    height: 24px;
+    width: 24px;
+    margin-top: 6px;
+}
+#footmarkIcon img {
+    width: 24px;
+}
+/*我的足迹隐藏部分*/
+#myFootMarkHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*footMarkHide里面的class样式调用shoppingHide里面的class样式*/
+#footmarkHide {
+    z-index: -3;
+    position: absolute;
+    background-color: white;
+    height: 198px;
+    width: 274px;
+    right: -275px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+}
+/*会员反馈部分*/
+#vipTickling {
+    /*添加底部滚动条时需要调整这里 减去16px*/
+    margin-top: 140px;
+    height: 36px;
+    overflow: hidden;
+}
+#vipTicklingIcon {
+    width: 24px;
+    margin-top: 6px;
+}
+#vipTicklingIcon img {
+    height: 24px;
+}
+/*会员反馈隐藏部分*/
+#myVipTicklingHide {
+    z-index: -3;
+    background-color: white;
+    position: absolute;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*返回顶部部分*/
+#backTop {
+    height: 36px;
+    overflow: hidden;
+}
+#backTopIcon {
+    height: 12px;
+    width: 24px;
+    margin-top: 12px;
+}
+#backTopIcon img {
+    width: 24px;
+    height: 20px;
+}
+/*返回顶部隐藏部分*/
+#myBackTopHide {
+    z-index: -3;
+    background-color: white;
+    position: absolute;
+    height: 34px;
+    width: 116px;
+    right: -117px;
+    border: solid #cecece;
+    border-width: 1px 0 1px 1px;
+    border-radius: 2px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 14px;
+    color: #59595f;
+}
+/*底部问卷调查*/
+/*目前底部调查这里还和原网页不一致，当做出底部滚动条的时候就自动调整okay*/
+#questionnaireSurvey {
+    height: 35px;
+    width: 111px;
+    border: 1px solid #e0dfdf;
+    position: fixed;
+    /*添加底部滚动条时需要调整这里 加上16px*/
+    bottom: 3px;
+    right: 40px;
+    background: url("images/wenjuan.png");
+}
+/*<!--LOGO部分-->*/
+/*viplogo部分*/
+#logo {
+    width: 1000px;
+    height: 100px;
+    /*background-color: red;*/
+}
+#logoImg {
+    width: 250px;
+    height: 100px;
+}
+#logoImg img {
+    margin-top: 5px;
+    width: 250px;
+}
+/*品质保证部分*/
+#quality {
+    height: 44px;
+    width: 393px;
+    margin-left: 223px;
+    margin-top: 28px;
+}
+#quality li {
+    float: left;
+    width: 115px;
+    height: 44px;
+    margin-right: 16px;
+}
+#qualityProducts {
+    background: url("images/jinglingtu.png") -150px -55px;
+}
+#sevenDay {
+    background: url("images/jinglingtu.png") -150px -104px;
+}
+#returnedPurchase {
+    background: url("images/jinglingtu.png") -150px -155px;
+}
+/*logo购物袋部分*/
+/*==这里和上面的通栏部分的 手机版和  更多部分  有层级问题=*/
+#myTopShoppingBags {
+    position: relative;
+    height: 50px;
+    width: 132px;
+    margin-top: 18px;
+    border: solid white;
+    border-width: 1px 1px 0 1px;
+}
+#cutOffRule {
+    height: 10px;
+    width: 20px;
+    margin-left: -1px;
+    margin-top: 24px;
+    border-left: 1px solid #ccc;
+}
+#myTopShoppingBagsIcon {
+    height: 22px;
+    width: 16px;
+    margin-top: 16px;
+    position: relative;
+    background: url("images/jinglingtu.png") 0 -58px;
+}
+#count {
+    height: 16px;
+    width: 24px;
+    position: absolute;
+    top:-5px;
+    left: 10px;
+    border-radius: 8px;
+    background-color: #f10180;
+    text-align: center;
+    line-height: 16px;
+    color: white;
+    font-weight: bold;
+}
+#bagsWord {
+    font-size: 12px;
+    color: #666a73;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+/*顶部购物袋隐藏部分*/
+#myTopShoppingBagsHide {
+    z-index: 3;
+    position: absolute;
+    height: 80px;
+    width: 350px;
+    border: 1px solid #ccc;
+    top: 49px;
+    right: -1px;
+    background-color: #fff;
+}
+#topContent {
+    width: 226px;
+    height: 14px;
+    font-size: 12px;
+    margin-top: 33px;
+    color: #666a73;
+}
+#topContent a {
+    color: #f1037f;
+}
+/*主要的导航*/
+/*主要的各种分类*/
+#mianNav {
+    height: 40px;
+    background-color: #f10180;
+}
+#mianNavContent {
+    width: 1000px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    /*height: 40px;*/
+}
+#mianNavContent>ul>li {
+    float: left;
+    padding: 12px 13px 0;
+    height: 28px;
+}
+/*唯品国际的定义背景色*/
+/*#vipgj {*/
+    /*background-color: #bd1067;*/
+/*}*/
+#mianNavContent a,#topMoreWord {
+    color: white;
+    font-weight: bold;
+}
+/*主要的个各种分类里的更多部分*/
+/*==这里和上面的会员俱乐部有层级问题=*/
+#topMore {
+    position: relative;
+}
+.selectedm {
+    margin-top: 8px;
+    margin-left: 6px;
+    /*用边框做一个三角形*/
+    border-style: solid;
+    border-width: 5px;
+    border-color: #fff transparent transparent transparent;
+}
+/*更多部分的隐藏部分*/
+#topMoreHide {
+    z-index: 3;
+    padding: 26px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    height: 260px;
+    width: 594px;
+    background-color: white;
+}
+#topMoreHide li {
+    float: left;
+    width: 170px;
+    height: 96px;
+    border-radius: 5px;
+}
+#topMoreHiden {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: url("images/nvzhuang.jpg")no-repeat;
+}
+#topMoreHidex {
+    position: relative;
+    overflow: hidden;
+    margin: 0 16px  16px;;
+    background: url("images/xiebao.jpg") no-repeat;
+}
+#topMoreHidep {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: url("images/peishi.jpg") no-repeat;
+}
+#topMoreHidey {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: url("images/yundong.jpg") no-repeat;
+}
+#topMoreHidew {
+    position: relative;
+    overflow: hidden;
+    margin: 0 16px 16px;;
+    background: url("images/weipinshe.jpg") no-repeat;
+}
+
+/*=========================================================*/
+.shadow {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index: 3;
+    width: 170px;
+    height: 96px;
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.9) 100%);
+    transition: transform 300ms linear;
+}
+
+.brand-text {
+    position: absolute;
+    z-index: 3;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    bottom: 10px;
+    overflow: hidden;
+    transition: transform 300ms linear;
+}
+
+.brand-name-Chinses {
+    height: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+/*分类与预告*/
+#classifyAndNotice {
+    width: 170px;
+    height: 40px;
+    margin-left: 178px;
+}
+#classify,#notice {
+    float: left;
+    width: 85px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+    vertical-align: middle;
+}
+#classify img,#notice img {
+    padding-left: 16px;
+    padding-top: 5px;
+    width: 20px;
+    height: 32px;
+}
+/*唯品国际大图部分*/
+#vipInternational {
+    position: relative;
+    height: 360px;
+    width: 100%;
+    overflow: hidden;
+}
+#vipWord {
+    height: 60px;
+    width: 650px;
+    /*color: white;*/
+    background-color: red;
+    display: block;
+    font-size: 50px;
+    margin: 200px auto;
+}
+#vipInternational img {
+    position: absolute;
+    bottom: 0;
+    height: 360px;
+}
+
+/*全球各地区部分*/
+#global {
+    width: 1000px;
+    height: 230px;
+}
+#global img {
+    margin-top: 50px;
+    width: 200px;
+}
+/*热门话题部分*/
+#hot {
+    height: 52px;
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+#hot img {
+    position: absolute;
+    left: -85px;
+}
+/*面膜两个图片*/
+#facial {
+    width: 1010px;
+    margin-top: 30px;
+}
+#facial div {
+    width: 490px;
+    height: 320px;
+    border: 1px solid #e5e6e1;
+}
+#facial img {
+    width: 490px;
+}
+#facial p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+}
+#facial span {
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    color: #868686;
+    font-size: 16px;
+}
+/*爆品推荐部分*/
+#recommend {
+    height: 52px;
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+#recommend img {
+    position: absolute;
+    left: -85px;
+}
+/*爆品推荐轮播内容部分*/
+#best {
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+/*JS调用时要调整这里的透明度*/
+#bestLeft,#bestRight {
+    z-index: 3;
+    position: absolute;
+    height: 70px;
+    width: 30px;
+    top: 72px;
+}
+#bestLeft {
+    opacity: 0;
+    left: 10px;
+    background: url("images/xiangzuo.png");
+}
+#bestRight {
+    opacity: 0;
+    right: 10px;
+    background: url("images/xiangyou.png");
+}
+#best ul {
+    /*===手动用来调整运动的===*/
+    position: absolute;
+    left: -1035px;
+    width: 4140px;
+}
+#best li>a>img {
+    width: 170px;
+    border: 1px solid #f3f3f3;
+}
+#best li {
+    float: left;
+    margin-right: 35px;
+    height: 300px;
+    width: 172px;
+}
+/*li的样式*/
+.ta {
+    height: 83px;
+    width: 172px;
+}
+.taStar {
+    margin: 10px auto;
+    height: 16px;
+    width: 122px;
+}
+.tj {
+    width: 50px;
+    display: inline-block;
+    font-size: 12px;
+    color: #392f26;
+}
+.star {
+    margin-top: 4px;
+    width: 72px;
+}
+.summary {
+    font-size: 12px;
+    text-align: center;
+    color: #392f26;
+}
+.price {
+    text-align: center;
+}
+.price span {
+    color: #e2367e;
+    font-weight: bold;
+    font-size: 14px;
+}
+.price i {
+    color: #d1d1d1;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+/*美容彩妆部分*/
+#cosmetics {
+    width: 1000px;
+    height: 600px;
+}
+/*美容彩妆导航部分*/
+#cosmeticsNav {
+    height: 40px;
+    overflow: hidden;
+    border-bottom: 2px solid #ff7988;
+}
+#cometicsLogo {
+    width: 98px;
+    height: 24px;
+    margin-top: 8px;
+    margin-right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #3e3e3e;
+}
+#cosmeticsNav li {
+    float: left;
+    padding: 14px 7px  0;
+    font-size: 14px;
+    color: #a99db5;
+}
+#cosmeticsNav a {
+    color: #a99db5;
+}
+#cometicsMore {
+    margin-top: 15px;
+    color: #a99db5;
+    font-size: 14px;
+}
+/*美容彩妆内容部分*/
+/*美容彩妆内容左边部分*/
+#cosmeticsContent {
+    height: 558px;
+}
+#coscLeft {
+    width: 830px;
+}
+/*顶部*/
+#coscLeftTop div {
+    position: relative;
+    display: inline-block;
+}
+#coscLeftTop button {
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    border: 2px solid #ff7988;
+    bottom: 30px;
+    left: 56px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+}
+#royal {
+     margin-left: 14px;
+ }
+#coscLeftTop img {
+    height: 255px;
+}
+/*底部*/
+/*底部轮播部分*/
+#coscLeftBottom {
+    position: relative;
+    height: 295px;
+    width: 830px;
+    position: relative;
+    overflow: hidden;
+}
+/*JS调用时要调整这里的透明度*/
+#coscLeftButton,#coscRightButton {
+    z-index: 3;
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    top: 92px;
+    opacity: 0;
+}
+#coscLeftButton {
+    left: 10px;
+    background: url("images/jinglingtuhot.png") -33px 0;
+}
+#coscRightButton {
+    right: 10px;
+    background: url("images/jinglingtuhot.png");
+}
+#coscLeftBottom ul {
+    /*===手动用来调整运动的===*/
+    position: absolute;
+    left: -876px;
+    width: 3504px;
+}
+#coscLeftBottom li>a>img {
+    width: 170px;
+    border: 1px solid #f3f3f3;
+}
+#coscLeftBottom li {
+    float: left;
+    margin-right: 47px;
+    margin-top: 16px;
+    height: 270px;
+    width: 172px;
+}
+/*li的样式*/
+.cos {
+    height: 62px;
+    width: 172px;
+}
+.cossummary {
+    padding-top: 15px;
+    font-size: 12px;
+    text-align: center;
+    color: #392f26;
+}
+.cosprice {
+    text-align: center;
+}
+.cosprice span {
+    color: #e2367e;
+    font-weight: bold;
+    font-size: 14px;
+}
+.cosprice i {
+    color: #d1d1d1;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+/*美容彩妆内容右边部分*/
+#coscRight {
+    width:170px;
+    height:550px;
+}
+#remai {
+    height: 60px;
+    width: 136px;
+    line-height: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+#coscRight ul {
+    text-align: center;
+    width: 137px;
+    height: 490px;
+}
+#coscRight img {
+    width: 135px;
+    border: 1px solid #f3f3f3;
+}
+#coscRight span {
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    margin-left: 13px;
+    color: #999;
+    font-size: 13px;
+    height: 52px;
+}
+/*热销专场部分*/
+#hotSell {
+    height: 52px;
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+#hotSell img {
+    position: absolute;
+    left: -85px;
+}
+/*热销专场内容部分*/
+#hotSellContentA {
+    width: 1000px;
+    height: 265px;
+    margin-top: 35px;
+}
+#hotSellContentA img {
+     width: 490px;
+ }
+#hotSellContentA a {
+    display: block;
+    width: 490px;
+    height: 265px;
+}
+/*热销专场左侧部分*/
+#hotSellContentALeft {
+    position: relative;
+    width: 490px;
+    height: 235px;
+}
+#hotSCLBottomL {
+    position: absolute;
+    bottom: 0;
+    width: 490px;
+    height: 30px;
+    opacity: 0.5;
+    background-color: #000;
+}
+#hotSCLBottomLC {
+    position: absolute;
+    bottom: 5px;
+    height: 20px;
+    width: 490px;
+}
+#bottomaL,#bottombL{
+    display: block;
+}
+#bottomaL{
+    margin-top: 3px;
+    margin-left: 20px;
+    height: 13px;
+    width: 13px;
+    background: url("images/jinglingtuhot.png") -2px -56px;
+}
+#bottombL {
+    margin-top: 3px;
+    margin-left: 5px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+/*热销专场右侧部分*/
+#hotSellContentARight {
+    position: relative;
+    width: 490px;
+    height: 235px;
+}
+#hotSCRBottomR {
+    position: absolute;
+    bottom: 0;
+    width: 490px;
+    height: 30px;
+    opacity: 0.5;
+    background-color: #000;
+}
+#hotSCRBottomRC {
+    position: absolute;
+    bottom: 5px;
+    height: 20px;
+    width: 490px;
+}
+#bottomaR,#bottombR{
+    display: block;
+}
+#bottomaR{
+    margin-top: 3px;
+    margin-left: 20px;
+    height: 13px;
+    width: 13px;
+    background: url("images/jinglingtuhot.png") -2px -56px;
+}
+#bottombR {
+    margin-top: 3px;
+    margin-left: 5px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+/*即将推出部分*/
+#coming {
+    height: 60px;
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+#coming img {
+    position: absolute;
+    left: -85px;
+}
+/*即将推出的内容部分*/
+#comingContent {
+    width: 1000px;
+    height: 180px;
+    margin-top: 20px;
+    /*background-color: red;*/
+}
+#comingContent li {
+    width: 320px;
+    height: 180px;
+    float: left;
+    /*background-color: yellow;*/
+    position: relative;
+}
+#comingContent img {
+    width: 320px;
+    height: 153px;
+}
+/*即将推出的左侧内容部分*/
+#cl {
+    position: absolute;
+    bottom: 26px;
+    width: 320px;
+    height: 26px;
+    opacity: 0.5;
+    background-color: #000;
+}
+#clc {
+    position: absolute;
+    bottom: 30px;
+    height: 14px;
+    width: 320px;
+}
+#clba,#clbb{
+    display: block;
+}
+#clba{
+    margin-left: 14px;
+    height: 12px;
+    width: 12px;
+    background: url("images/jinglingtuhot.png") -2px -56px;
+}
+#clbb {
+    margin-left: 6px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+#clw {
+    width: 320px;
+    height: 27px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #666;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/*即将推出的中间内容部分*/
+#ccCenter {
+    margin: 0 20px;
+}
+#cc {
+    position: absolute;
+    bottom: 26px;
+    width: 320px;
+    height: 26px;
+    opacity: 0.5;
+    background-color: #000;
+}
+#ccc {
+    position: absolute;
+    bottom: 30px;
+    height: 14px;
+    width: 320px;
+}
+#ccba,#ccbb{
+    display: block;
+}
+#ccba{
+    margin-left: 14px;
+    height: 12px;
+    width: 12px;
+    background: url("images/jinglingtuhot.png") -2px -56px;
+}
+#ccbb {
+    margin-left: 6px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+#ccw {
+    width: 320px;
+    height: 27px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #666;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/*即将推出的右侧内容部分*/
+#cr {
+    position: absolute;
+    bottom: 26px;
+    width: 320px;
+    height: 26px;
+    opacity: 0.5;
+    background-color: #000;
+}
+#crc {
+    position: absolute;
+    bottom: 30px;
+    height: 14px;
+    width: 320px;
+}
+#crba,#crbb{
+    display: block;
+}
+#crba{
+    margin-left: 14px;
+    height: 12px;
+    width: 12px;
+    background: url("images/jinglingtuhot.png") -2px -56px;
+}
+#crbb {
+    margin-left: 6px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+#crw {
+    width: 320px;
+    height: 27px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #666;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+/*JS需要调用的样式*/
+/*导航栏底部边框合并*/
+.hidden {
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    background-color: white;
+}
+/*鼠标放上后的三角形*/
+.selectedc {
+    margin-top: 6px;
+    border-style: solid;
+    border-width: 6px;
+    border-color: transparent transparent #f10180 transparent;
+}
+.selectedmc {
+    margin-top: 2px;
+    margin-left: 6px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent transparent #fff transparent;
+}
+/*选择地区时调用的样式*/
+#area .background {
+    background-color: #f1037f;
+    color: white;
+}
+
