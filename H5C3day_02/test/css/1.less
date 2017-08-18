@@ -1,0 +1,33 @@
+.changColor() {
+  background-color: red;
+  color:red;
+  font-size: 30px;
+  border:1px solid #000;
+}
+
+
+header{
+  .changColor();
+}
+
+body {
+  .changColor();
+}
+
+.changColor1(@c) {
+  background-color: @c;
+  color: @c;
+}
+
+body {
+  .changColor1(yellow);
+  .changColor1(red);
+}
+
+.changColor2(@c:blue){
+  background-color: @c;
+}
+
+div {
+  .changColor2(red);
+}

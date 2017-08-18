@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../lib/jquery.fullpage.css">
+  <script src="../lib/jquery-1.12.4.js"></script>
+  <script src="../lib/jquery.fullPage.min.js"></script>
+
+  <style>
+    .s1 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .s1 .s1_content {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .s1 .s1_content>img:nth-child(1) {
+      margin-top: 100px;
+    }
+
+    .s1 .s1_content>.des {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    /* 没有被激活的时候 图片的设置  */
+
+    .s1 .s1_content>.des>img {
+      opacity: .1;
+      /* 为了省事 用margin  */
+      margin: 0 20px;
+      transition: all 1s;
+    }
+    /*  被激活的时候  图片的变化就完成 */
+
+    .active .s1_content>.des>img {
+      opacity: 1;
+      margin: 0;
+    }
+    /* ====================================== */
+
+    .s2 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .s2 .s2_content {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .s2 .s2_content .shield {
+      width: 500px;
+       margin-top: 150px; 
+      margin-left: 150px;
+    }
+
+    .s2 .s2_content>img {
+      position: absolute;
+      top: 180px;
+      right: 250px;
+    }
+    /* 没有激活的时候 */
+
+    .s2 .s2_content>.shield>img:nth-child(-n+4) {
+      transition: transform 1s 0.1s linear;
+    }
+
+    .s2 .s2_content>.shield>img:nth-child(1) {
+      transform: translate(20px, 280px) rotate(80deg);
+    }
+
+    .s2 .s2_content>.shield>img:nth-child(2) {
+      transform: translate(220px, 190px) rotate(60deg);
+    }
+
+    .s2 .s2_content>.shield>img:nth-child(3) {
+      transform: translate(500px, -280px) rotate(270deg);
+    }
+
+    .s2 .s2_content>.shield>img:nth-child(4) {
+      transform: translate(120px, 360px) rotate(120deg);
+    }
+    /*  激活的时候 */
+
+    .active .s2_content>.shield>img:nth-child(-n+4) {
+      transform: none;
+    }
+    /* ====================================== */
+
+    .s3,
+    .s3 .s3_content {
+      width: 100%;
+      height: 100%;
+    }
+
+    .s3 .s3_content {
+      position: relative;
+    }
+
+    .s3 .s3_content>.s3_info3 {
+      position: absolute;
+      top: 250px;
+      left: 200px;
+    }
+
+    .s3 .s3_content>.circle {
+      position: absolute;
+      top: 150px;
+      right: 140px;
+    }
+    /*  没有激活的时候 火箭隐藏  */
+
+    .s3 .s3_content>.rocket {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translate(-100%, 100%);
+      transition: transform 1s .2s linear;
+    }
+    /* 激活的时候 火箭到圈里 */
+
+    .active .s3_content>.rocket {
+
+      transform: translate(1056px, -286px);
+    }
+    /* =========================================== */
+
+    .s4 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .s4 .s4_content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .s4 .s4_content>img {
+      position: absolute;
+      top: 200px;
+      right: 180px;
+    }
+
+    .s4 .s4_content>.smart_url {
+      width: 529px;
+      height: 438px;
+      /* border: 1px solid #000; */
+      position: absolute;
+      top: 180px;
+      left: 180px;
+    }
+
+    .s4 .s4_content>.smart_url>img {
+      transform: translateX(-1000px);
+    }
+
+    .s4 .s4_content>.smart_url>.key {
+      width: 0;
+      height: 22px;
+      background-image: url(../images/key.png);
+      position: absolute;
+      top: 22px;
+      left: 18px;
+    }
+
+    .s4 .s4_content>.smart_url>.result {
+      background-image: url(../images/result.png);
+      width: 100%;
+      height: 0;
+      position: absolute;
+      top: 53px;
+    }
+    /*  未激活的时候  */
+    /* 激活的时候 */
+
+    .active .s4_content>.smart_url>img {
+      transition: transform 1s;
+      transform: none;
+    }
+
+    .active .s4_content>.smart_url>.key {
+      transition: width 1s 1s;
+      width: 99px;
+    }
+
+    .active .s4_content>.smart_url>.result {
+      transition: height 1s 2s;
+      height: 372px;
+    }
+    /* ======================================== */
+
+    .s5 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .s5 .s5_content {
+      width: 100%;
+      height: 100%;
+      /* position: relative; */
+      overflow: hidden;
+    }
+
+    .s5 .s5_content {
+      text-align: center;
+    }
+
+    .s5 .s5_content>img {
+      margin-top: 40px;
+    }
+
+    .s5 .s5_content>.browser {
+      width: 1004px;
+      height: 520px;
+      margin: 5px auto;
+      /* border: 1px solid #000; */
+      position: relative;
+      background-color: rgba(255,255,255,.2);
+    }
+
+    .s5 .s5_content>.browser>img:nth-child(2) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    /* 构建边框 */
+
+    .s5 .s5_content>.browser>div {
+      position: absolute;
+    }
+
+    .s5 .s5_content>.browser>.up {
+      width: 100%;
+      height: 0;
+      border-top: 1px solid #fff;
+      top: 0;
+      transform: translateX(2000px);
+    }
+
+    .s5 .s5_content>.browser>.bottom {
+      width: 100%;
+      height: 0;
+      border-bottom: 1px solid #fff;
+      bottom: 0;
+      transform: translateX(-2000px);
+    }
+
+    .s5 .s5_content>.browser>.left {
+      width: 0;
+      height: 100%;
+      border-left: 1px solid #fff;
+      left: 0;
+      top: 0;
+      transform: translateY(-2000px);
+    }
+
+    .s5 .s5_content>.browser>.right {
+      width: 0;
+      height: 100%;
+      border-right: 1px solid #fff;
+      right: 0;
+      top: 0;
+      transform: translateY(2000px);
+    }
+
+    .s5 .s5_content>.browser>.center {
+      width: 0;
+      height: 27px;
+      top: 30px;
+      left: 81px;
+      border: none;
+      border-color: #fff;
+    }
+
+    .s5 .s5_content>.browser>.footer {
+      width: 100%;
+      height: 0;
+      border-top: 1px solid #fff;
+      bottom: 28px;
+      left: 0;
+    }
+    /* 激活的时候 s上下左右div */
+
+    .active .s5_content>.browser>div:nth-of-type(-n+4) {
+      transition: transform 1s .3s;
+      transform: none;
+    }
+
+    .active .s5_content>.browser>.center {
+      transition: width 1s 1.3s,border 0.1s 1.3s;
+      border: 1px solid #fff;
+      width: 906px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="fullpage">
+    <div class="section s1">
+      <div class="s1_content">
+        <img src="../images/logo.png" alt="">
+        <div class="des">
+          <img src="../images/text_1.png" alt="">
+          <img src="../images/text_2.png" alt="">
+          <img src="../images/text_3.png" alt="">
+          <img src="../images/text_4.png" alt="">
+          <img src="../images/text_5.png" alt="">
+          <img src="../images/text_6.png" alt="">
+          <img src="../images/text_7.png" alt="">
+          <img src="../images/text_8.png" alt="">
+        </div>
+        <img src="../images/info_1.png" alt="">
+      </div>
+    </div>
+    <div class="section s2 ">
+      <div class="s2_content">
+        <div class="shield">
+          <img src="../images/shield_1.png" alt="">
+          <img src="../images/shield_2.png" alt="">
+          <img src="../images/shield_3.png" alt="">
+          <img src="../images/shield_4.png" alt="">
+          <img src="../images/shield_5.png" alt="">
+          <img src="../images/shield_6.png" alt="">
+          <img src="../images/shield_7.png" alt="">
+          <img src="../images/shield_8.png" alt="">
+          <img src="../images/shield_9.png" alt="">
+        </div>
+        <img src="../images/info_2.png" alt="">
+      </div>
+    </div>
+    <div class="section s3 ">
+      <div class="s3_content">
+        <img class="s3_info3" src="../images/info_3.png" alt="">
+        <img class="rocket" src="../images/rocket.png" alt="">
+        <img class="circle" src="../images/circle.png" alt="">
+      </div>
+    </div>
+    <div class="section s4 ">
+      <div class="s4_content">
+        <div class="smart_url">
+          <img src="../images/search.png" alt="">
+          <div class="key"></div>
+          <div class="result"></div>
+        </div>
+        <img src="../images/info_4.png" alt="">
+      </div>
+    </div>
+    <div class="section s5 ">
+      <div class="s5_content">
+        <img src="../images/info_5.png" alt="">
+        <div class="browser">
+          <img src="../images/toolbar.png" alt="">
+          <img src="../images/extra.png" alt="">
+          <div class="up"></div>
+          <div class="bottom"></div>
+          <div class="left"></div>
+          <div class="right"></div>
+          <div class="center"></div>
+          <div class="footer"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(function () {
+      $('#fullpage').fullpage({
+        // 每一屏的颜色
+        'sectionsColor': ["#0da5d6", '#2ab561', '#de8910', '#16ba9d', "#0da5d6"],
+        verticalCentered: false,
+        continuousVertical: true
+      })
+    })
+  </script>
+</body>
+
+</html>

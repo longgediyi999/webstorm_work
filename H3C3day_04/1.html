@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            width: 600px;
+            height: 50px;
+            margin: 100px auto;
+        }
+
+        div {
+            float: left;
+            width: 20%;
+            height: 100%;
+            position: relative;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+
+            transform-origin: bottom;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #fff;
+        }
+
+        span:nth-child(1) {
+            background-color: #8080c0;
+            color: yellow;
+
+            transform: translate3d(0,-25px,-25px) rotateX(90deg);
+        }
+
+        span:nth-child(2){
+            background-color: #00b271;
+            color: #fff;
+        }
+
+
+        div:hover{
+            transform: rotateX(-90deg);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <span>真菜单</span>
+            <span>假菜单</span>
+        </div>
+        <div>
+            <span>真菜单</span>
+            <span>假菜单</span>
+        </div>
+        <div>
+            <span>真菜单</span>
+            <span>假菜单</span>
+        </div>
+        <div>
+            <span>真菜单</span>
+            <span>假菜单</span>
+        </div>
+        <div>
+            <span>真菜单</span>
+            <span>假菜单</span>
+        </div>
+    </nav>
+</body>
+</html>

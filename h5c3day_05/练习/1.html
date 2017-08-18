@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../lib/jquery.fullpage.css"/>
+    <script src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery.fullPage.min.js"></script>
+    <style>
+        /*第一页*/
+        .s1 {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding-top: 95px;
+        }
+
+        .des {
+            margin-top: 30px;
+        }
+
+        .s1 img:last-child {
+            margin-top: 45px;
+        }
+
+        .s1 .des img {
+            margin: 0 20px;
+            transition: all 1s;
+            opacity: 0;
+        }
+
+        .active .s1 .des img {
+            margin: 0;
+            opacity: 1;
+        }
+
+        /*第二页*/
+        .s2 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .s2 .s2_left {
+            width: 500px;
+            height: 700px;
+            margin-top: 200px;
+            margin-left: 150px;
+        }
+
+        .s2 .s2_right {
+            position: absolute;
+            right: 200px;
+            top: 266px;
+        }
+
+        .s2 .s2_left img:nth-child(1) {
+            transform: translate(100px, 120px) rotate(60deg);
+        }
+
+        .s2 .s2_left img:nth-child(2) {
+            transform: translate(-100px, -150px) rotate(120deg);
+        }
+
+        .s2 .s2_left img:nth-child(3) {
+            transform: translate(200px, 300px) rotate(180deg);
+        }
+
+        .s2 .s2_left img:nth-child(4) {
+            transform: translate(123px, 300px) rotate(240deg);
+        }
+
+        .s2 .s2_left img:nth-child(-n+4) {
+            transition: transform 2s;
+        }
+
+        .active .s2 .s2_left img:nth-child(-n+4) {
+            transform: none;
+        }
+
+        /*第三页*/
+        .s3 {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .s3 .s3_left {
+            margin-top: 270px;
+            margin-left: 251px;
+        }
+
+        .s3 .s3_right {
+            position: absolute;
+            right: -40px;
+            top: 205px;
+        }
+
+        .s3 .s3_right img:nth-child(2) {
+            transition: transform 2s;
+            transform: translate(-1723px, 301px);
+        }
+
+        .active .s3 .s3_right img:nth-child(2) {
+            transform: translate(-340px, -127px);
+        }
+
+        /*第四页*/
+        .s4 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .s4 .s4_right {
+            position: relative;
+            left: 1018px;
+            top: -192px;
+        }
+
+        .s4 .s4_left {
+            height: 438px;
+            width: 529px;
+            position: relative;
+            left: -1000px;         /* left: 271px;*/
+            top: 239px;
+            overflow: hidden;
+
+        }
+
+        .s4 .s4_left img:nth-child(2) {
+            position: relative;
+            top: -17px;
+
+        }
+
+        .s4 .s4_left img:nth-child(3) {
+            position: absolute;
+            left: 12px;
+            top: 23px;
+            margin-left: 1px;
+
+        }
+
+        .s4 .s4_left .keyp {
+            display: block;
+            width: 99px;
+            height: 22px;
+            background-color: rgb(22, 186, 157);
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 21px;
+            left:19px;
+        }
+
+        .s4 .s4_left .resultp {
+            display: block;
+            width: 529px;
+            height: 372px;
+            background-color: rgb(22, 186, 157);
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 54px;
+        }
+
+        .active .s4 .s4_left {
+            transition: left 1s;
+            left: 271px;
+        }
+
+        .active .s4 .s4_left .keyp {
+            transition: left 1s 1s;
+            left: 300px;
+        }
+
+        .active .s4 .s4_left .resultp {
+            transition: top 1s 2s;
+            top: 450px;
+        }
+
+        /*第五页*/
+        .s5 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .s5_top {
+            width: 1077px;
+            height: 134px;
+            margin: 30px auto;
+        }
+
+        .s5_bottom {
+            width: 1004px;
+            height: 558px;
+            /*background-color: red;*/
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .s5_bottom img:nth-child(2){
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .s5_div1 {
+            width: 100%;
+            border-top: 1px solid #fff;
+            position: absolute;
+            bottom: 28px;
+        }
+
+        .s5_divt {
+            width: 100%;
+            height: 0;
+            border-top: 1px solid #fff;
+            position: absolute;
+            top: 0px;
+            left: 1000px;
+        }
+
+        .s5_divb {
+            width: 100%;
+            height: 0;
+            border-top: 1px solid #fff;
+            position: absolute;
+            bottom: 0px;
+            right: 1000px;
+        }
+
+        .s5_divl {
+            height: 100%;
+            width: 0px;
+            border-left: 1px solid #fff;
+            position: absolute;
+            left: -1px;
+            top: -1000px;
+        }
+
+        .s5_divr {
+            height: 100%;
+            width: 0px;
+            border-left: 1px solid #fff;
+            position: absolute;
+            right: 1px;
+            top: 1000px;
+        }
+
+        .s5_divc {
+            width: 0;
+            height: 27px;
+            border: none;
+            border-color: #fff;
+            position: absolute;
+            top: 30px;
+            left: 77px;
+        }
+
+        .active .s5_divt {
+            transition: left 2s ;
+            left: 0px;
+        }
+
+        .active .s5_divb {
+            transition: right 2s ;
+            right: 0px;
+        }
+
+        .active .s5_divl {
+            transition: top 2s ;
+            top: 0px;
+        }
+
+        .active .s5_divr {
+            transition: top 2s ;
+            top: 0px;
+        }
+
+        .active .s5_divc {
+            transition: width 1s 2s;
+            border: 1px solid #fff;
+            width: 910px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="fullpage">
+    <div class="section">
+        <div class="s1">
+            <img src="../images/logo.png" alt=""/>
+            <div class="des">
+                <img src="../images/text_1.png" alt=""/>
+                <img src="../images/text_2.png" alt=""/>
+                <img src="../images/text_3.png" alt=""/>
+                <img src="../images/text_4.png" alt=""/>
+                <img src="../images/text_5.png" alt=""/>
+                <img src="../images/text_6.png" alt=""/>
+                <img src="../images/text_7.png" alt=""/>
+                <img src="../images/text_8.png" alt=""/>
+            </div>
+            <img src="../images/info_1.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="section ">
+        <div class="s2">
+            <div class="s2_left">
+                <img src="../images/shield_1.png" alt=""/>
+                <img src="../images/shield_2.png" alt=""/>
+                <img src="../images/shield_3.png" alt=""/>
+                <img src="../images/shield_4.png" alt=""/>
+                <img src="../images/shield_5.png" alt=""/>
+                <img src="../images/shield_6.png" alt=""/>
+                <img src="../images/shield_7.png" alt=""/>
+                <img src="../images/shield_8.png" alt=""/>
+                <img src="../images/shield_9.png" alt=""/>
+            </div>
+            <div class="s2_right">
+                <img src="../images/info_2.png" alt=""/>
+            </div>
+        </div>
+    </div>
+
+    <div class="section ">
+        <div class="s3">
+            <div class="s3_left">
+                <img src="../images/info_3.png" alt=""/>
+            </div>
+            <div class="s3_right">
+                <img src="../images/circle.png" alt=""/>
+                <img src="../images/rocket.png" alt=""/>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section ">
+        <div class="s4">
+            <div class="s4_left">
+                <img src="../images/search.png" alt=""/>
+                <img src="../images/result.png" alt=""/>
+                <img src="../images/key.png" alt=""/>
+                <p class="keyp"></p>
+                <p class="resultp"></p>
+            </div>
+            <div class="s4_right">
+                <img src="../images/info_4.png" alt=""/>
+            </div>
+        </div>
+    </div>
+
+    <div class="section active">
+        <div class="s5">
+            <div class="s5_top">
+                <img src="../images/info_5.png" alt=""/>
+            </div>
+            <div class="s5_bottom">
+                <img src="../images/toolbar.png" alt=""/>
+                <img src="../images/extra.png" alt=""/>
+                <div class="s5_div1"></div>
+                <div class="s5_divt"></div>
+                <div class="s5_divb"></div>
+                <div class="s5_divl"></div>
+                <div class="s5_divr"></div>
+                <div class="s5_divc"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    $(function () {
+        $("#fullpage").fullpage({
+            'sectionsColor': ["#0da5d6", '#2ab561', '#de8910', '#16ba9d', "#0da5d6"],
+            verticalCentered: false,
+            continuousVertical: true
+        })
+    });
+
+</script>
+
+</html>

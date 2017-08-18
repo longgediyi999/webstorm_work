@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: green;
+        }
+
+        .view {
+            width: 480px;
+            margin: 300px auto;
+        }
+
+        img  {
+            transition: transform 1s;
+        }
+
+
+    </style>
+</head>
+<body>
+<input type="button" value="打散" id="dasanBtn"/>
+<input type="button" value="合并" id="hebingBtn"/>
+<div class="view">
+    <img src="images/shield_1_01.png" alt=""/>
+    <img src="images/shield_1_02.png" alt=""/>
+    <img src="images/shield_1_03.png" alt=""/>
+    <img src="images/shield_1_04.png" alt=""/>
+    <img src="images/shield_1_05.png" alt=""/>
+    <img src="images/shield_1_06.png" alt=""/>
+    <img src="images/shield_1_07.png" alt=""/>
+    <img src="images/shield_1_08.png" alt=""/>
+    <img src="images/shield_1_09.png" alt=""/>
+</div>
+</body>
+<script>
+    var dasanBtn = document.querySelector("#dasanBtn");
+    var hebingBtn = document.querySelector("#hebingBtn");
+
+    var imgg = document.querySelectorAll("img");
+
+    dasanBtn.onclick = function () {
+        var x = Math.random()*800-400;
+        var y = Math.random()*600-300;
+        var ran = Math.random()*360;
+
+        for(var i = 0; i < imgg.length ; i++) {
+
+            imgg[i].style.transform = "translate("+x+"px,"+y+"px)  rotate("+ran+"deg)";
+        }
+    };
+    hebingBtn.onclick = function () {
+        for(var i = 0; i < imgg.length ; i++) {
+            imgg[i].style.transform = "translate(0px,0px)  rotate(0deg)";
+        }
+    }
+    
+    
+</script>
+</html>

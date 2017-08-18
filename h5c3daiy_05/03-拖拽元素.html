@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .target {
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      float: left;
+    }
+
+    .container {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #000;
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 被拖拽的元素 draggable 可以拖动  -->
+  <div class="target" draggable="true"></div>
+  <!-- 容器 -->
+  <div class="container"></div>
+</body>
+
+<script>
+  /* ctrl+q  选择到标签内的所有代码  */
+
+  // 获取目标元素
+  var target = document.querySelector(".target");
+  var container = document.querySelector(".container");
+
+  container.addEventListener("dragover", function (e) {
+    // 禁止默认行为
+    e.preventDefault();
+  });
+
+  container.addEventListener("drop", function () {
+    // appendChild 有剪切的功能 如果dom元素原本存在dom树中 会被剪切
+    // 克隆一个target
+    var cloneDom=target.cloneNode();
+    container.appendChild(cloneDom);
+  });
+
+</script>
+
+</html>

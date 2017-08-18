@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #tooltip{
+            position: absolute;
+            border: 1px solid #333;
+            background: #f7f5d1;
+            padding: 1px;
+            color: #333;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<a href="#" class="tooltip" title="这是我的链接提示">提示1.</a>
+<a href="#" class="tooltip" title="这是我的链接提示">提示2.</a>
+<a href="#" title="这是我的链接提示">自带提示1.</a>
+<a href="#" title="这是我的链接提示">自带提示2.</a>
+</body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var x = 10;
+        var y = 20;
+        $("a.tooltip").mouseover(function (e) {
+            this.myTitle = this.title;
+            this.title = "";
+            var tooltip = "<div id='tooltip'>" + this.myTitle + "</div>";
+            $("body").append(tooltip);
+
+            $("#tooltip")
+                    .css({
+                        "top": (e.pageY + y) + "px",
+                        "left": (e.pageX + x) + "px"
+                    }).show("slow");
+        }).mouseout(function () {
+            this.title = this.myTitle;
+            $("#tooltip").remove();
+        }).mousemove(function (e) {
+            $("#tooltip")
+                    .css({
+                        "top": (e.pageY + y) + "px",
+                        "left": (e.pageX + x) + "px"
+                    });
+        });
+
+    });
+</script>
+</html>

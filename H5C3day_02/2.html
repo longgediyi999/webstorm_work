@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .view {
+            width: 500px;
+            height: 600px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            padding-left: 100px;
+        }
+
+        header {
+            width: 200px;
+            height: 100px;
+            position: relative;
+            background-color: greenyellow;
+            border-radius: 100px 100px 0 0;
+        }
+
+        header::after {
+            content: "";
+            display: block;
+            background-color:red;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border-radius: 50%;
+            top: 50px;
+            left: 60px;
+        }
+
+        header::before {
+            content: "";
+            display: block;
+            background-color:red;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            border-radius: 50%;
+            top: 50px;
+            right: 60px;
+        }
+
+        .and_body {
+            width: 200px;
+            height: 220px;
+            background-color: greenyellow;
+            margin-top: 10px;
+            border-radius: 0 0 10px 10px;
+
+            position: relative;
+        }
+
+        .and_body::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 25px;
+            height: 150px;
+            top: 30px;
+            left:-30px;
+            background-color: greenyellow;
+            border-radius: 10px;
+        }
+
+        .and_body::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 25px;
+            height: 150px;
+            top: 30px;
+            right:-30px;
+            background-color: greenyellow;
+            border-radius: 10px;
+        }
+
+        footer {
+            width: 25px;
+            height: 80px;
+            position: absolute;
+            bottom: -80px;
+            background-color: greenyellow;
+            border-radius: 0 0 12px 12px;
+        }
+
+        footer:nth-child(1){
+            left: 30px;
+        }
+
+        footer:nth-child(2) {
+            right: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="view">
+        <header></header>
+
+        <div class="and_body">
+            <footer></footer>
+            <footer></footer>
+        </div>
+
+    </div>
+</body>
+</html>

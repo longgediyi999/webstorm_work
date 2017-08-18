@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .content {
+            width: 300px;
+            height: 200px;
+            margin: 50px auto;
+            background-color: #ffefb7;
+        }
+        .content span {
+            display: block;
+            background-color: greenyellow;
+        }
+        #msg {
+            height: 20px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    外层div元素
+    <span>内层span元素</span>
+    外层div元素
+</div>
+<div id="msg1"></div>
+</body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(document).ready(function () {
+        $('span').bind("click", function (event) {
+           var text = $('#msg1').html() + "<p>内层span元素被单机<p/>";
+            $('#msg1').html(text);
+            event.stopPropagation();
+        });
+        $('.content').bind("click", function (event) {
+           var text = $('#msg1').html() + "<p>外层div元素被单机<p/>";
+            $('#msg1').html(text);
+            event.stopPropagation();
+        });
+        $('body').bind("click", function () {
+           var text = $('#msg1').html() + "<p>body元素被单机<p/>";
+            $('#msg1').html(text);
+        });
+    });
+</script>
+</html>

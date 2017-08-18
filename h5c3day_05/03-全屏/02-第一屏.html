@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../lib/jquery.fullpage.css">
+  <script src="../lib/jquery-1.12.4.js"></script>
+  <script src="../lib/jquery.fullPage.min.js"></script>
+
+  <style>
+    .s1 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .s1 .s1_content {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .s1 .s1_content>img:nth-child(1) {
+      margin-top: 100px;
+    }
+
+    .s1 .s1_content>.des {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    /* 没有被激活的时候 图片的设置  */
+
+    .s1 .s1_content>.des>img {
+      opacity: .1;
+      /* 为了省事 用margin  */
+      margin: 0 20px;
+      transition: all 1s;
+    }
+    /*  被激活的时候  图片的变化就完成 */
+    .active .s1_content>.des>img {
+      opacity: 1;
+      margin: 0;
+    }
+   
+  </style>
+</head>
+
+<body>
+  <div id="fullpage">
+    <div class="section s1">
+      <div class="s1_content">
+        <img src="../images/logo.png" alt="">
+        <div class="des">
+          <img src="../images/text_1.png" alt="">
+          <img src="../images/text_2.png" alt="">
+          <img src="../images/text_3.png" alt="">
+          <img src="../images/text_4.png" alt="">
+          <img src="../images/text_5.png" alt="">
+          <img src="../images/text_6.png" alt="">
+          <img src="../images/text_7.png" alt="">
+          <img src="../images/text_8.png" alt="">
+        </div>
+        <img src="../images/info_1.png" alt="">
+      </div>
+    </div>
+    <div class="section">第二屏</div>
+    <div class="section"> 第三屏 </div>
+    <div class="section">第四屏</div>
+    <div class="section">第五屏</div>
+  </div>
+
+  <script>
+    $(function () {
+      $('#fullpage').fullpage({
+        // 每一屏的颜色
+        'sectionsColor': ["#0da5d6", '#2ab561', '#de8910', '#16ba9d', "#0da5d6"],
+        verticalCentered: false,
+        continuousVertical: true
+      })
+    })
+  </script>
+</body>
+
+</html>

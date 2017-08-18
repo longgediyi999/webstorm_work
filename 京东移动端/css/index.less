@@ -1,0 +1,132 @@
+@import "base.less";
+
+/* 声明京东精灵图  */
+
+.jd_sprites() {
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px 200px;
+}
+
+.view {
+}
+
+// 头部搜索
+header {
+  height: 40px;
+  background-color: red;
+  position: relative;
+  padding: 5px 50px 5px 70px;
+
+  .logo {
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    .jd_sprites();
+    background-position: 0 -110px;
+
+    background-origin: content-box;
+    background-clip: content-box;
+    padding: 9px 7px;
+  }
+
+  .login {
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+  }
+
+  .search {
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      display: block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      .jd_sprites();
+      background-position: -60px -110px;
+      position: absolute;
+      top: 5px;
+      left: 11px;
+    }
+
+    input {
+      text-indent: 30px;
+    }
+
+  }
+
+}
+
+// 轮播图
+.carousel {
+
+}
+
+// 首页导航
+.jd_nav {
+
+  ul>li {
+    float: left;
+    width: 25%;
+  }
+
+
+  ul>li>a {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    padding: 5px 0;    /*上下左右*/
+
+  }
+
+  ul>li>a>img {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+// 掌上秒杀
+.hand_kill {
+}
+
+// 618 节日
+.jd_festival {
+}
+
+// 广告
+.adv {
+}
+
+// 特色超市
+.jd_market {
+}
+
+// 主题街
+.jd_theme {
+}
+
+// 品牌推荐
+.recommend {
+}
+
+// 猜你喜欢
+.jd_guess {
+}
+
+// 尾部工具栏
+.footer_tool {
+}
+
+// 尾部导航
+footer {
+}

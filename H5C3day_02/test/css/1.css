@@ -1,0 +1,22 @@
+header {
+  background-color: red;
+  color: red;
+  font-size: 30px;
+  border: 1px solid #000;
+}
+body {
+  background-color: red;
+  color: red;
+  font-size: 30px;
+  border: 1px solid #000;
+}
+body {
+  background-color: yellow;
+  color: yellow;
+  background-color: red;
+  color: red;
+}
+div {
+  background-color: red;
+}
+ 

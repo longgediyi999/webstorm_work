@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .view {
+            width: 282px;
+            /*height: 70px;*/
+            background-color: #000;
+            color: #fff;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        ul li {
+            display: block;
+            /*height: 20px;*/
+        }
+        .content {
+            height: 20px;
+            background-color: red;
+            transition: height  2s;
+        }
+
+        /*.content {*/
+            /*height: 200px;*/
+        /*}*/
+        .content:hover{
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="view">
+        <ul>
+            <li class="content">今日新闻</li>
+            <li class="content">今日新闻</li>
+            <li class="content">今日新闻</li>
+        </ul>
+    </div>
+
+</body>
+</html>

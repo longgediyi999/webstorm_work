@@ -1,0 +1,33 @@
+韩国VB加美女吧m,hgjnm,<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../lib/jquery.fullpage.css">
+  <script src="../lib/jquery-1.12.4.js"></script>
+  <script src="../lib/jquery.fullPage.min.js"></script>
+</head>
+
+<body>
+  <div id="fullpage">
+    <div class="section">第一屏</div>
+    <div class="section">第二屏</div>
+    <div class="section"> 第三屏 </div>
+    <div class="section">第四屏</div>
+    <div class="section">第五屏</div>
+  </div>
+
+  <script>
+    $(function () {
+      $('#fullpage').fullpage({
+        // 每一屏的颜色
+        'sectionsColor': ["#0da5d6", '#2ab561', '#de8910', '#16ba9d',"#0da5d6"],
+        verticalCentered:false,
+        continuousVertical:true
+      })
+    })
+  </script>
+</body>
+
+</html>

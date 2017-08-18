@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../angular.js"></script>
+</head>
+<body>
+    <div class="box" ng-app="App">
+        <div ng-controller="DemoContoller">
+            <h1>{{name}}在{{school}}学习使用angular</h1>
+            <ul>
+                <li ng-hide="false" ng-repeat="(key,course) in courses">第{{key+1}}天:{{course}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        var App = angular.module("App",[]);
+        
+        App.controller('DemoContoller',['$scope', function ($scope) {
+
+            $scope.name = "卵望";
+            $scope.school="狗屎学校";
+            $scope.courses = [
+                    '吃屎',
+                    '吃狗屎',
+                    '继续'
+            ]
+
+        }]);
+
+
+    </script>
+
+</body>
+
+</html>
