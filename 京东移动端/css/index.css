@@ -95,3 +95,302 @@ header .search input {
   margin: 0 auto;
   width: 50%;
 }
+.line {
+  height: 10px;
+  background-color: #f5f5f5;
+}
+.hand_kill {
+  position: relative;
+}
+.hand_kill > .kill_title > span:nth-child(1) {
+  display: block;
+  width: 20px;
+  height: 21px;
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px 200px;
+  background-position: -82px -110px;
+  position: absolute;
+  top: 0;
+  left: 12px;
+}
+.hand_kill > .kill_title > span:nth-child(2) {
+  margin-left: 50px;
+  color: #c91523;
+}
+.hand_kill > .kill_title > .daojishi {
+  position: absolute;
+  top: 3px;
+  left: 127px;
+}
+.hand_kill > .kill_title > .daojishi span {
+  font-size: 16px;
+  background-color: #3d3d3d;
+  color: #fff;
+  padding: 0 2px;
+}
+.hand_kill > .kill_title > .daojishi span:nth-child(3n) {
+  background-color: white;
+  color: #3d3d3d;
+}
+.hand_kill > .kill_title a {
+  position: absolute;
+  font-size: 14px;
+  top: 0px;
+  right: 3px;
+}
+.hand_kill > .kill_content > ul > li {
+  width: 33.3333333%;
+  float: left;
+}
+.hand_kill > .kill_content > ul > li > a {
+  text-align: center;
+  position: relative;
+}
+.hand_kill > .kill_content > ul > li > a img {
+  width: 90%;
+  margin-top: 15px;
+}
+.hand_kill > .kill_content > ul > li > a span {
+  font-size: 14px;
+  display: block;
+  width: 48px;
+  height: 28px;
+  background-color: #fdb60a;
+  position: absolute;
+  top: 75px;
+  right: 24px;
+  border-radius: 50%;
+  line-height: 28px;
+  color: #fff;
+}
+.hand_kill > .kill_content > ul > li > a p:nth-child(3) {
+  font-size: 14px;
+  color: #c91523;
+}
+.hand_kill > .kill_content > ul > li > a p:nth-child(4) {
+  font-size: 14px;
+  color: #666;
+}
+.jd_festival > .festival_title {
+  position: relative;
+}
+.jd_festival > .festival_title ul > li {
+  float: left;
+  width: 50%;
+  position: absolute;
+}
+.jd_festival > .festival_title ul > li:nth-child(1) {
+  left: 5px;
+  bottom: 5px;
+}
+.jd_festival > .festival_title ul > li:nth-child(2) {
+  right: 0;
+  bottom: 77px;
+}
+.jd_festival > .festival_title ul > li:nth-child(3) {
+  right: 0;
+  bottom: 5px;
+}
+.jd_festival > .festival_title ul > li > a > img {
+  width: 95%;
+}
+.jd_festival > .festival_content ul > li {
+  float: left;
+}
+.jd_festival > .festival_content ul > li:nth-child(-n+3) {
+  width: 33.3333333%;
+}
+.jd_festival > .festival_content ul > li:nth-child(n+4) {
+  width: 50%;
+}
+.adv > a > img {
+  width: 100%;
+}
+.jd_market > .market_title h4 {
+  color: #c91523;
+  padding: 3px 5px;
+}
+.jd_market > .market_content > ul > li {
+  float: left;
+  width: 50%;
+}
+.jd_market > .market_content > ul > li:nth-child(4) {
+  clear: both;
+}
+.banner {
+  text-align: center;
+}
+.banner > a {
+  margin: 2px auto;
+  width: 98%;
+}
+.jd_theme > .theme_title {
+  height: 32px;
+}
+.jd_theme > .theme_title > p {
+  font-size: 16px;
+  color: #cf3057;
+  padding: 3px 3px;
+}
+.jd_theme > .theme_content > ul > li:nth-child(-n+2) {
+  width: 50%;
+  float: left;
+}
+.jd_theme > .theme_content > ul > li:nth-child(n+3) {
+  width: 25%;
+  float: left;
+}
+.jd_theme > .theme_content > ul > li:nth-child(5) {
+  clear: both;
+}
+.recommend > .recommend_title {
+  height: 32px;
+}
+.recommend > .recommend_title > p {
+  font-size: 16px;
+  color: #cf3057;
+  padding: 3px 3px;
+}
+.recommend > .recommend_content > ul > li:nth-child(1) {
+  float: left;
+  width: 40%;
+}
+.recommend > .recommend_content > ul > li:nth-child(n+2) {
+  float: left;
+  width: 30%;
+}
+.jd_guess > .guess_title {
+  height: 32px;
+  position: relative;
+}
+.jd_guess > .guess_title > span:first-child {
+  display: inline-block;
+  font-size: 16px;
+  color: #c91560;
+  line-height: 16px;
+  padding: 0 3px;
+}
+.jd_guess > .guess_title > span:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px 200px;
+  background-position: -125px -31px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  right: 107px;
+  top: 6px;
+}
+.jd_guess > .guess_title > span:nth-child(3) {
+  display: inline-block;
+  font-size: 14px;
+  color: #c91523;
+  position: absolute;
+  right: 7px;
+  top: 4px;
+}
+.jd_guess > .guess_content > ul > li {
+  position: relative;
+  float: left;
+  width: 50%;
+  padding: 2px 2px;
+}
+.jd_guess > .guess_content > ul > li a {
+  border-bottom: 1px solid #000;
+}
+.jd_guess > .guess_content > ul > li > a > p:first-child {
+  display: inline-block;
+  color: red;
+  font-size: 16px;
+  padding: 3px 20px;
+}
+.jd_guess > .guess_content > ul > li > a > p:nth-child(2) {
+  display: inline-block;
+  font-size: 14px;
+  color: #8397a5;
+  border: 1px solid #d2d0ce;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.jd_guess > .guess_content > ul > li > a > p:nth-child(4) {
+  font-size: 14px;
+  height: 37px;
+  overflow: hidden;
+}
+.more {
+  height: 42px;
+  background-color: #fff;
+  vertical-align: bottom;
+}
+.more span {
+  font-size: 14px;
+  display: block;
+  height: 39px;
+  color: #666666;
+  text-align: center;
+  line-height: 39px;
+  background-color: #F3F5F7;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  background-color: #f3f5f7;
+}
+.footer_tool > .tool_login > ul > li {
+  float: left;
+  width: 25%;
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+}
+.footer_tool > .tool_login > ul > li:nth-child(-n+3) {
+  border-right: 2px solid black;
+}
+.footer_tool > .tool_login > ul {
+  height: 34px;
+  padding: 6px 0px;
+  border-bottom: 1px solid #cccccc;
+}
+.footer_tool > .tool_atp ul {
+  border-bottom: 1px solid #cccccc;
+}
+.footer_tool > .tool_atp > ul > li {
+  float: left;
+  width: 33.333333333333%;
+  text-align: center;
+  color: #666666;
+  padding: 10px 0;
+}
+.footer_tool > .tool_atp > ul > li > a > span:first-child {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px 200px;
+  background-position: -120px -70px;
+}
+.footer_tool > .tool_atp > ul > li > a > span:nth-child(2) {
+  display: block;
+}
+.footer_tool > .tool_atp > ul > li:nth-child(2) > a > span {
+  background-position: -40px -70px;
+}
+.footer_tool > .tool_atp > ul > li:nth-child(3) > a > span {
+  background-position: -80px -70px;
+}
+.footer_tool > .tool_banner {
+  height: 45px;
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+  line-height: 45px;
+}
+footer > ul > li {
+  float: left;
+  width: 20%;
+}
+footer ul li a img {
+  width: 57px;
+  height: 44px;
+}
