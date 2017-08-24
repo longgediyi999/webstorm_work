@@ -13,9 +13,12 @@
 // 头部搜索
 header {
   height: 40px;
-  background-color: red;
-  position: relative;
+  background-color: rgba(201, 21, 35, 0);
+  position: fixed;
   padding: 5px 50px 5px 70px;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 
   .logo {
     width: 70px;
@@ -69,6 +72,43 @@ header {
 
 // 轮播图
 .carousel {
+  overflow: hidden;
+  position: relative;
+
+   .carousel_ul {
+    width: 1000%;
+    li{
+      float: left;
+      width: 10%;
+    }
+
+  }
+  .carousel_o {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    margin-left: -80px;
+
+    li {
+      float: left;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      margin-left: 5px;
+
+
+    }
+    .active{
+      background-color: red;
+      color:red;
+    }
+
+
+
+  }
+
+
 
 }
 
@@ -194,42 +234,42 @@ header {
 
 // 618 节日
 .jd_festival {
-  >.festival_title {
+  > .festival_title {
     position: relative;
-    ul>li {
+    ul > li {
       float: left;
       width: 50%;
       position: absolute;
     }
 
-    ul>li:nth-child(1){
+    ul > li:nth-child(1) {
       left: 5px;
       bottom: 5px;
     }
 
-    ul>li:nth-child(2){
+    ul > li:nth-child(2) {
       right: 0;
       bottom: 77px;
     }
-    ul>li:nth-child(3){
+    ul > li:nth-child(3) {
       right: 0;
       bottom: 5px;
     }
 
-    ul>li>a>img {
+    ul > li > a > img {
       width: 95%;
     }
   }
 
-  >.festival_content {
-    ul>li {
+  > .festival_content {
+    ul > li {
       float: left;
     }
-    ul>li:nth-child(-n+3) {
+    ul > li:nth-child(-n+3) {
       width: 33.3333333%;
     }
 
-    ul>li:nth-child(n+4){
+    ul > li:nth-child(n+4) {
       width: 50%;
     }
 
@@ -239,27 +279,27 @@ header {
 
 // 广告
 .adv {
-  >a>img {
+  > a > img {
     width: 100%;
   }
 }
 
 // 特色超市
 .jd_market {
-  >.market_title {
+  > .market_title {
     h4 {
-      color:#c91523;
+      color: #c91523;
       padding: 3px 5px;
     }
   }
 
-  >.market_content {
-    >ul>li {
+  > .market_content {
+    > ul > li {
       float: left;
       width: 50%;
     }
 
-    >ul>li:nth-child(4) {
+    > ul > li:nth-child(4) {
       clear: both;
     }
   }
@@ -268,7 +308,7 @@ header {
 
 .banner {
   text-align: center;
-  >a {
+  > a {
     margin: 2px auto;
     width: 98%;
   }
@@ -276,28 +316,28 @@ header {
 
 // 主题街
 .jd_theme {
-  >.theme_title {
+  > .theme_title {
 
     height: 32px;
-    >p {
+    > p {
       font-size: 16px;
       color: rgb(207, 48, 87);
       padding: 3px 3px;
     }
 
   }
-  >.theme_content{
-    >ul>li:nth-child(-n+2){
+  > .theme_content {
+    > ul > li:nth-child(-n+2) {
       width: 50%;
       float: left;
     }
 
-    >ul>li:nth-child(n+3){
+    > ul > li:nth-child(n+3) {
       width: 25%;
       float: left;
     }
 
-    >ul>li:nth-child(5){
+    > ul > li:nth-child(5) {
       clear: both;
     }
   }
@@ -305,21 +345,21 @@ header {
 
 // 品牌推荐
 .recommend {
-  >.recommend_title {
+  > .recommend_title {
     height: 32px;
-    >p {
+    > p {
       font-size: 16px;
       color: rgb(207, 48, 87);
       padding: 3px 3px;
     }
   }
 
-  >.recommend_content {
-    >ul>li:nth-child(1){
+  > .recommend_content {
+    > ul > li:nth-child(1) {
       float: left;
       width: 40%;
     }
-    >ul>li:nth-child(n+2){
+    > ul > li:nth-child(n+2) {
       float: left;
       width: 30%;
     }
@@ -328,7 +368,7 @@ header {
 
 // 猜你喜欢
 .jd_guess {
-  >.guess_title {
+  > .guess_title {
     height: 32px;
     position: relative;
     > span:first-child {
@@ -363,25 +403,25 @@ header {
 
   }
 
-  >.guess_content {
-    >ul>li {
+  > .guess_content {
+    > ul > li {
       position: relative;
       float: left;
       width: 50%;
       padding: 2px 2px;
 
-      a{
+      a {
         border-bottom: 1px solid #000;
       }
 
-      >a>p:first-child {
+      > a > p:first-child {
         display: inline-block;
         color: red;
         font-size: 16px;
         padding: 3px 20px;
       }
 
-      >a>p:nth-child(2){
+      > a > p:nth-child(2) {
         display: inline-block;
         font-size: 14px;
         position: absolute;
@@ -392,7 +432,7 @@ header {
         top: 0;
       }
 
-      >a>p:nth-child(4) {
+      > a > p:nth-child(4) {
         font-size: 14px;
         height: 37px;
         overflow: hidden;
@@ -407,7 +447,7 @@ header {
   height: 42px;
   background-color: #fff;
   vertical-align: bottom;
-  span{
+  span {
     font-size: 14px;
     display: block;
     height: 39px;
@@ -421,11 +461,10 @@ header {
   }
 }
 
-
 // 尾部工具栏
 .footer_tool {
-  >.tool_login {
-    >ul>li {
+  > .tool_login {
+    > ul > li {
       float: left;
       width: 25%;
       font-size: 14px;
@@ -433,29 +472,29 @@ header {
       text-align: center;
 
     }
-    >ul>li:nth-child(-n+3){
+    > ul > li:nth-child(-n+3) {
       border-right: 2px solid black;
     }
-    >ul {
+    > ul {
       height: 34px;
       padding: 6px 0px;;
       border-bottom: 1px solid rgb(204, 204, 204);
     }
   }
 
-  >.tool_atp {
+  > .tool_atp {
 
     ul {
       border-bottom: 1px solid rgb(204, 204, 204);
     }
 
-    >ul>li {
+    > ul > li {
       float: left;
       width: 33.333333333333%;
       text-align: center;
       color: #666666;
       padding: 10px 0;
-      >a>span:first-child{
+      > a > span:first-child {
         display: inline-block;
         width: 33px;
         height: 33px;
@@ -463,28 +502,26 @@ header {
         background-position: -120px -70px;
       }
 
-      >a>span:nth-child(2) {
+      > a > span:nth-child(2) {
         display: block;
       }
     }
 
-    >ul>li:nth-child(2) {
-      >a>span {
+    > ul > li:nth-child(2) {
+      > a > span {
         background-position: -40px -70px;
       }
     }
 
-    >ul>li:nth-child(3) {
-      >a>span {
+    > ul > li:nth-child(3) {
+      > a > span {
         background-position: -80px -70px;
       }
     }
 
-
-
   }
 
-  >.tool_banner {
+  > .tool_banner {
     height: 45px;
     font-size: 14px;
     color: #666666;
@@ -495,15 +532,23 @@ header {
 }
 
 // 尾部导航
+.zhanyong {
+  img {
+    width: 20%;
+  }
+}
+
 footer {
-  >ul>li {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  > ul > li {
     float: left;
     width: 20%;
   }
 
   ul li a img {
-    width: 57px;
-    height: 44px;
+    width: 100%;
   }
 
 }

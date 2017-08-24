@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  /* 3像素 */
+  display: block;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+input {
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* 清除浮动 */
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+html,
+body,
+.view,
+.container {
+  width: 100%;
+  height: 100%;
+}
+.view {
+  padding-top: 45px;
+  position: relative;
+}
+header {
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  background-color: greenyellow;
+}
+.container {
+  position: relative;
+  padding-left: 80px;
+}
+.left_box {
+  height: 100%;
+  overflow: hidden;
+  width: 80px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.left_box ul li {
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.left_box ul .active {
+  color: red;
+  border-right: none;
+}
+.right_box {
+  height: 100%;
+  overflow: hidden;
+}
+.right_box ul li {
+  float: left;
+  width: 33.33%;
+}

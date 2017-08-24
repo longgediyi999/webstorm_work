@@ -1,0 +1,78 @@
+@import "wjsfont.less";
+
+@fontColor: #808080;
+.wjs_view {
+  a {
+    color: inherit;
+  }
+}
+
+/*头部导航*/
+.wjs_top_nav {
+
+  a {
+    text-decoration: none;
+  }
+
+  .row {
+
+    > div {
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      color: @fontColor;
+    }
+
+    .wjs_phone {
+      position: relative;
+      > img {
+        position: absolute;
+        bottom: -151px;
+        left: -8px;
+        display: none;
+      }
+      &:hover > img {
+        display: block;
+      }
+    }
+
+    //免费注册
+    .btn {
+      color: #fff;
+    }
+
+    > div:last-child {
+      border-right: none;
+    }
+  }
+}
+
+/*导航条*/
+.wjs_nav {
+  .navbar {
+    margin-bottom: 0px;
+    > .container {
+      a {
+        height: 80px;
+        line-height: 80px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        &:hover,&:focus {
+          border-bottom: 1px solid red;
+        }
+      }
+
+    }
+
+    .navbar-brand {
+      .wjsfont {
+        font-size: 70px;
+      }
+      >.wjsfont-logo {
+        color :red;
+      }
+    }
+  }
+}

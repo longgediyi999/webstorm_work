@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>Title</title>
+</head>
+<body>
+<div>1</div>
+<script>
+    function itcast(div) {
+        var obj = {
+            tap: function (c) {
+                var startX,startY;
+                
+                var startTime;
+                
+                div.addEventListener("touchstart", function (e) {
+                    if(e.targetTouches.length>1){
+                        return;
+                    }
+                    
+                    startX = e.targetTouches[0].clientX;
+                    startY = e.targetTouches[0].clientY;
+                    
+                    startTime = Date.now();
+                });
+                
+                div.addEventListener("touchend", function (e) {
+                    if(e.changedTouches.length>1){
+                        return;
+                    }
+
+                    var endX = e.changedTouches[0].clientX;
+                    var endY = e.changedTouches[0].clientY;
+
+                });
+                
+                
+            }
+        }
+    }
+</script>
+</body>
+</html>

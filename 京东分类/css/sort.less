@@ -1,0 +1,58 @@
+@import "base.less";
+html,
+body,
+.view,
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.view {
+  padding-top: 45px;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  background-color: greenyellow;
+}
+.container{
+  // background-color: palevioletred;
+  position: relative;
+  padding-left: 80px;
+}
+.left_box{
+  height: 100%;
+  overflow: hidden;
+  width: 80px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  ul{
+    li{
+      height: 40px;
+      width: 100%;;
+      line-height: 40px;
+      text-align: center;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+    .active{
+      color: red;
+      border-right: none;
+    }
+  }
+}
+.right_box{
+  height: 100%;
+  overflow: hidden;
+  ul{
+    li{
+      float: left;
+      width: 33.33%;
+    }
+  }
+}
