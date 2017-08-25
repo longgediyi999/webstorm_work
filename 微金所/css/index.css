@@ -126,10 +126,39 @@
 .wjs_nav .navbar > .container a:focus {
   border-bottom: 1px solid red;
 }
-.wjs_nav .navbar .navbar-brand .wjsfont {
+.wjs_nav .navbar > .container .navbar-brand {
+  padding-top: 5px;
+}
+.wjs_nav .navbar > .container .navbar-brand:hover,
+.wjs_nav .navbar > .container .navbar-brand:focus {
+  border-bottom: none;
+}
+.wjs_nav .navbar > .container .navbar-brand .wjsfont {
   font-size: 70px;
 }
-.wjs_nav .navbar .navbar-brand > .wjsfont-logo {
+.wjs_nav .navbar > .container .navbar-brand > .wjsfont-logo {
   color: red;
+}
+/*轮播图*/
+.wjs_carousel img {
+  width: 100%;
+}
+/*支付交易保障*/
+.wjs_exchange .container .row {
+  padding-bottom: 40px;
+  padding-top: 60px;
+  color: #878787;
+}
+.wjs_exchange .container .row > div {
+  margin-bottom: 20px;
+}
+.wjs_exchange .container .row > div a:hover {
+  color: red;
+}
+.wjs_exchange .container .row > div a .media > .media-left {
+  font-size: 40px;
+}
+.wjs_exchange .container .row > div a .media > .media-body h4 {
+  font-size: 22px;
 }
 /*# sourceMappingURL=index.css.map */
