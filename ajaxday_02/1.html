@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<h3>1</h3>
+<h3>2</h3>
+<h3>3</h3>
+<script>
+	var xhr = new XMLHttpRequest();
+
+	xhr.open('get','./example.php');
+	xhr.setRequestHeader('Content-Type','text/html');
+
+	xhr.send();
+
+	var input = document.querySelectorAll("h3");
+	input[2].addEventListener("click", function () {
+		alert(1);
+	});
+	input[1].inner
+</script>
+</body>
+</html>

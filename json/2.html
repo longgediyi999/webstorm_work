@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	var book = {
+		title:'asdf',
+		authors: [
+				"asdf"
+		],
+		edasdf:3,
+		year:2011
+	};
+
+	var jsonTest = JSON.stringify(book, function (key,value) {
+		switch (key){
+			case "auchors":
+				return value.json("1")
+
+			case "year":
+				return 5000;
+
+			default:
+				return value;
+		}
+	});
+	
+	document.write(jsonTest);
+
+	/*var hahha = JSON.parse(jsonTest);
+
+	console.log(hahha);*/
+
+</script>
+</body>
+</html>

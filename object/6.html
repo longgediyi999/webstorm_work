@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	function Person() {
+	}
+
+	Person.prototype.name = "liming";
+	Person.prototype.age = 29;
+	Person.prototype.sayName = function () {
+		alert(this.name);
+	};
+
+	var person1 = new Person();
+	/*person1.sayName();
+
+	var person2 = new Person();
+	person2.sayName();
+
+	alert(person1.sayName == person2.sayName);*/
+
+	console.log(Object.getPrototypeOf(person1));
+
+
+</script>
+</body>
+</html>

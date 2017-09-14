@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		body {
+			background-color: #000000;
+		}
+	</style>
+</head>
+<body>
+
+<script src="1.js"></script>
+<script>
+	/*new Ball({
+		r: 10,
+		color: "green",
+		x: 200,
+		y: 200
+	});
+	new Ball({
+
+	});*/
+
+	function Game() {
+		this.ballList = [];
+		this.init();
+	};
+
+	Game.prototype.init = function () {
+		var self = this
+		document.onmousemove = function (e) {
+			self.makeBall(e);
+		}
+	};
+
+	Game.prototype.makeBall = function (e) {
+		this.ballList.push(new Ball({
+			x : e.clientX,
+			y : e.clientY,
+			color : 'rgb('+Math.ceil(Math.random() * 255)+','+Math.ceil(Math.random() * 255)+','+Math.ceil(Math.random() * 255)+')',
+			r: Math.random() * 30 + 20,
+			game : this
+		}));
+	};
+	
+	Game.prototype.run = function () {
+		var self = this;
+		window.setInterval(function () {
+			self.mainloop();
+		},1000/50)
+	};
+
+	Game.prototype.mainloop = function () {
+		this.ballList.forEach(function (ball) {
+			ball.move();
+			if(ball) {
+				ball.render();
+			}
+		})
+	};
+
+	
+
+	new Game().run();
+
+
+</script>
+</body>
+</html>

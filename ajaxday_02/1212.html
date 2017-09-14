@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	class Person {
+		constructor(name,age) {
+			console.log('con被调用了')
+			this.name = name
+			this.age = age
+		}
+		
+		greeting: function() {
+			console.log(this.name);
+		}
+
+		/*greetingg() {
+			console.log(this.name);
+		}*/
+	}
+
+	var p1 = new Person('zhang',15)
+	
+	console.log(p1);
+
+</script>
+</body>
+</html>

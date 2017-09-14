@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	function Person(name,age,job) {
+		this.name = name
+		this.age = age
+		this.job = job
+		this.friends = ['1','2']
+	}
+
+	Person.prototype = {
+		constructro : Person,
+		sayName : function () {
+			alert(this.name)
+		}
+	}
+	
+	var person1 = new Person('asd',1,'hahah')
+	var person2 = new Person('Greg',2,'DOctor')
+	
+	person1.friends.push('Van')
+	
+	console.log(person1.friends);
+
+	console.log(person2.friends);
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</script>
+</body>
+</html>

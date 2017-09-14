@@ -1,0 +1,46 @@
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+</head>
+<body>
+<script>
+	/*var person = new Object()
+	person.name = "liming"
+	person.age = 21
+	person.job = "Software"
+	person.sayName = function () {
+		alert(this.name);
+	}*/
+
+	var person = {
+		name: "liming",
+		age: 21,
+		job: "Software",
+		sayName : function () {
+			//alert(this.age)
+		},
+	}
+
+	person.sayName();
+
+	Object.defineProperty(person,"name",{
+		configurable: false,
+		value: 'asdf'
+	})
+
+	console.log(person.name);
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

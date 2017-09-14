@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	function create(name,age,job) {
+		this.name = name;
+		this.age = age;
+		this.job = job;
+		this.sayName = function() {
+			alert(this.job);
+		}
+	}
+
+	var person1  = new create("limign",12,"shabi");
+	console.log(person1);
+
+	person1.sayName();
+
+	alert(person1.constructor == create);
+</script>
+</body>
+</html>

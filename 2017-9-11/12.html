@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	var colors = new Array()
+	
+	for(var i = 0; i < 5 ; i++) {
+	    colors.push("test"+i)
+	}
+	
+
+
+	var keyi = colors.unshift('1')
+	console.log(colors);
+
+	colors.pop()
+	console.log(colors);
+	
+	colors.forEach(function () {
+		console.log(this);
+	})
+	
+</script>
+</body>
+</html>

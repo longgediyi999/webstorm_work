@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	function  createAnocher(original) {
+		var clone = Object(original)
+		clone.sayHi = function () {
+			alert('hi')
+		}
+
+		return clone
+	}
+
+	var person = {
+		name : 'nicholas',
+		firend: ['12','23','34']
+	}
+
+	var anocherPerson = createAnocher(person)
+	anocherPerson.sayHi()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
