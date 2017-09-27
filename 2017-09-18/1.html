@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		#canvas {
+			/*border: 1px solid #000;*/
+			background-color: #000;
+		}
+	</style>
+</head>
+<body>
+
+
+<canvas id="canvas" width="800" height="600"></canvas>
+
+<script>
+	var canvas = document.getElementById('canvas')
+	var ctx = canvas.getContext('2d')
+
+	var ballList = []  //空数组
+
+	//小球 构造函数
+	function Ball(x, y) {
+		this.x = x
+		this.y = y
+
+		this.r = Math.random() * 30 + 20
+
+		this.color = 'rgb(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ')'
+
+		this.directionX = Math.random() * 10 - 5
+		this.directionY = Math.random() * 10 - 5
+	}
+
+	Ball.prototype.update = function () {
+		this.x += this.directionX   //随机-5到正5的坐标
+		this.y += this.directionY
+
+		this.r -= 2
+	}
+
+	Ball.prototype.render = function () {
+		ctx.beginPath()
+		ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI)
+		ctx.fillStyle = this.color
+		ctx.fill()
+	}
+
+	canvas.onmousemove = function (e) {
+		ballList.push(new Ball(e.clientX, e.clientY))
+
+	}
+
+	window.setInterval(function () {
+
+		ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+		for (var i = 0; i < ballList.length; i++) {
+			ballList[i].update()
+
+			if (ballList[i].r <= 0) {
+				ballList.splice(i, 1)
+				i--
+				continue
+			}
+			ballList[i].render()
+
+		}
+
+
+	}, 1000 / 50)
+
+
+</script>
+</body>
+</html>

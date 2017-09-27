@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		#canvas {
+			/*border: 1px solid #000;*/
+			background-color: #000;
+		}
+	</style>
+</head>
+<canvas id="canvas" width="800" height="600"></canvas>
+<body>
+<script>
+	var canvas = document.getElementById('canvas')
+	var cts = canvas.getContext('2d')
+
+	var ballList = []
+
+	function BallList(x, y) {
+		this.x = x
+		this.y = y
+		this.r = Math.random() * 50
+
+		this.color = 'rgb(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ')'
+
+		this.directionX = Math.random() * 10 - 5
+		this.directionY = Math.random() * 10 - 5
+	}
+
+
+	canvas.onmousemove = function (e) {
+		ballList.push(new BallList(e.clientX, e.clientY))
+
+	}
+
+	BallList.prototype.update = function () {
+
+		this.x += this.directionX   //
+		this.y += this.directionY   //
+		this.r -= 2
+	}
+
+
+	BallList.prototype.render = function () {
+		cts.beginPath()
+		cts.arc(this.x, this.y, this.r, 0, 2 * Math.PI)
+		cts.fillStyle = this.color
+		cts.fill()
+	}
+
+	window.setInterval(function () {
+		cts.clearRect(0, 0, canvas.width, canvas.height)
+
+		for (var i = 0; i < ballList.length; i++) {
+			ballList[i].update()
+			if (ballList[i].r <= 0) {
+				ballList.splice(i, 1)
+				i--
+				continue
+			}
+
+			ballList[i].render()
+		}
+
+
+	}, 1000 / 50)
+</script>
+</body>
+</html>

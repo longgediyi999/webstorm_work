@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		#canvas {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+<canvas width="500" height="500" id="canvas"></canvas>
+<script>
+
+	//var canvas = document.getElementById('canvas')
+
+	var drawing = document.getElementById("canvas");
+	//确定浏览器支持<canvas>元素
+	if (drawing.getContext) {
+		var context = drawing.getContext("2d");
+		/*
+		 * 根据 Mozilla 的文档
+		 * http://developer.mozilla.org/en/docs/Canvas_tutorial:Basic_usage
+		 */
+// 绘制红色描边矩形
+		context.fillStyle = "#ff0000";
+		context.fillRect(10, 10, 50, 50);
+//绘制半透明的蓝色矩形
+		context.fillStyle = "rgba(0,0,255,0.5)";
+		context.fillRect(30, 30, 50, 50);
+
+		context.clearRect(40, 40, 10, 10);
+	}
+
+
+</script>
+</body>
+</html>

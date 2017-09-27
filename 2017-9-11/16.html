@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	
+	a = (function () {
+		var arr = []
+		
+		for(var i = 0; i<3;i++){
+			var param = i;
+			var clac = function () {
+				return param * param    //0 1 4
+			}
+			arr.push(clac)
+		}
+		
+		for(var i = 0; i < arr.length ; i++) {
+		    console.log(arr[i]());
+		}
+		
+	})
+
+	a()
+</script>
+</body>
+</html>

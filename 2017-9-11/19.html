@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		#canvas {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600"></canvas>
+</body>
+<script>
+	var canvas = document.getElementById('canvas')
+
+	var ctx = canvas.getContext('2d')
+
+	//画下直线
+	ctx.moveTo(100,500)
+	ctx.lineTo(500,500)
+	ctx.stroke()
+
+	//下右三角形
+
+	ctx.fillStyle = 'black'
+	ctx.beginPath()
+	ctx.moveTo(500,500)
+	ctx.lineTo(500,475)
+	ctx.lineTo(550,500)
+	ctx.lineTo(500,525)
+	ctx.lineTo(500,500)
+	ctx.fill()
+
+	//画上直线
+	ctx.moveTo(100,500)
+	ctx.lineTo(100,100)
+	ctx.stroke()
+
+	//上三角形
+	ctx.beginPath()
+	ctx.moveTo(100,100)
+	ctx.lineTo(125,100)
+	ctx.lineTo(100,50)
+	ctx.lineTo(75,100)
+	ctx.lineTo(100,100)
+	ctx.fill()
+
+	ctx.moveTo(100,500)
+
+	for(var i = 1; i <= 100 ; i++) {
+		ctx.moveTo(i*4+100,500)
+		ctx.lineTo(i*4+100,100)
+		ctx.stroke()
+
+		ctx.moveTo(500,500-i*4)
+		ctx.lineTo(500,500-i*4)
+		ctx.stroke()
+
+	}
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script src="url.js"></script>
+<script src="jquery.js"></script>
+<script src="template.js"></script>
+<script src="js.js"></script>
+<script type="text/html" id="getMenu">
+	{{each result as value}}
+	<div>
+		<a href="#">
+			<!-- 后台返回来的数据不是具体图片路径，是img标签 -->
+			<!-- <img src="images/ic_search.png"> -->
+			{{#value.img}}
+			<p>{{value.name}}</p>
+		</a>
+	</div>
+	{{/each}}
+</script>
+</body>
+</html>

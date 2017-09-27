@@ -1,0 +1,143 @@
+body {
+  background-color: #f5f5f5;
+}
+#header {
+  height: 50px;
+  padding: 10px;
+  background-color: #ff841d;
+}
+#header .logo img {
+  height: 25px;
+}
+#header .app {
+  float: right;
+}
+#header .app img {
+  height: 34px;
+}
+#search {
+  padding: 10px;
+  background-color: white;
+}
+#search form {
+  position: relative;
+  padding-right: 70px;
+}
+#search form input[type="search"] {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  border: 0;
+  padding-left: 15px;
+}
+#search form input[type="submit"] {
+  width: 63px;
+  height: 30px;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  background-color: #ff841d;
+}
+#menu {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: white;
+}
+#menu .row a {
+  display: block;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+#menu .row a img {
+  width: 50px;
+  height: 50px;
+}
+#menu .row a p {
+  font-size: 12px;
+}
+#more,
+.more {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 10px;
+  background-color: #ff841d;
+}
+#more span,
+.more span {
+  color: white;
+}
+#more img,
+.more img {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+}
+#list {
+  padding: 10px;
+}
+#list .media {
+  background-color: white;
+  padding: 10px;
+}
+#list .media .media-left img {
+  width: 100px;
+  height: 100px;
+}
+#list .media .media-body .media-heading {
+  font-size: 16px;
+}
+#list .media .media-body .media-red {
+  color: red;
+}
+#list .media .other {
+  margin-top: 5px;
+  color: #a1a1a1;
+}
+#list .media .other span {
+  font-size: 12px;
+}
+#discount {
+  margin: 10px 0;
+  background-color: white;
+  height: 30px;
+  line-height: 30px;
+}
+#discount p {
+  text-align: center;
+}
+#logr div {
+  width: 30%;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  float: left;
+  border: 1px solid #ccc;
+  border-right: 0px;
+  background-color: #f5f5f5;
+}
+#logr .logTop {
+  width: 40%;
+}
+#logr .logTop span {
+  display: inline-block;
+  margin-top: -2px;
+  vertical-align: middle;
+  width: 30px;
+  height: 25px;
+  background-image: url(http://www.zuyushop.com/wap/images/top.jpg);
+}
+#download {
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+#download p {
+  text-align: center;
+  color: red;
+}
+/*# sourceMappingURL=index.css.map */

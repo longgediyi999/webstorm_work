@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xiaoling</title>
+	<style>
+		#canvas {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+
+<body>
+<canvas id="canvas" width="800" height="600"></canvas>
+<script src="js/CookieChart.js">
+</script>
+<script>
+	new CookieChart({
+		id: 'canvas',
+		data: [
+			{
+				title: '苹果',
+				count: 5000
+			},
+			{
+				title: '橘子',
+				count: 4000
+			},
+			{
+				title: '火龙果',
+				count: 2000
+			},
+			{
+				title: '葡萄',
+				count: 8000
+			},
+			{
+				title: '榴莲',
+				count: 6000
+			}
+		],
+		startAngle : 0
+	})
+</script>
+</body>
+
+</html>

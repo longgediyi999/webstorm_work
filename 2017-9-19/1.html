@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xiaoling</title>
+	<style>
+		#canvas {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+
+<body>
+<canvas id="canvas" width="800" height="600"></canvas>
+<script>
+	drawAverageCircle('canvas', 360)
+
+	function drawAverageCircle(id, per) {
+		var canvas = document.getElementById(id)
+		var ctx = canvas.getContext('2d')
+
+		var perRadian = 2 * Math.PI / per
+
+		var circleCenter = {
+			x: canvas.width / 2,
+			y: canvas.height / 2
+		}
+
+		for (var i = 0; i < per; i+=50) {
+			ctx.beginPath()
+			ctx.moveTo(circleCenter.x, circleCenter.y)
+			ctx.fillStyle = 'rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')'
+			ctx.arc(circleCenter.x,circleCenter.y,200,perRadian*i,(i+50)*perRadian)
+			ctx.fill()
+		}
+
+
+	}
+
+
+</script>
+</body>
+
+</html>

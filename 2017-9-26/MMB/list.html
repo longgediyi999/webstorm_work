@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <!-- 引入bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 引入base -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入index -->
+    <link rel="stylesheet" href="css/list.css">
+    <!-- 引入less -->
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <a href="#" class="logo">
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="#" class="app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+
+    <!-- search  -->
+    <section id="search">
+        <form action="#">
+                <input type="search" placeholder="book">
+                <input type="submit" value="搜索">
+        </form>
+    </section>
+
+    <!-- nav -->
+    <section id="nav">
+        <span>首页</span>
+        <span>全部分类</span>
+        <span class="nav_tv">电视</span>
+        <a href="#">筛选</a>
+    </section>
+
+    <!-- product -->
+    <section id="product">
+        <ul class="product_list">
+            <!-- <li class="clearfix">
+                <div class="product">
+                    <img src="http://pro.zuyushop.com:8015/ProPic/20159/Thumb/Thumb_2015090009064857056.jpg" alt="">
+                    <div class="pic">
+                        <h5>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</h5>
+                        <p>￥1999</p>
+                        <div class="text">
+                            <span>报价</span>
+                            <span>评论</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="product">
+                    <img src="http://pro.zuyushop.com:8015/ProPic/20159/Thumb/Thumb_2015090009064857056.jpg" alt="">
+                    <div class="pic">
+                        <h5>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</h5>
+                        <p>￥1999</p>
+                        <div class="text">
+                            <span>报价</span>
+                            <span>评论</span>
+                        </div>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+    </section>
+
+    <!-- jump -->
+    <section id="jump" class="clearfix">
+        <div class="prev"><a href="#">上一页</a></div>
+        <div class="select">
+            <select>
+                <!-- <option value="1">1</option>
+                <option value="1">1</option>
+                <option value="1">1</option> -->
+            </select>
+        </div>
+        <div class="next"><a href="#">下一页</a></div>
+    </section>
+
+
+   
+
+    <!-- more -->
+    <section class="more">
+        <span>更多优惠信息</span>
+        <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+    </section>
+
+    <!-- logr 登陆/注册 -->
+    <section id="logr" class="clearfix">
+        <div class="login">登陆</div>
+        <div class="register">注册</div>
+        <div class="logTop">
+            <span></span>
+            返回顶部
+        </div>
+    </section>
+
+    <!-- download -->
+    <section id="download">
+        <p>手机app下载</p>
+    </section>
+
+
+    <!-- 动态获取商品列表数据 -->
+    <script type="text/html" id="getMenuList">
+        {{each result as value}}
+        <li class="clearfix">
+            <a href="./details.html?productId={{value.productId}}">
+                <div class="product">
+                    {{#value.productImg}}
+                    <!-- <img src="http://pro.zuyushop.com:8015/ProPic/20159/Thumb/Thumb_2015090009064857056.jpg" alt=""> -->
+                    <div class="pic">
+                        <h5>{{value.productName}}</h5>
+                        <p>{{value.productPrice}}</p>
+                        <div class="text">
+                            <span>{{value.productQuote}}</span>
+                            <span>{{value.productCom}}</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    
+    </script>
+
+
+    <!-- 引入jQuery -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 引入bootstrap -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 引入url -->
+    <script src="js/url.js"></script>
+    <!-- 引入template -->
+    <script src="js/template.js"></script>
+    <!-- 引入list -->
+    <script src="js/list.js"></script>
+
+
+</body>
+</html>

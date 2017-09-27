@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <!-- 引入bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 引入base -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入index -->
+    <link rel="stylesheet" href="css/details.css">
+    <!-- 引入less -->
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <a href="#" class="logo">
+            <img src="images/header_logo.png" alt="">
+        </a>
+        <a href="#" class="app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+
+    <!-- search  -->
+    <section id="search">
+        <form action="#">
+                <input type="search" placeholder="book">
+                <input type="submit" value="搜索">
+        </form>
+    </section>
+
+    <!-- nav -->
+    <section id="nav">
+        <span>首页</span>
+        <span>全部分类</span>
+        <span class="nav_tv">电视</span>
+        <a href="#">筛选</a>
+    </section>
+
+    <!-- details -->
+    <section id="details">
+        <div class="shop">
+            <!-- <h4>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</h4>
+            <div class="img">
+                <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="">
+            </div>
+            <section id="details_log" class="clearfix">
+                <div class="login">比价搜索</div>
+                <div class="register">产品参数</div>
+                <div class="logTop">
+                    评论(999+)
+                </div>
+            </section>
+            <div class="ico clearfix">
+                <div class="logo"></div>
+                <div>京东商城</div>
+                <div class="rmb">￥1999</div>
+                <div>
+                    <span>去购买</span>
+                </div>
+            </div>
+            <div class="txt">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+            </div> -->
+        </div>
+       
+    </section>
+    <section id="comment">
+        <div class="comment">
+            <ul>
+                <!-- <li>
+                    <div class="command">
+                        <div class="command_top clearfix">
+                            <span class="left">匿名</span>
+                            <span class="right">2017.09.26</span>
+                        </div>
+                        <div class="command_bot">
+                            实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟
+                            实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </section>
+  
+
+
+
+
+
+   
+
+    <!-- more -->
+    <section class="more">
+        <span>更多优惠信息</span>
+        <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+    </section>
+
+    <!-- logr 登陆/注册 -->
+    <section id="logr" class="clearfix">
+        <div class="login">登陆</div>
+        <div class="register">注册</div>
+        <div class="logTop">
+            <span></span>
+            返回顶部
+        </div>
+    </section>
+
+    <!-- download -->
+    <section id="download">
+        <p>手机app下载</p>
+    </section>
+    
+    <!-- 动态获取商品信息 -->
+    <script type="text/html" id="getDetails">
+        
+        {{each result as value}}
+        <h4>{{value.productName}}</h4>
+        <div class="img">
+            {{#value.productImg}}
+            <!-- <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt=""> -->
+        </div>
+        <section id="details_log" class="clearfix">
+            <div class="login">比价搜索</div>
+            <div class="register">产品参数</div>
+            <div class="logTop">
+                评论(999+)
+            </div>
+        </section>
+        <div class="ico clearfix">
+            <div class="logo"></div>
+            <div>京东商城</div>
+            <div class="rmb">￥1999</div>
+            <div>
+                <span>去购买</span>
+            </div>
+        </div>
+        <div class="txt">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+        {{/each}}
+
+    </script>
+
+    <script type="text/html" id="getPl">
+    {{each result as value}}
+        <li>
+                <div class="command">
+                    <div class="command_top clearfix">
+                        <span class="left">{{value.comName}}</span>
+                        <span class="right">{{value.comTime}}</span>
+                    </div>
+                    <div class="command_bot">
+                        {{value.comContent}}
+                    </div>
+                </div>
+            </li>
+    {{/each}}
+    </script>
+
+
+    <!-- 引入jQuery -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 引入bootstrap -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 引入url -->
+    <script src="js/url.js"></script>
+    <!-- 引入template -->
+    <script src="js/template.js"></script>
+    <!-- 引入list -->
+    <script src="js/details.js"></script>
+
+
+</body>
+</html>

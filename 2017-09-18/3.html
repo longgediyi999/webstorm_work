@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xiaoling</title>
+	<style>
+		#canvas {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+
+<body>
+<canvas id="canvas" width="800" height="600"></canvas>
+<script>
+	var canvas = document.getElementById('canvas')
+	var ctx = canvas.getContext('2d')
+
+	var originPoint = {
+		x: 50,
+		y: canvas.height - 50
+	}
+
+	var axis = {
+		x: canvas.width - 50,
+		y: 50
+	}
+
+	ctx.beginPath()
+	ctx.moveTo(originPoint.x,originPoint.y)
+	ctx.lineTo(axis.x,originPoint.y)
+	ctx.stroke()
+
+	ctx.beginPath()
+	ctx.moveTo(axis.x,originPoint.y)
+	ctx.lineTo(axis.x,originPoint.y-10)
+	ctx.lineTo(axis.x+20,originPoint.y)
+	ctx.lineTo(axis.x,originPoint.y+10)
+	ctx.closePath()
+	ctx.fill()
+
+	ctx.beginPath()
+	ctx.moveTo(originPoint.x,originPoint.y)
+	ctx.lineTo(originPoint.x,axis.y)
+	ctx.stroke()
+
+	ctx.beginPath()
+	ctx.moveTo(originPoint.x,axis.y)
+	ctx.lineTo(originPoint.x-10,axis.y)
+	ctx.lineTo(originPoint.x,axis.y-20)
+	ctx.lineTo(originPoint.x+10,axis.y)
+	ctx.closePath()
+	ctx.fill()
+
+
+</script>
+</body>
+
+</html>

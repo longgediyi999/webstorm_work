@@ -1,0 +1,355 @@
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 12px "微软雅黑", "Arial Narrow", HELVETICA;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+}
+
+a:hover {
+    color: #cd0200;
+    text-decoration: underline
+}
+
+a {
+    text-decoration: none
+}
+
+em {
+    font-style: normal
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+p {
+    word-wrap: break-word
+}
+
+body {
+    min-width: 1200px;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    line-height: 0;
+    content: '';
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.header {
+    width: 100%;
+    height: 130px;
+    background-color: #1e50ae;
+}
+
+.header1 {
+    margin: auto;
+    width: 1200px;
+    height: 130px;
+}
+
+.header2 {
+    float: right;
+    width: 150px;
+    height: 20px;
+    margin-top: 33px;
+    font-size: 15px;
+}
+
+.header2 a {
+    color: #fff;
+}
+
+.logo {
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+    font-size: 32px;
+    color: #fff;
+    font-family: "微软雅黑";
+}
+
+.nav {
+    float: right;
+    display: inline-block;
+    position: relative;
+    top: 62px;
+    left: 150px;
+    color: #fff;
+    font-family: "微软雅黑";
+    font-size: 16px;
+}
+
+.nav a {
+    width: 100px;
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #00f;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.column {
+    height: 500px;
+}
+
+.banner img {
+    width: 100%;
+    height: 500px;
+}
+
+.main {
+    clear: both;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.hot {
+    width: 221px;
+    float: left;
+}
+
+.seek {
+    width: 213px;
+    height: 94px;
+    margin-top: 10px;
+    border: 1px solid #c0c0c0;
+}
+
+.classify {
+    width: 213px;
+    height: 534px;
+    margin-top: 10px;
+    border: 1px solid #c0c0c0;
+}
+
+.news {
+    width: 480px;
+    height: 248px;
+    margin-top: 10px;
+}
+
+.subnav {
+    width: 480px;
+    height: 248px;
+    margin-top: 10px;
+}
+
+.productsearch {
+    height: 45px;
+    font-size: 18px;
+    color: #fff;
+    background: #1e50ae;
+}
+
+.top {
+    padding: 9px;
+}
+
+.topa {
+    margin: 14px 0 0 3px;
+}
+
+.topaa {
+    width: 124px;
+    height: 23px;
+}
+
+.topbb {
+    width: 50px;
+    height: 23px;
+}
+
+.products {
+    height: 45px;
+    font-size: 18px;
+    color: #fff;
+    background: #1e50ae;
+}
+
+.productsa {
+    padding: 9px;
+}
+
+.product {
+    font-size: 14px;
+    color: #000;
+}
+
+.product a {
+    color: #000;
+    text-decoration: none;
+}
+
+.productsb {
+    margin-left: 13px;
+    width: 188px;
+    height: 47px;
+}
+
+.productsb a {
+    display: block;
+    padding-top: 28px;
+    border-bottom: 1px dashed #c0c0c0;
+    color: #222;
+    text-decoration: none;
+}
+
+.productsb a:hover {
+    color: #1e50ae;
+}
+
+.industry, .knowledge {
+    width: 480px;
+    height: 45px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.industrya, .knowledgea {
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.industryb, .knowledgeb {
+    float: right;
+    position: relative;
+    bottom: 19px;
+    right: 20px;
+}
+
+.taiwan, .metals, .black, .analyze, .twotypes {
+    height: 46px;
+    font-size: 14px;
+    border-bottom: 1px dashed #c0c0c0
+}
+
+.taiwana, .metalsa, .blacka, .analyzea, .twotypesa {
+    float: left;
+    width: 379px;
+    height: 40px;
+    line-height: 46px;
+}
+
+.taiwanb, .metalsb, .blackb, .analyzeb, .twotypesb {
+    float: right;
+    width: 81px;
+    padding-top: 13px;
+}
+
+.airtool, .maintain {
+    height: 46px;
+    font-size: 14px;
+}
+
+.airtoola, .maintaina {
+    float: left;
+    width: 379px;
+    height: 40px;
+    line-height: 46px;
+}
+
+.airtoolb, .maintainb {
+    float: right;
+    width: 81px;
+    padding-top: 13px;
+}
+
+.company, .latest {
+    float: left;
+    width: 960px;
+    height: 57px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.forshort, .latesta {
+    width: 64px;
+    height: 45px;
+    padding-top: 27px;
+    font-size: 16px;
+}
+
+.forshorta, .latestb {
+    float: right;;
+    position: relative;
+    bottom: 46px;
+    right: 20px;
+}
+
+.forshortb {
+    float: left;
+    width: 970px;
+    height: 100px;
+}
+
+.forshorc {
+    float: left;
+    width: 300px;
+    height: 88px;
+}
+
+.forshortd {
+    float: left;
+    width: 654px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.forshorte {
+    float: left;
+    width: 300px;
+    height: 88px;
+}
+
+.tail {
+    clear: both;
+    background-color: #444;
+}
+
+.taila {
+    margin: auto;
+    width: 1200px;
+    height: 87px;
+    font-size: 14px;
+    padding-top: 14px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.tailc {
+    color: #ddd;
+}
+
+.taila a {
+    color: #ddd;
+    text-decoration: none;
+}

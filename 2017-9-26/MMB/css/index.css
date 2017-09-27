@@ -1,0 +1,51 @@
+#menu {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: white;
+}
+#menu .row a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+#menu .row a img {
+  width: 50px;
+  height: 50px;
+}
+#menu .row a p {
+  font-size: 12px;
+}
+#list {
+  padding: 10px;
+}
+#list .media {
+  background-color: white;
+  padding: 10px;
+}
+#list .media .media-left img {
+  width: 100px;
+  height: 100px;
+}
+#list .media .media-body .media-heading {
+  font-size: 16px;
+}
+#list .media .media-body .media-red {
+  color: red;
+}
+#list .media .other {
+  margin-top: 5px;
+  color: #a1a1a1;
+}
+#list .media .other span {
+  font-size: 12px;
+}
+#discount {
+  margin: 10px 0;
+  background-color: white;
+  height: 30px;
+  line-height: 30px;
+}
+#discount p {
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */

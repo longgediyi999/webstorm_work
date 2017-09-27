@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xiaoling</title>
+	<style>
+		#canvas {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+
+<body>
+<canvas id="canvas" width="800" height="600"></canvas>
+<script>
+
+	var radians = [
+		Math.PI / 180 * 90,
+		Math.PI / 180 * 90,
+		Math.PI / 180 * 80,
+		Math.PI / 180 * 100
+	]
+
+	drawAverageCircle('canvas', radians)
+
+	function drawAverageCircle(id, randians) {
+		var canvas = document.getElementById(id)
+		var ctx = canvas.getContext('2d')
+
+		var circleCenter = {
+			x: canvas.width / 2,
+			y: canvas.height / 2
+		}
+
+		var startAngle = -Math.PI / 180 * 30
+
+		for (var i = 0; i < radians.length; i++) {
+			ctx.beginPath()
+			ctx.moveTo(circleCenter.x, circleCenter.y)
+			ctx.fillStyle = 'rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')'
+			ctx.arc(circleCenter.x, circleCenter.y, 200, startAngle, startAngle + randians[i])
+			ctx.fill()
+			startAngle += radians[i]
+
+		}
+	}
+
+
+</script>
+</body>
+
+</html>
