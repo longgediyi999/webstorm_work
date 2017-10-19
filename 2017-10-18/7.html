@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="demoCtrl">
+
+<ul>
+	<li ng-repeat="item in arr" class="{{ $first? 'first': '' }}">
+		{{ item }}
+		<p>当前循环的索引 {{ $index }}</p>
+		<p>当前循环是否是第一次循环 {{ $first }}</p>
+		<p>当前循环是否是最后一次循环 {{ $last }}</p>
+		<p>当前循环是否是中间项 {{$middle}}</p>
+		<p>当前项是否是偶数项 {{$even}}</p>
+		<p>当前项是否是奇数项 {{$odd}}</p>
+	</li>
+</ul>
+
+<script src="angular.js"></script>
+<script>
+	angular.module('myApp', [])
+			.controller('demoCtrl', ['$scope', function ($scope) {
+				$scope.arr = ['a', 'b', 'c', 'd', 'e']
+			}])
+</script>
+</body>
+</html>

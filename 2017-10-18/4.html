@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="demoCtrl">
+{{ msg }}
+<div ng-controller="demoCtrlA">{{ msg }}</div>
+<div ng-controller="demoCtrlB">{{ msg }}</div>
+
+<script src="angular.js"></script>
+<script>
+	angular.module('myApp', [])
+			.controller('demoCtrl', ['$scope', '$rootScope', function (a, b) {
+				//a.msg = 'demoCtrl'
+				b.msg = '全局作用域'
+			}])
+			.controller('demoCtrlA', ['$scope', function (a) {
+				a.msg = 'I am A'
+			}])
+			.controller('demoCtrlB', ['$scope', function (a) {
+				//a.msg = 'I am B'
+
+			}])
+</script>
+</body>
+</html>

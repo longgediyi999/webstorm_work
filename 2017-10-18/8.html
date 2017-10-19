@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angularjs demo</title>
+</head>
+<body ng-app="myApp" ng-controller="demoCtrl">
+<!--
+	在循环当中,重复的值是不被允许的 使用track by $index 去解决这个问题
+-->
+<ul>
+	<li ng-repeat="item in arr track by $index">
+		{{item}}
+	</li>
+</ul>
+<script src="angular.js"></script>
+<script>
+	angular.module('myApp',[])
+
+			.controller('demoCtrl',['$scope',function($scope){
+
+				$scope.arr = ['a','b','c','a','b'];
+
+			}])
+</script>
+</body>
+</html>

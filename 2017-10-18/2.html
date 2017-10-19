@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="demoCtrl">
+
+<label ng-repeat="item in balls">
+	<input type="checkbox" ng-model="item.isChecked"/> {{ item.name }}
+</label>
+<br/>
+<br/>
+<button ng-click="submitData()">tijiao</button>
+
+<ul>
+	<li ng-repeat="item in result">
+		{{ item.name }}
+	</li>
+</ul>
+
+<script src="angular.js"></script>
+<script>
+	angular.module('myApp',[])
+			.controller('demoCtrl',['$scope', function ($scope) {
+				$scope.balls = [
+					{
+						name:'足球',
+						isChecked : false
+					},
+					{
+						name:'足1球',
+						isChecked : false
+					},
+					{
+						name:'足2球',
+						isChecked : false
+					},
+					{
+						name:'足3球',
+						isChecked : false
+					},
+					{
+						name:'足4球',
+						isChecked : false
+					},
+				]
+
+				//结果数组
+				$scope.result = []
+
+				$scope.submitData = function () {
+					$scope.result = []
+					for (var i =0; i<$scope.balls.length;i++)
+					{
+						//如果当前数据是选中的
+						if($scope.balls[i].isChecked){
+							$scope.result.push($scope.balls[i])
+						}
+					}
+					console.log($scope.result);
+				}
+
+			}])
+</script>
+</body>
+</html>

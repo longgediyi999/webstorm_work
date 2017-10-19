@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.red {
+			background: red
+		}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="demoCtrl">
+
+<input type="checkbox" ng-model="isActive"/>
+
+{{ isActive }}
+
+<div ng-class="{'red':isActive,'green':true}">111</div>
+
+
+<script src="angular.js"></script>
+<script>
+	angular.module('myApp', [])
+			.controller('demoCtrl', ['$scope', function ($scope) {
+				$scope.isActive = false
+			}])
+</script>
+</body>
+</html>

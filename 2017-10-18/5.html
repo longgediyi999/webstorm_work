@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	function controller(callback) {
+		var $scope = {}
+		var abc = {}
+		var arr = callback.toString().split(/\(|\)/)[1].split(',')
+		for(var i = 0; i < arr.length ; i++) {
+		    switch(arr[i]){
+			    case '$scope':
+				    arr[i] = $scope
+				    break
+			    case 'abc':
+				    arr[i] = abc
+				    break
+		    }
+		}
+		console.log(arr);
+		callback.apply(null,arr)
+		console.log('$scope' , $scope);
+		console.log('abc',abc);
+	}
+	controller(function (abc,$scope) {
+		$scope.a = '1'
+		abc.b = '2'
+	})
+
+</script>
+</body>
+</html>

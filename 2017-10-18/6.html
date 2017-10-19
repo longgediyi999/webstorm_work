@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="demoCtrl">
+{{ arr }}
+
+<div ng-repeat="items in persons">
+	<ul>
+		<li>{{ items.name }}</li>
+		<li>{{ items.age }}</li>
+		<li>{{ items.hobby }}</li>
+	</ul>
+</div>
+<div> {{ obj }} </div>
+<div ng-repeat="(key,value) in obj">
+	{{ key }} => {{value}}
+</div>
+
+<script src="angular.js"></script>
+<script>
+	angular.module('myApp', [])
+			.controller('demoCtrl', ['$scope', function ($scope) {
+				$scope.arr = ['a', 'b', 'c']
+				$scope.persons = [
+					{
+						name: '张三',
+						age: 18,
+						hobby: ['吃饭', '睡觉', '打豆豆']
+					},
+					{
+						name: 'lisi',
+						age: 19,
+						hobby: [1, 2, 3]
+					},
+					{
+						name: 'wangwu',
+						age: 20,
+						hobby: ['lala', 'hehe']
+					}
+				]
+				$scope.obj = {
+					a:1,
+					b:2,
+					c:3
+				}
+			}])
+</script>
+</body>
+</html>

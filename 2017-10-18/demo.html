@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		[ng-cloak] {
+			color: red;
+		}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="demoCtrl">
+
+<div >
+	{{msg1}} {{msg2}}
+</div>
+
+<script src="angular.js"></script>
+<script>
+	angular.module('myApp', [])
+
+			.controller('demoCtrl', ['$scope', function ($scope) {
+
+				$scope.msg1 = "我是msg1";
+				$scope.msg2 = "我是msg2";
+
+			}])
+</script>
+</body>
+</html>
