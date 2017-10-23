@@ -4,8 +4,24 @@
 	<meta charset="UTF-8">
 	<title>Title</title>
 </head>
-<body>
+<body ng-app="myApp">
 
-script
+<a ui-sref="index">首页</a>
+<a ui-href="list">列表页</a>
+
+<div ui-view></div>
+
+
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="js/route.js"></script>
+<script src="js/common.js"></script>
+<script src="js/directive.js"></script>
+<script src="views/home/indexCtrl.js"></script>
+<script src="views/list/listCtrl.js"></script>
+<script src="views/article/articleCtrl.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 </html>

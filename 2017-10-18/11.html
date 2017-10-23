@@ -7,11 +7,19 @@
 <body>
 
 <script>
-	function a(propertyName) {
-		return function (obje) {
-			
+	function init() {
+		let name = "Mozilla";
+
+		function displayName() {
+			alert(name);
 		}
+
+		return displayName;
+
 	}
+
+	var myFunc = init()
+	myFunc();
 </script>
 </body>
 </html>
